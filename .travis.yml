@@ -4,13 +4,7 @@ python: 2.7
 env:
   - WORKFLOW_TEST=example1/wf3-shed-tools.ga
 
-install:
-  # Setup git to allow git operations.
-  - git config --global user.name "Travis Test User"
-  - git config --global user.email "planemo_test@galaxyproject.org"
-  - pip install planemo
-
-script: sh run_test.sh "$WORKFLOW_TEST"
+script: sh run_tests.sh "$WORKFLOW_TEST"
 
 services:
   - postgresql
