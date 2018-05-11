@@ -1,10 +1,13 @@
 language: python
-sudo: false
+sudo: true  # Only required if SERVE_GALAXY=docker
+
 python: 2.7
 env:
-  - WORKFLOW_TEST=example1/wf3-shed-tools.ga
+  - WORKFLOW_TEST=example1/wf3-shed-tools.ga SERVE_GALAXY=native
+  - WORKFLOW_TEST=example1/wf3-shed-tools.ga SERVE_GALAXY=docker
 
 script: sh run_tests.sh "$WORKFLOW_TEST"
 
 services:
-  - postgresql
+  - postgresql  # Only required if SERVE_GALAXY=native
+  - docker      # Only required if SERVE_GALAXY=docker
