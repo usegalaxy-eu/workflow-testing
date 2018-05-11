@@ -1,8 +1,8 @@
 #!/bin/bash
 
 : ${PLANEMO_TARGET:="planemo==0.50.1"}
-#: ${PLANEMO_OPTIONS:="--verbose"}
-: ${PLANEMO_OPTIONS:=""}
+: ${PLANEMO_OPTIONS:="--verbose"}
+#: ${PLANEMO_OPTIONS:=""}
 : ${PLANEMO_PROFILE_NAME:="wxflowtest"}
 : ${PLANEMO_SERVE_PORT:="9019"}
 : ${PLANEMO_TEST_STYLE:="serve_and_test"}  # profile_serve_and_test, serve_and_test, docker_serve_and_test, test, docker_test
