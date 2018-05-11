@@ -1,12 +1,16 @@
 - doc: Test sample data for Microbial variant calling workflow
   job: wf4-shed-tools-job.yml
   outputs:
-    #jbrowse_html:
-    #  asserts:
-    #    has_line_matching:
-    #      expression: "JBrowseDefaultMainPage"
+    #Not sure how to test HTML files yet.
+    jbrowse_html:
+      asserts:
+        has_text:
+          text: "JBrowseDefaultMainPage"
     snippy_fasta:
       asserts:
         has_line:
           line: '>Wildtype Staphylococcus aureus strain WT.'
-
+    snippy_tabular:
+      asserts:
+        has_n_columns:
+          n: 14

@@ -212,7 +212,8 @@
             }
          ],
          "workflow_outputs":[
-            {"output_name": "snpconsensus", "label": "snippy_fasta"}
+            {"output_name": "snpconsensus", "label": "snippy_fasta"},
+            {"output_name": "snpsum", "label": "snippy_tabular"}
          ],
          "input_connections":{
             "fastq_input|fastq_input1":{
