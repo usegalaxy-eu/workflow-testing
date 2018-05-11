@@ -1,7 +1,6 @@
 - doc: Test sample data for Microbial variant calling workflow
   job: wf4-shed-tools-job.yml
   outputs:
-    #Not sure how to test HTML files yet.
     jbrowse_html:
       asserts:
         has_text:
