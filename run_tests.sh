@@ -70,7 +70,7 @@ elif [ "$PLANEMO_TEST_STYLE" = "docker_test" ]; then
         --engine docker_galaxy \
         --docker_galaxy_image "${PLANEMO_DOCKER_GALAXY_IMAGE}" \
         --docker_extra_volume . \
-        "$1"
+        "$1" > /dev/null
 else
     echo "Unknown test style ${PLANEMO_TEST_STYLE}"
     exit 1
