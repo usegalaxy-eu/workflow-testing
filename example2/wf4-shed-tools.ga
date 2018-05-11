@@ -212,7 +212,7 @@
             }
          ],
          "workflow_outputs":[
-
+            {"output_name": "snpconsensus", "label": "snippy_fasta"}
          ],
          "input_connections":{
             "fastq_input|fastq_input1":{
@@ -264,7 +264,7 @@
             }
          ],
          "workflow_outputs":[
-
+            {"output_name": "output", "label": "jbrowse_html"}
          ],
          "input_connections":{
             "track_groups_1|data_tracks_0|data_format|annotation":{

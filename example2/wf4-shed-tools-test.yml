@@ -1,8 +1,12 @@
 - doc: Test sample data for Microbial variant calling workflow
   job: wf4-shed-tools-job.yml
-  #outputs:
-  #  intersect:
-  #    asserts:
-  #      has_line:
-  #        line: 'chr1	134210701	134222701	NM_001195025	0	+	134212806	134228958	0	8	348,121,24,152,66,120,133,2168,	0,8828,10081,11572,12006,13833,14434,15196,'
+  outputs:
+    #jbrowse_html:
+    #  asserts:
+    #    has_line_matching:
+    #      expression: "JBrowseDefaultMainPage"
+    snippy_fasta:
+      asserts:
+        has_line:
+          line: '>Wildtype Staphylococcus aureus strain WT.'
 
