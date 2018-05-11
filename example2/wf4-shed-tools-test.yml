@@ -12,4 +12,4 @@
     snippy_tabular:
       asserts:
         has_n_columns:
-          n: 14
+          n: 2
