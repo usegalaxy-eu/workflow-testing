@@ -1,0 +1,15 @@
+mutant_R1:
+  class: File
+  path: mutant_R1.fastq
+mutant_R2:
+  class: File
+  path: mutant_R2.fastq
+wildtype.fna:
+  class: File
+  path: wildtype.fna
+wildtype.gbk:
+  class: File
+  path: wildtype.gbk
+wildtype.gff:
+  class: File
+  path: wildtype.gff

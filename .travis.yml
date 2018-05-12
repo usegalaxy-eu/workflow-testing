@@ -9,6 +9,7 @@ env:
   - WORKFLOW_TEST=example1/wf3-shed-tools.ga PLANEMO_TEST_STYLE=serve_and_test
   - WORKFLOW_TEST=example1/wf3-shed-tools.ga PLANEMO_TEST_STYLE=docker_serve_and_test
   - WORKFLOW_TEST=example1/wf3-shed-tools.ga PLANEMO_TEST_STYLE=profile_serve_and_test
+  - WORKFLOW_TEST=example2/wf4-shed-tools.ga PLANEMO_TEST_STYLE=docker_test
 
 script: sh run_tests.sh "$WORKFLOW_TEST"
 
