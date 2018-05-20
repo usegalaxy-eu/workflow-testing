@@ -1,17 +1,20 @@
 language: python
 sudo: true  # Only required if PLANEMO_TEST_STYLE runs with Docker
-
 python: 2.7
 env:
-  # First variant not yet working, not sure why...
-  # - WORKFLOW_TEST=example1/wf3-shed-tools.ga PLANEMO_TEST_STYLE=test
-  - WORKFLOW_TEST=example1/wf3-shed-tools.ga PLANEMO_TEST_STYLE=docker_test
-  - WORKFLOW_TEST=example1/wf3-shed-tools.ga PLANEMO_TEST_STYLE=serve_and_test
-  - WORKFLOW_TEST=example1/wf3-shed-tools.ga PLANEMO_TEST_STYLE=docker_serve_and_test
-  - WORKFLOW_TEST=example1/wf3-shed-tools.ga PLANEMO_TEST_STYLE=profile_serve_and_test
-  - WORKFLOW_TEST=example2/wf4-shed-tools.ga PLANEMO_TEST_STYLE=docker_test
+  global:
+    - PLANEMO_TEST_SCRIPT="https://raw.githubusercontent.com/galaxyproject/planemo/master/scripts/run_galaxy_workflow_tests.sh"
+    - PLANEMO_TARGET="planemo==0.50.1"
+  matrix:
+    # First variant not yet working, not sure why...
+    # - WORKFLOW_TEST=example1/wf3-shed-tools.ga PLANEMO_TEST_STYLE=test
+    - WORKFLOW_TEST=example1/wf3-shed-tools.ga PLANEMO_TEST_STYLE=docker_test
+    - WORKFLOW_TEST=example1/wf3-shed-tools.ga PLANEMO_TEST_STYLE=serve_and_test
+    - WORKFLOW_TEST=example1/wf3-shed-tools.ga PLANEMO_TEST_STYLE=docker_serve_and_test
+    - WORKFLOW_TEST=example1/wf3-shed-tools.ga PLANEMO_TEST_STYLE=profile_serve_and_test
+    - WORKFLOW_TEST=example2/wf4-shed-tools.ga PLANEMO_TEST_STYLE=docker_test
 
-script: sh run_tests.sh "$WORKFLOW_TEST"
+script: bash <(curl -s "$PLANEMO_TEST_SCRIPT") "$WORKFLOW_TEST"
 
 services:
   - postgresql  # Only required if PLANEMO_TEST_STYLE runs without Docker
