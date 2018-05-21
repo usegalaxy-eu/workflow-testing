@@ -18,7 +18,6 @@ env:
 matrix:
   allow_failures:
     - env: WORKFLOW_TEST=example1/wf3-shed-tools.ga PLANEMO_TEST_STYLE=test
-    - env: WORKFLOW_TEST=example1/wf3-shed-tools.ga PLANEMO_TEST_STYLE=manual_docker_run_and_test
 
 script: bash <(curl -s "$PLANEMO_TEST_SCRIPT") "$WORKFLOW_TEST"
 
