@@ -15,10 +15,6 @@ env:
     - WORKFLOW_TEST=example1/wf3-shed-tools.ga PLANEMO_TEST_STYLE=manual_docker_run_and_test
     - WORKFLOW_TEST=example2/wf4-shed-tools.ga PLANEMO_TEST_STYLE=docker_test
 
-matrix:
-  allow_failures:
-    - env: WORKFLOW_TEST=example1/wf3-shed-tools.ga PLANEMO_TEST_STYLE=test
-
 script: bash <(curl -s "$PLANEMO_TEST_SCRIPT") "$WORKFLOW_TEST"
 
 services:
