@@ -10,6 +10,8 @@ Workflow                   | Status
 ---                        | ---
 example1/wf3-shed-tools.ga | [![Build Status](https://build.usegalaxy.eu/job/usegalaxy.eu/job/workflow-testing/PYTHON=System-CPython-2.7,WORKFLOW=example1%2Fwf3-shed-tools.ga/badge/icon)](https://build.usegalaxy.eu/job/usegalaxy.eu/job/workflow-testing/PYTHON=System-CPython-2.7,WORKFLOW=example1%2Fwf3-shed-tools.ga/)
 example2/wf4-shed-tools.ga | [![Build Status](https://build.usegalaxy.eu/job/usegalaxy.eu/job/workflow-testing/PYTHON=System-CPython-2.7,WORKFLOW=example2%2Fwf4-shed-tools.ga/badge/icon)](https://build.usegalaxy.eu/job/usegalaxy.eu/job/workflow-testing/PYTHON=System-CPython-2.7,WORKFLOW=example2%2Fwf4-shed-tools.ga/)
+HiCExplorer/scratch-to-contact.ga | [![Build Status](https://build.usegalaxy.eu/job/usegalaxy.eu/job/workflow-testing/PYTHON=System-CPython-2.7,WORKFLOW=HiCExplorer%2Fscratch-to-contact.ga/badge/icon)](https://build.usegalaxy.eu/job/usegalaxy.eu/job/workflow-testing/PYTHON=System-CPython-2.7,WORKFLOW=HiCExplorer%2Fscratch-to-contact.ga/)
+example_blockclust/blockclust_workflow.ga  | [![Build Status](https://build.usegalaxy.eu/job/usegalaxy.eu/job/workflow-testing/PYTHON=System-CPython-2.7,WORKFLOW=example_blockclust%2Fblockclust_workflow.ga /badge/icon)](https://build.usegalaxy.eu/job/usegalaxy.eu/job/workflow-testing/PYTHON=System-CPython-2.7,WORKFLOW=example_blockclust%2Fblockclust_workflow.ga/)
 
 ## Test Files
 
