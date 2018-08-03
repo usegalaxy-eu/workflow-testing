@@ -10,7 +10,12 @@
       "errors": null,
       "id": 0,
       "input_connections": {},
-      "inputs": [],
+      "inputs": [
+          {
+          "name": "Forward", 
+          "description": ""
+          }
+      ],
       "label": "Forward",
       "name": "Input dataset",
       "outputs": [],
@@ -19,7 +24,7 @@
         "top": 335
       },
       "tool_id": null,
-      "tool_state": "{}",
+      "tool_state": "{\"name\": \"Forward\"}",
       "tool_version": null,
       "type": "data_input",
       "uuid": "1b01f7c2-da37-4311-baac-20143fedea57",
@@ -31,7 +36,12 @@
       "errors": null,
       "id": 1,
       "input_connections": {},
-      "inputs": [],
+      "inputs": [
+          {
+          "name": "Reverse", 
+          "description": ""
+          }
+      ],
       "label": "Reverse",
       "name": "Input dataset",
       "outputs": [],
@@ -40,7 +50,7 @@
         "top": 463
       },
       "tool_id": null,
-      "tool_state": "{}",
+      "tool_state": "{\"name\": \"Reverse\"}",
       "tool_version": null,
       "type": "data_input",
       "uuid": "3fbbf2cd-fad1-4952-aa92-cfe1bae98aa1",

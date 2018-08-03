@@ -1,6 +1,6 @@
 Reverse:
   class: File
-  path: small_test_R1_unsorted.sam forward.sam
+  path: small_test_R1_unsorted.sam
 Forward:
   class: File
   path: small_test_R2_unsorted.sam 
