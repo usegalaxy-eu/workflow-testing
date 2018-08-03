@@ -1,0 +1,2 @@
+ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR209/ERR209218/ERR209218_1.fastq.gz
+ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR209/ERR209218/ERR209218_2.fastq.gz

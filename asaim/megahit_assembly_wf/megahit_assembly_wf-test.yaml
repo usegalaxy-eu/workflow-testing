@@ -1,0 +1,21 @@
+- doc: Test sample data for the ASaiM assembly workflow using MEGAHIT
+  job: shotgun_wf-job.yml
+  outputs:
+    megahit_output:
+      asserts:
+        has_text:
+          text: 'k141_1 flag=1 multi=2.0000 len=344'
+    quast_tsv_output:
+      asserts:
+        has_text:
+          text: '14598532'
+    bowtie2_stats:
+      asserts:
+        has_text:
+          text: '42.13% overall alignment rate'
+    multiqc_html:
+      asserts:
+        has_text:
+          text: 'fastqc'
+          
+
