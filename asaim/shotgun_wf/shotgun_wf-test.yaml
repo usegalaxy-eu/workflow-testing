@@ -1,0 +1,27 @@
+- doc: Test sample data for the ASaiM shotgun workflow
+  job: shotgun_wf-job.yml
+  outputs:
+    metaphlan2_community:
+      asserts:
+        has_text:
+          text: 'k__Bacteria|p__Proteobacteria|c__Gammaproteobacteria|o__Pseudomonadales|f__Pseudomonadaceae|g__Pseudomonas'
+    krona_html:
+      asserts:
+        has_text:
+          text: 'Pseudomonas'
+    humann2_gene_families:
+      asserts:
+        has_text:
+          text: 'c__Gammaproteobacteria'
+    humann2_path_abundance:
+      asserts:
+        has_text:
+          text: ''
+    genus_level_gene_families:
+      asserts:
+        has_text:
+          text: 'g__Pseudomonas'
+    combined_gene_families:
+      asserts:
+        has_text:
+          text: 'c__Gammaproteobacteria'
