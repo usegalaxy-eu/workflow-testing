@@ -11,10 +11,10 @@
       "id": 0,
       "input_connections": {},
       "inputs": [
-          {
-          "name": "Forward", 
-          "description": ""
-          }
+        {
+          "description": "",
+          "name": "Forward"
+        }
       ],
       "label": "Forward",
       "name": "Input dataset",
@@ -28,7 +28,13 @@
       "tool_version": null,
       "type": "data_input",
       "uuid": "1b01f7c2-da37-4311-baac-20143fedea57",
-      "workflow_outputs": []
+      "workflow_outputs": [
+        {
+          "label": null,
+          "output_name": "output",
+          "uuid": "92d61139-6470-476f-834d-92b54d52ea75"
+        }
+      ]
     },
     "1": {
       "annotation": "",
@@ -37,10 +43,10 @@
       "id": 1,
       "input_connections": {},
       "inputs": [
-          {
-          "name": "Reverse", 
-          "description": ""
-          }
+        {
+          "description": "",
+          "name": "Reverse"
+        }
       ],
       "label": "Reverse",
       "name": "Input dataset",
@@ -54,7 +60,13 @@
       "tool_version": null,
       "type": "data_input",
       "uuid": "3fbbf2cd-fad1-4952-aa92-cfe1bae98aa1",
-      "workflow_outputs": []
+      "workflow_outputs": [
+        {
+          "label": null,
+          "output_name": "output",
+          "uuid": "e5d1a243-295a-45dd-b303-880c0cc3d792"
+        }
+      ]
     },
     "2": {
       "annotation": "",
@@ -99,7 +111,7 @@
         "owner": "crs4",
         "tool_shed": "toolshed.g2.bx.psu.edu"
       },
-      "tool_state": "{\"genomeSource\": \"{\\\"indices\\\": \\\"TAIR10\\\", \\\"refGenomeSource\\\": \\\"indexed\\\", \\\"__current_case__\\\": 0}\", \"__page__\": null, \"__rerun_remap_job_id__\": null, \"paired\": \"{\\\"interPairEnd\\\": \\\"false\\\", \\\"fastq\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}, \\\"sPaired\\\": \\\"single\\\", \\\"__current_case__\\\": 0}\", \"params\": \"{\\\"minEditDistSeed\\\": \\\"19\\\", \\\"seqMatch\\\": \\\"1\\\", \\\"clipping\\\": \\\"0\\\", \\\"offDiagonal\\\": \\\"100\\\", \\\"seedsOccurrence\\\": \\\"10000\\\", \\\"minScore\\\": \\\"30\\\", \\\"gapOpen\\\": \\\"6\\\", \\\"mismatch\\\": \\\"4\\\", \\\"outputAll\\\": \\\"false\\\", \\\"unpairedReadpair\\\": \\\"17\\\", \\\"gapExtension\\\": \\\"50\\\", \\\"skipPairing\\\": \\\"false\\\", \\\"bandWidth\\\": \\\"100\\\", \\\"readGroup\\\": {\\\"__current_case__\\\": 1, \\\"specReadGroup\\\": \\\"no\\\"}, \\\"mateRescue\\\": \\\"false\\\", \\\"__current_case__\\\": 1, \\\"mark\\\": \\\"false\\\", \\\"internalSeeds\\\": \\\"1.5\\\", \\\"source_select\\\": \\\"full\\\"}\", \"suppressHeader\": \"\\\"false\\\"\"}",
+      "tool_state": "{\"genomeSource\": \"{\\\"indices\\\": \\\"dm6\\\", \\\"refGenomeSource\\\": \\\"indexed\\\", \\\"__current_case__\\\": 0}\", \"__page__\": null, \"__rerun_remap_job_id__\": null, \"paired\": \"{\\\"interPairEnd\\\": \\\"false\\\", \\\"fastq\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}, \\\"sPaired\\\": \\\"single\\\", \\\"__current_case__\\\": 0}\", \"params\": \"{\\\"minEditDistSeed\\\": \\\"19\\\", \\\"seqMatch\\\": \\\"1\\\", \\\"clipping\\\": \\\"0\\\", \\\"offDiagonal\\\": \\\"100\\\", \\\"seedsOccurrence\\\": \\\"10000\\\", \\\"minScore\\\": \\\"30\\\", \\\"gapOpen\\\": \\\"6\\\", \\\"mismatch\\\": \\\"4\\\", \\\"outputAll\\\": \\\"false\\\", \\\"unpairedReadpair\\\": \\\"17\\\", \\\"gapExtension\\\": \\\"50\\\", \\\"skipPairing\\\": \\\"false\\\", \\\"bandWidth\\\": \\\"100\\\", \\\"readGroup\\\": {\\\"__current_case__\\\": 1, \\\"specReadGroup\\\": \\\"no\\\"}, \\\"mateRescue\\\": \\\"false\\\", \\\"__current_case__\\\": 1, \\\"mark\\\": \\\"false\\\", \\\"internalSeeds\\\": \\\"1.5\\\", \\\"source_select\\\": \\\"full\\\"}\", \"suppressHeader\": \"\\\"false\\\"\"}",
       "tool_version": "0.8.0",
       "type": "tool",
       "uuid": "4a6d2ae5-0374-4b75-9e67-e60c14186d3f",
@@ -148,7 +160,7 @@
         "owner": "crs4",
         "tool_shed": "toolshed.g2.bx.psu.edu"
       },
-      "tool_state": "{\"genomeSource\": \"{\\\"indices\\\": \\\"TAIR10\\\", \\\"refGenomeSource\\\": \\\"indexed\\\", \\\"__current_case__\\\": 0}\", \"__page__\": null, \"__rerun_remap_job_id__\": null, \"paired\": \"{\\\"interPairEnd\\\": \\\"false\\\", \\\"fastq\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}, \\\"sPaired\\\": \\\"single\\\", \\\"__current_case__\\\": 0}\", \"params\": \"{\\\"minEditDistSeed\\\": \\\"19\\\", \\\"seqMatch\\\": \\\"1\\\", \\\"clipping\\\": \\\"1\\\", \\\"offDiagonal\\\": \\\"100\\\", \\\"seedsOccurrence\\\": \\\"10000\\\", \\\"minScore\\\": \\\"30\\\", \\\"gapOpen\\\": \\\"6\\\", \\\"mismatch\\\": \\\"4\\\", \\\"outputAll\\\": \\\"false\\\", \\\"unpairedReadpair\\\": \\\"17\\\", \\\"gapExtension\\\": \\\"50\\\", \\\"skipPairing\\\": \\\"false\\\", \\\"bandWidth\\\": \\\"100\\\", \\\"readGroup\\\": {\\\"__current_case__\\\": 1, \\\"specReadGroup\\\": \\\"no\\\"}, \\\"mateRescue\\\": \\\"false\\\", \\\"__current_case__\\\": 1, \\\"mark\\\": \\\"false\\\", \\\"internalSeeds\\\": \\\"1.5\\\", \\\"source_select\\\": \\\"full\\\"}\", \"suppressHeader\": \"\\\"false\\\"\"}",
+      "tool_state": "{\"genomeSource\": \"{\\\"indices\\\": \\\"dm6\\\", \\\"refGenomeSource\\\": \\\"indexed\\\", \\\"__current_case__\\\": 0}\", \"__page__\": null, \"__rerun_remap_job_id__\": null, \"paired\": \"{\\\"interPairEnd\\\": \\\"false\\\", \\\"fastq\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}, \\\"sPaired\\\": \\\"single\\\", \\\"__current_case__\\\": 0}\", \"params\": \"{\\\"minEditDistSeed\\\": \\\"19\\\", \\\"seqMatch\\\": \\\"1\\\", \\\"clipping\\\": \\\"1\\\", \\\"offDiagonal\\\": \\\"100\\\", \\\"seedsOccurrence\\\": \\\"10000\\\", \\\"minScore\\\": \\\"30\\\", \\\"gapOpen\\\": \\\"6\\\", \\\"mismatch\\\": \\\"4\\\", \\\"outputAll\\\": \\\"false\\\", \\\"unpairedReadpair\\\": \\\"17\\\", \\\"gapExtension\\\": \\\"50\\\", \\\"skipPairing\\\": \\\"false\\\", \\\"bandWidth\\\": \\\"100\\\", \\\"readGroup\\\": {\\\"__current_case__\\\": 1, \\\"specReadGroup\\\": \\\"no\\\"}, \\\"mateRescue\\\": \\\"false\\\", \\\"__current_case__\\\": 1, \\\"mark\\\": \\\"false\\\", \\\"internalSeeds\\\": \\\"1.5\\\", \\\"source_select\\\": \\\"full\\\"}\", \"suppressHeader\": \"\\\"false\\\"\"}",
       "tool_version": "0.8.0",
       "type": "tool",
       "uuid": "3744db0b-6ada-4bcf-941a-5e41e82a879d",
@@ -156,7 +168,7 @@
     },
     "4": {
       "annotation": "",
-      "content_id": "toolshed.g2.bx.psu.edu/repos/bgruening/hicexplorer_hicbuildmatrix/hicexplorer_hicbuildmatrix/2.1.2.0",
+      "content_id": "toolshed.g2.bx.psu.edu/repos/bgruening/hicexplorer_hicbuildmatrix/hicexplorer_hicbuildmatrix/2.1.4.0",
       "errors": null,
       "id": 4,
       "input_connections": {
@@ -195,20 +207,20 @@
         "top": 299
       },
       "post_job_actions": {},
-      "tool_id": "toolshed.g2.bx.psu.edu/repos/bgruening/hicexplorer_hicbuildmatrix/hicexplorer_hicbuildmatrix/2.1.2.0",
+      "tool_id": "toolshed.g2.bx.psu.edu/repos/bgruening/hicexplorer_hicbuildmatrix/hicexplorer_hicbuildmatrix/2.1.4.0",
       "tool_shed_repository": {
-        "changeset_revision": "495ae38f6e0d",
+        "changeset_revision": "4ceaee0043a5",
         "name": "hicexplorer_hicbuildmatrix",
         "owner": "bgruening",
         "tool_shed": "toolshed.g2.bx.psu.edu"
       },
-      "tool_state": "{\"__page__\": null, \"outputFormat\": \"\\\"h5\\\"\", \"outBam_Boolean\": \"\\\"false\\\"\", \"restrictionSequence\": \"\\\"\\\"\", \"region\": \"\\\"\\\"\", \"restrictionCutFileBinSize_conditional\": \"{\\\"__current_case__\\\": 1, \\\"restrictionCutFileBinSize_selector\\\": \\\"optionBinSize\\\", \\\"binSize\\\": \\\"\\\"}\", \"samFiles\": \"[{\\\"__index__\\\": 0, \\\"samFile\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}}, {\\\"__index__\\\": 1, \\\"samFile\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}}]\", \"danglingSequence\": \"\\\"\\\"\", \"minMappingQuality\": \"\\\"\\\"\", \"__rerun_remap_job_id__\": null, \"keepSelfCircles\": \"\\\"false\\\"\"}",
-      "tool_version": "2.1.2.0",
+      "tool_state": "{\"__page__\": null, \"outputFormat\": \"\\\"h5\\\"\", \"outBam_Boolean\": \"\\\"false\\\"\", \"restrictionSequence\": \"\\\"\\\"\", \"region\": \"\\\"\\\"\", \"restrictionCutFileBinSize_conditional\": \"{\\\"__current_case__\\\": 1, \\\"restrictionCutFileBinSize_selector\\\": \\\"optionBinSize\\\", \\\"binSize\\\": \\\"5000\\\"}\", \"samFiles\": \"[{\\\"__index__\\\": 0, \\\"samFile\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}}, {\\\"__index__\\\": 1, \\\"samFile\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}}]\", \"danglingSequence\": \"\\\"\\\"\", \"minMappingQuality\": \"\\\"\\\"\", \"__rerun_remap_job_id__\": null, \"keepSelfCircles\": \"\\\"false\\\"\"}",
+      "tool_version": "2.1.4.0",
       "type": "tool",
       "uuid": "153da939-7eae-4b4b-8c12-70718abe8c50",
       "workflow_outputs": [
         {
-          "label": "hicmatrix",
+          "label": null,
           "output_name": "outFileName",
           "uuid": "a28bdfa6-c0a4-4083-adc8-eb18e4989abf"
         },
@@ -231,5 +243,5 @@
     }
   },
   "tags": [],
-  "uuid": "63b4b5e8-0069-4743-bb60-557a3a1f8d08"
+  "uuid": "abd56795-ae69-4d7e-8fa8-3d926bb66730"
 }
