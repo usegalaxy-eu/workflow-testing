@@ -1,0 +1,6 @@
+Mate 1:
+  class: File
+  path: ERR209218_1.fastq.gz
+Mate 2:
+  class: File
+  path: ERR209218_2.fastq.gz

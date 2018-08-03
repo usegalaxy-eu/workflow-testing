@@ -1,0 +1,21 @@
+- doc: Test sample data for the ASaiM assembly workflow using metaSPAdes
+  job: shotgun_wf-job.yml
+  outputs:
+    metaspades_contigs:
+      asserts:
+        has_text:
+          text: 'NODE_1_length_265022_cov_5.5507'
+    quast_tsv_output:
+      asserts:
+        has_text:
+          text: '14598532'
+    bowtie2_stats:
+      asserts:
+        has_text:
+          text: '42.13% overall alignment rate'
+    multiqc_html:
+      asserts:
+        has_text:
+          text: 'fastqc'
+          
+
