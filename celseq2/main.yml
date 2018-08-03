@@ -1,0 +1,21 @@
+- doc: Create input batch
+  job: files.yml
+    WD_P1_B1:
+      class: Collection
+      collection_type: paired
+      elements:
+        - identifier: forward
+          class: File
+          path: WD_DP_P1_1_forward.sub.fastq
+        - identifier: reverse
+          class: File
+          path: WD_DP_P1_1_reverse.sub.fastq
+
+
+- doc: Test outputs
+  job: files.yml
+  outputs:
+    extract2output:
+      asserts:
+        has_text:
+          text: "@J"
