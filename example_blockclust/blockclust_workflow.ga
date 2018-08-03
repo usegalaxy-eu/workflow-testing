@@ -223,7 +223,9 @@
         "left": 132.5,
         "top": 257.5
       },
-      "inputs": [],
+      "inputs": [
+        {"name": "blockclust_input", "description": ""}
+      ],
       "label": "blockclust_input",
       "name": "Input dataset",
       "errors": null,
@@ -232,7 +234,7 @@
       "outputs": [],
       "workflow_outputs": [],
       "input_connections": {},
-      "tool_state": "{}",
+      "tool_state": "{\"name\": \"blockclust_input\"}",
       "id": 0,
       "uuid": "db26f352-07df-4188-909e-55e9224287b3"
     }
