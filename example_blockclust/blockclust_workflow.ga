@@ -28,7 +28,13 @@
       "tool_version": null,
       "type": "data_input",
       "uuid": "db26f352-07df-4188-909e-55e9224287b3",
-      "workflow_outputs": []
+      "workflow_outputs": [
+        {
+          "label": null,
+          "output_name": "output",
+          "uuid": "c353237b-7a61-4677-aa20-58d459935357"
+        }
+      ]
     },
     "1": {
       "annotation": "",
@@ -195,6 +201,11 @@
           "action_type": "HideDatasetAction",
           "output_name": "clusters"
         },
+        "HideDatasetActionhclust_plot": {
+          "action_arguments": {},
+          "action_type": "HideDatasetAction",
+          "output_name": "hclust_plot"
+        },
         "HideDatasetActionmodel_based_pred_bed": {
           "action_arguments": {},
           "action_type": "HideDatasetAction",
@@ -227,13 +238,7 @@
       "tool_version": "1.0.0",
       "type": "tool",
       "uuid": "a6ec4d94-c110-4f27-a2a2-7c3291cab692",
-      "workflow_outputs": [
-        {
-          "label": "blockclust_hclust_plot",
-          "output_name": "hclust_plot",
-          "uuid": "5898de22-d7d4-4d6f-b3a6-15215c6c7ee8"
-        }
-      ]
+      "workflow_outputs": []
     }
   },
   "tags": [],
