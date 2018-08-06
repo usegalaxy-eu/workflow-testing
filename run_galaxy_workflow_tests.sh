@@ -1,4 +1,5 @@
 #!/bin/bash
+set -ex
 : ${PLANEMO_OPTIONS:=""}  # e.g. PLANEMO_OPTIONS="--verbose"
 
 # Ensure we can find this history later.
