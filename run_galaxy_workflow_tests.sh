@@ -16,7 +16,7 @@ planemo $PLANEMO_OPTIONS test \
 planemo_exit_code=$?
 set -e
 
-history_id=$(parsec histories get_histories --name 'CWL Target History' | jq -r .[0].id)
+history_id=$(parsec histories get_histories --name "$history_name" | jq -r .[0].id)
 history_slug=$(parsec histories update_history --importable $history_id | jq -r .username_and_slug)
 echo "History published at https://usegalaxy.eu/$history_slug"
 exit $planemo_exit_code
