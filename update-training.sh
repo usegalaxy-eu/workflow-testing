@@ -17,13 +17,19 @@ update_workflows() {
 	done
 }
 
-identify_workflows() {
-	find training -name '*-test.yml' | sed 's/-test.yml/.ga/'
-}
-
 
 #clone
 update_workflows
 
 echo "Please register or add the following:"
-identify_workflows
+echo
+find training -name '*-test.yml' | sed 's/-test.yml/.ga/'
+echo
+echo "And add the following to the readme:"
+echo
+
+for training in $(find training -name '*-test.yml' | sed 's/-test.yml/.ga/'); do
+	training_escape=$(echo $training | sed 's|/|%2F|g')
+	echo "$training |  [![Build Status](https://build.usegalaxy.eu/job/usegalaxy.eu/job/workflow-testing/PYTHON=System-CPython-2.7,WORKFLOW=${training_escape}/badge/icon)](https://build.usegalaxy.eu/job/usegalaxy.eu/job/workflow-testing/PYTHON=System-CPython-2.7,WORKFLOW=${training_escape}/)"
+done
+
