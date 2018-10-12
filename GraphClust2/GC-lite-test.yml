@@ -1,0 +1,7 @@
+- doc: Test sample data for graphclust workflow
+  job: GC-lite-job.yml
+  outputs:
+    final_stats:
+      asserts:
+        has_line:
+          line: 'CLUSTER  1  SEQS  14  IDS_UNIQUE  14  MODELS  1'
