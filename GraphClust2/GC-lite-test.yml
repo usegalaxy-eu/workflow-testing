@@ -1,0 +1,15 @@
+- doc: Test sample data for graphclust workflow
+  job:
+    cliques_lite:
+      class: File
+      location: https://github.com/BackofenLab/docker-galaxy-graphclust/raw/master/sample_data/cliques-low-representatives.fa
+      filetype: fasta
+  outputs:
+    evaluation_text:
+      asserts:
+        has_text:
+          text: "adjusted_rand_score"
+    glob_report_final_stats:
+      asserts:
+        has_text:
+          text: "CLUSTER  1  SEQS"
