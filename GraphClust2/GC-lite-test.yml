@@ -2,7 +2,8 @@
   job:
     cliques_lite:
       class: File
-      path: cliques-low-representatives.fa
+      location: https://github.com/BackofenLab/docker-galaxy-graphclust/raw/master/sample_data/cliques-low-representatives.fa
+      filetype: fasta
   outputs:
     evaluation_text:
       asserts:
