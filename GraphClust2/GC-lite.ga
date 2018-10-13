@@ -1,5 +1,7 @@
 {
     "uuid": "555ecf2d-98db-4ae7-ad0a-55ce41693d25",
+    "annotation": "",
+    "a_galaxy_workflow": "true",
     "tags": [],
     "format-version": "0.1",
     "name": "GC-lite-wf",
@@ -8,13 +10,7 @@
             "tool_id": null,
             "tool_version": null,
             "outputs": [],
-            "workflow_outputs": [
-                {
-                    "output_name": "output",
-                    "uuid": "8f49a89e-563d-41ee-a7eb-4062a39b4bd0",
-                    "label": null
-                }
-            ],
+            "workflow_outputs": [],
             "input_connections": {},
             "tool_state": "{\"name\": \"cliques_lite\"}",
             "id": 0,
@@ -168,7 +164,7 @@
                 {
                     "output_name": "dot_bracket_stdout",
                     "uuid": "c9679358-f558-4e12-ae47-7e0a08afa5f5",
-                    "label": null
+                    "label": "dot_bracket_stdout"
                 }
             ],
             "input_connections": {
@@ -224,13 +220,7 @@
                     "name": "gspan_compressed"
                 }
             ],
-            "workflow_outputs": [
-                {
-                    "output_name": "gspan_compressed",
-                    "uuid": "9031e069-4007-4289-bda8-dee7b5ce838e",
-                    "label": null
-                }
-            ],
+            "workflow_outputs": [],
             "input_connections": {
                 "dataFile": {
                     "output_name": "dot_bracket_stdout",
@@ -273,13 +263,7 @@
                     "name": "data_svector"
                 }
             ],
-            "workflow_outputs": [
-                {
-                    "output_name": "data_svector",
-                    "uuid": "b5b899de-9189-4d6c-b6bf-9831280f4519",
-                    "label": null
-                }
-            ],
+            "workflow_outputs": [],
             "input_connections": {
                 "data_fasta": {
                     "output_name": "data.fasta",
@@ -456,13 +440,7 @@
                     "name": "tree_matrix"
                 }
             ],
-            "workflow_outputs": [
-                {
-                    "output_name": "centers",
-                    "uuid": "e2b8f028-0c11-4250-948e-25ae238b2fc9",
-                    "label": null
-                }
-            ],
+            "workflow_outputs": [],
             "input_connections": {
                 "fasta_data": {
                     "output_name": "data.fasta",
@@ -550,13 +528,7 @@
                     "name": "model_tree_stk"
                 }
             ],
-            "workflow_outputs": [
-                {
-                    "output_name": "model_tree_stk",
-                    "uuid": "c63dc730-7999-484b-a875-e9fafce2ccce",
-                    "label": null
-                }
-            ],
+            "workflow_outputs": [],
             "input_connections": {
                 "tree_file": {
                     "output_name": "trees",
@@ -623,13 +595,7 @@
                     "name": "model_cmfinder_stk"
                 }
             ],
-            "workflow_outputs": [
-                {
-                    "output_name": "model_cmfinder_stk",
-                    "uuid": "884fcb76-feaa-41b2-a85c-bc6cd38a89f7",
-                    "label": null
-                }
-            ],
+            "workflow_outputs": [],
             "input_connections": {
                 "model_tree_stk": {
                     "output_name": "model_tree_stk",
@@ -708,13 +674,7 @@
                     "name": "xfile"
                 }
             ],
-            "workflow_outputs": [
-                {
-                    "output_name": "cmfile_outfile",
-                    "uuid": "f454a87a-7895-4019-88b0-661e0cea70eb",
-                    "label": null
-                }
-            ],
+            "workflow_outputs": [],
             "input_connections": {
                 "alignment_infile": {
                     "output_name": "model_cmfinder_stk",
@@ -797,13 +757,7 @@
                     "name": "multiple_alignment_output"
                 }
             ],
-            "workflow_outputs": [
-                {
-                    "output_name": "outfile",
-                    "uuid": "969e0a60-af5b-4844-848c-7f4a5992f5d0",
-                    "label": null
-                }
-            ],
+            "workflow_outputs": [],
             "input_connections": {
                 "cm_opts|cmfile": {
                     "output_name": "cmfile_outfile",
@@ -905,46 +859,8 @@
                 }
             ],
             "workflow_outputs": [
-                {
-                    "output_name": "topDot",
-                    "uuid": "14959ce4-9e2c-4174-8952-ed1dc12bd395",
-                    "label": null
-                },
-                {
-                    "output_name": "combined_cm_out",
-                    "uuid": "ebe3e832-652a-4ddd-9a8e-958c4b4b2b63",
-                    "label": null
-                },
-                {
-                    "output_name": "final_stats",
-                    "uuid": "38bc3ed1-1dba-4665-b2bc-88698f5875aa",
-                    "label": "final_stats"
-                },
-                {
-                    "output_name": "rscapePlot",
-                    "uuid": "83056e90-807e-4508-aab6-0bd2096ab810",
-                    "label": null
-                },
-                {
-                    "output_name": "topSecondaryStruct",
-                    "uuid": "e73c4935-1b80-4c65-aa9a-43e8a8159d23",
-                    "label": null
-                },
-                {
-                    "output_name": "clusters",
-                    "uuid": "d2a96c0d-4702-40cd-9f89-79b95065dfe8",
-                    "label": null
-                },
-                {
-                    "output_name": "evaluation",
-                    "uuid": "51dc83c0-5c56-48e8-91ee-e4b3fac56602",
-                    "label": null
-                },
-                {
-                    "output_name": "RESULTS_zip",
-                    "uuid": "a5be4bfe-adc1-4511-b9c1-9799bc92353b",
-                    "label": null
-                }
+                {"output_name": "final_stats", "label": "glob_report_final_stats"},
+                {"output_name": "evaluation", "label": "evaluation_text"}
             ],
             "input_connections": {
                 "model_tree_files": {
@@ -1020,7 +936,5 @@
             "content_id": "toolshed.g2.bx.psu.edu/repos/rnateam/graphclust_postprocessing/glob_report/0.4",
             "type": "tool"
         }
-    },
-    "annotation": "",
-    "a_galaxy_workflow": "true"
+    }
 }
