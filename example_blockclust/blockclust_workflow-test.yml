@@ -1,5 +1,8 @@
 - doc: Test blockclust workflow in Galaxy Europe
-  job: blockclust_workflow-job.yml
+  job:
+    blockclust_input:
+      class: File
+      path: blockclust1.bed
   outputs:
     blockclust_hclust_plot:
       asserts:
