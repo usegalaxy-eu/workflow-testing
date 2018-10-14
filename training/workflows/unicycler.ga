@@ -1,5 +1,5 @@
 {
-    "uuid":"2fa1768f-116d-4695-83c5-6a07eff7be33",
+    "uuid":"2d0f5854-4e29-48fe-8a19-47c45c01f6b1",
     "tags":[
 
     ],
@@ -13,7 +13,6 @@
 
             ],
             "workflow_outputs":[
-
             ],
             "input_connections":{
 
@@ -45,7 +44,6 @@
 
             ],
             "workflow_outputs":[
-
             ],
             "input_connections":{
 
@@ -64,7 +62,7 @@
             ],
             "position":{
                 "top":683,
-                "left":103.9666748046875
+                "left":103.96665954589844
             },
             "annotation":"",
             "content_id":null,
@@ -77,7 +75,6 @@
 
             ],
             "workflow_outputs":[
-
             ],
             "input_connections":{
 
@@ -116,7 +113,6 @@
                 }
             ],
             "workflow_outputs":[
-
             ],
             "input_connections":{
                 "input_file":{
@@ -175,7 +171,6 @@
                 }
             ],
             "workflow_outputs":[
-
             ],
             "input_connections":{
                 "input_file":{
@@ -234,7 +229,6 @@
                 }
             ],
             "workflow_outputs":[
-
             ],
             "input_connections":{
                 "paired_unpaired|fastq_input2":{
@@ -296,44 +290,55 @@
             "type":"tool"
         },
         "6":{
-            "tool_id":"toolshed.g2.bx.psu.edu/repos/iuc/quast/quast/4.1.1",
-            "tool_version":"4.1.1",
+            "tool_id":"toolshed.g2.bx.psu.edu/repos/iuc/quast/quast/4.6.3",
+            "tool_version":"4.6.3",
             "outputs":[
                 {
                     "type":"txt",
-                    "name":"quast_out"
+                    "name":"log_txt"
                 },
                 {
-                    "type":"tsv",
-                    "name":"quast_tsv"
+                    "type":"tabular",
+                    "name":"mis_ass_tsv"
                 },
                 {
-                    "type":"tex",
-                    "name":"quast_tex"
+                    "type":"tabular",
+                    "name":"unalign_tsv"
                 },
                 {
                     "type":"html",
-                    "name":"icarus"
+                    "name":"contig_size_viewer"
+                },
+                {
+                    "type":"html",
+                    "name":"alignment_viewer"
+                },
+                {
+                    "type":"tabular",
+                    "name":"quast_tsv"
                 },
                 {
                     "type":"html",
                     "name":"report_html"
+                },
+                {
+                    "type":"pdf",
+                    "name":"report_pdf"
                 }
             ],
             "workflow_outputs":[
-
             ],
             "input_connections":{
-                "files_0|input":{
+                "input":{
                     "output_name":"assembly",
                     "id":5
                 }
             },
-            "tool_state":"{\"files\": \"[{\\\"type_file\\\": \\\"scaffold\\\", \\\"__index__\\\": 0, \\\"input\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}}]\", \"input_operon\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"__page__\": null, \"threshold_contig\": \"\\\"0,1000\\\"\", \"__rerun_remap_job_id__\": null, \"annot\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"input_size\": \"\\\"\\\"\", \"input_ref\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"chromInfo\": \"\\\"/galaxy-repl/localdata/chrom/?.len\\\"\", \"min_contig\": \"\\\"500\\\"\", \"gene_selection\": \"\\\"prokaryotes\\\"\"}",
+            "tool_state":"{\"files\": \"[{\\\"type_file\\\": \\\"scaffold\\\", \\\"__index__\\\": 0, \\\"input\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}}]\", \"input_operon\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"__page__\": null, \"type_file\": \"\\\"contig\\\"\", \"__rerun_remap_job_id__\": null, \"annot\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"threshold_contig\": \"\\\"0,1000\\\"\", \"input\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"input_size\": \"\\\"\\\"\", \"input_ref\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"chromInfo\": \"\\\"/galaxy-repl/localdata/chrom/?.len\\\"\", \"min_contig\": \"\\\"500\\\"\", \"gene_selection\": \"\\\"prokaryotes\\\"\"}",
             "id":6,
             "tool_shed_repository":{
                 "owner":"iuc",
-                "changeset_revision":"2f581f956e1c",
+                "changeset_revision":"0834c823d4b9",
                 "name":"quast",
                 "tool_shed":"toolshed.g2.bx.psu.edu"
             },
@@ -354,16 +359,20 @@
                     "description":"runtime parameter for tool Quast"
                 },
                 {
+                    "name":"input",
+                    "description":"runtime parameter for tool Quast"
+                },
+                {
                     "name":"input_ref",
                     "description":"runtime parameter for tool Quast"
                 }
             ],
             "position":{
-                "top":200,
-                "left":1145.9833984375
+                "top":128,
+                "left":1098.9833374023438
             },
             "annotation":"",
-            "content_id":"toolshed.g2.bx.psu.edu/repos/iuc/quast/quast/4.1.1",
+            "content_id":"toolshed.g2.bx.psu.edu/repos/iuc/quast/quast/4.6.3",
             "type":"tool"
         },
         "7":{
@@ -417,15 +426,18 @@
             ],
             "workflow_outputs":[
                 {
-                    "output_name":"out_ffn",
-                    "label":"ffn"
-                },
-                {
                     "output_name":"out_gbk",
+                    "uuid":"75fae6d1-6191-4371-9ed0-935a2da5fe53",
                     "label":"gbk"
                 },
                 {
+                    "output_name":"out_ffn",
+                    "uuid":"8ebe6394-6c19-41f4-8f57-8bff2328a67f",
+                    "label":"ffn"
+                },
+                {
                     "output_name":"out_tbl",
+                    "uuid":"d35471e9-6561-4a61-af16-f1ae288e7c35",
                     "label":"tbl"
                 }
             ],
@@ -462,7 +474,7 @@
             ],
             "position":{
                 "top":555,
-                "left":1100.9833984375
+                "left":1100.9833374023438
             },
             "annotation":"",
             "content_id":"toolshed.g2.bx.psu.edu/repos/crs4/prokka/prokka/1.12.0",

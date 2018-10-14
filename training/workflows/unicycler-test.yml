@@ -1,5 +1,17 @@
 - doc: Test sample data for the unicycler assembly workflow
-  job: unicycler-job.yml
+  job:
+    forward_reads:
+      class: File
+      location: https://zenodo.org/record/940733/files/illumina_f.fq
+      filetype: fastqsanger
+    reverse_reads:
+      class: File
+      location: https://zenodo.org/record/940733/files/illumina_r.fq
+      filetype: fastqsanger
+    long_reads:
+      class: File
+      location: https://zenodo.org/record/940733/files/minion_2d.fq
+      filetype: fastqsanger
   outputs:
     ffn:
       asserts:
