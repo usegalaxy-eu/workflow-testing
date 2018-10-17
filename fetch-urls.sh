@@ -6,3 +6,4 @@ for dir in $DIRECTORIES; do
 		bash -c "cd $dir && wget --no-clobber --continue -i urls.txt"
 	fi
 done
+
