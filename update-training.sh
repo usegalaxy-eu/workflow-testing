@@ -28,7 +28,7 @@ notify() {
 
 	for training in $(find training -name '*-test.yml' | sed 's/-test.yml/.ga/'); do
 		training_escape=$(echo $training | sed 's|/|%2F|g')
-		echo "$training |  [![Build Status](https://build.usegalaxy.eu/job/usegalaxy.eu/job/workflow-testing/PYTHON=System-CPython-2.7,WORKFLOW=${training_escape}/badge/icon)](https://build.usegalaxy.eu/job/usegalaxy.eu/job/workflow-testing/PYTHON=System-CPython-2.7,WORKFLOW=${training_escape}/)"
+		echo "$training |  [![Build Status](https://build.galaxyproject.eu/job/usegalaxy-eu/job/workflow-testing/PYTHON=System-CPython-2.7,WORKFLOW=${training_escape}/badge/icon)](https://build.galaxyproject.eu/job/usegalaxy-eu/job/workflow-testing/PYTHON=System-CPython-2.7,WORKFLOW=${training_escape}/)"
 	done
 }
 
