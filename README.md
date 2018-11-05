@@ -26,3 +26,7 @@ GraphClust2/GC-lite.ga                                                          
 ## Test Files
 
 For providing test files, each folder contains a `urls.txt` which contains a set of URLs that should be downloaded.
+
+## beautifying wofklow JSON's
+
+To reformat Galaxy's JSON files, this service comes in handy: https://jsonformatter.org/
