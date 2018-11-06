@@ -10,8 +10,9 @@ history_name="$1 $nonce"
 set +e # Do not die if planemo returns non-zero
 planemo $PLANEMO_OPTIONS test \
 	--history_name "$history_name" \
-	--galaxy_url "https://beta.usegalaxy.eu" \
-	--galaxy_user_key "$GALAXY_USER_KEY" --no_shed_install \
+	--galaxy_url "$GALAXY_URL" \
+	--galaxy_user_key "$GALAXY_USER_KEY" \
+	--no_shed_install \
 	--engine external_galaxy \
 	"$1";
 planemo_exit_code=$?
