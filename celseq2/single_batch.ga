@@ -18,7 +18,7 @@
             "input_connections": {},
             "inputs" : [
                 {
-                    "name" : "WD_P1_B1",
+                    "name" : "musc_pair",
                     "description" : ""
                 }
             ],
@@ -56,7 +56,7 @@
             "label": "Barcodes (single-col)",
             "inputs": [
                 {
-                    "name" : "celseq_barcodes.192.txt",
+                    "name" : "mpi_barcodes",
                     "description" : ""
                 }
             ],
@@ -88,7 +88,7 @@
             "label": "GTF file (UCSC)",
             "inputs": [
                 {
-                    "name" : "DanRer",
+                    "name" : "musc_ref",
                     "description" : ""
                 }
             ],
@@ -465,7 +465,7 @@
             ],
             "workflow_outputs": [
                 {
-                    "output_name": "out_counts",
+                    "output_name": "the_count_matrix",
                     "uuid": "209f3dd6-974f-4e76-a206-c86114a6697f",
                     "label": null
                 }

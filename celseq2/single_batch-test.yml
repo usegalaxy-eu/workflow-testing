@@ -1,0 +1,8 @@
+- doc: Test sample FASTQ for celseq2 mm10 data
+  job: files.yml
+  outputs:
+    the_count_matrix:
+      asserts:
+        has_text:
+          text: "1234"
+
