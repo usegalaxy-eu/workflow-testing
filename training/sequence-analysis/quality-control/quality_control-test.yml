@@ -1,6 +1,14 @@
 ---
 - doc: "Test sample data for Sequence-analyses:Quality-control"
-  job: quality_control-job.yml
+  job:
+    reads_1:
+      class: File
+      location: https://zenodo.org/record/61771/files/GSM461178_untreat_paired_subset_1.fastq
+      filetype: fastqsanger
+    reads_2:
+      class: File
+      location: https://zenodo.org/record/61771/files/GSM461178_untreat_paired_subset_2.fastq
+      filetype: fastqsanger
   outputs:
     reads_1_fastqc:
       asserts:
