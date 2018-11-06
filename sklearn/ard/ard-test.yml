@@ -1,6 +1,6 @@
 ---
-- doc: Test sample data for Adaboost regressor workflow
-  job: adaboost-job.yml
+- doc: Test sample data for ARD regressor workflow
+  job: ard-job.yml
   outputs:
     model_results:
       asserts:
