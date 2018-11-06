@@ -628,7 +628,7 @@
                 {
                     "output_name": "text_file",
                     "uuid": "39ff31d1-506c-457b-9a91-bad1f1538729",
-                    "label": "GSM46177_1_fastqc"
+                    "label": "GSM461177_1_fastqc"
                 }
             ],
             "input_connections": {
