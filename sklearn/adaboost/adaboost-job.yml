@@ -1,0 +1,4 @@
+---
+test_target.tabular:
+  class: File
+  location: https://zenodo.org/record/1475816/files/test_target.tabular

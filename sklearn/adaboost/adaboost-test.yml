@@ -1,0 +1,8 @@
+---
+- doc: Test sample data for Adaboost regressor workflow
+  job: adaboost-job.yml
+  outputs:
+    model_results:
+      asserts:
+        has_text:
+          text: '0.039249261220296226'
