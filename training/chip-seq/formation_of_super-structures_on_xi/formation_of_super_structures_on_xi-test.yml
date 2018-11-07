@@ -5,11 +5,11 @@
     wt_H3K4me3_rep1_read1_fastqc:
       asserts:
         has_text:
-          text: 'https___zenodo_org_record_1324070_files_wt_H3K4me3_read1_fastq_gz'
+          text: 'Sanger / Illumina 1.9'
     wt_H3K4me3_rep1_read2_fastqc:
       asserts:
         has_text:
-          text: 'https___zenodo_org_record_1324070_files_wt_H3K4me3_read2_fastq_gz'
+          text: 'Sanger / Illumina 1.9'
     wt_H3K4me3_rep1_trim_galore:
       asserts:
         has_text:
