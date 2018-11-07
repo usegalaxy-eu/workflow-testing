@@ -1,5 +1,5 @@
 ---
-- doc: Test mapping-by-sequencing wwith the MiModD suite of tools on A. thaliana proof-of-principle data
+- doc: Test mapping-by-sequencing with the MiModD suite of tools on A. thaliana proof-of-principle data
   job:
     A_thaliana_ref:
       class: File
