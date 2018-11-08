@@ -4,7 +4,7 @@ Based off of [jmchilton's template](https://github.com/jmchilton/planemo-workflo
 
 ## Testing
 
-We are [automatically running](https://build.galaxyproject.eu/job/usegalaxy-eu/job/workflow-testing/) these workflows weekly against UseGalaxy.eu
+We are [automatically running](https://build.galaxyproject.eu/job/usegalaxy-eu/job/workflow-testing/) these workflows against UseGalaxy.eu
 
 Workflow                                                                                     | Status
 ---                                                                                          | ---
@@ -36,4 +36,3 @@ cat wf.ga | jq . -S > out.ga
 ```
 
 or this webservice: https://jsonformatter.org/
-
