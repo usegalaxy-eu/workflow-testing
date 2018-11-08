@@ -1,0 +1,14 @@
+---
+- doc: Test sample data for Adaboost regressor workflow
+  job:
+    test_target.tabular:
+      class: File
+      location: https://zenodo.org/record/1478640/files/test_target.tabular
+      filetype: tabular
+  outputs:
+    model_results:
+      asserts:
+        has_text:
+          text: 'mean_test_score'
+        has_n_columns:
+          n: "12"
