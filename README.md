@@ -23,10 +23,13 @@ training/metagenomics/general-tutorial/amplicon.ga                              
 training/transcriptomics/ref-based/ref_based.ga                                              | [![Build Status](https://build.galaxyproject.eu/job/usegalaxy-eu/job/workflow-testing/PYTHON=System-CPython-2.7,WORKFLOW=training%2Ftranscriptomics%2Fref-based%2Fref_based.ga/badge/icon                                              )](https://build.galaxyproject.eu/job/usegalaxy-eu/job/workflow-testing/PYTHON=System-CPython-2.7,WORKFLOW=training%2Ftranscriptomics%2Fref-based%2Fref_based.ga/)
 GraphClust2/GC-lite.ga                                                                       | [![Build Status](https://build.galaxyproject.eu/job/usegalaxy-eu/job/workflow-testing/PYTHON=System-CPython-2.7,WORKFLOW=GraphClust2%2FGC-lite.ga/badge/icon                                                                           )](https://build.galaxyproject.eu/job/usegalaxy-eu/job/workflow-testing/PYTHON=System-CPython-2.7,WORKFLOW=GraphClust2%2FGC-lite.ga/)
 
-## Test Files
+## Pretty-printing Worfklow JSON
 
-For providing test files, each folder contains a `urls.txt` which contains a set of URLs that should be downloaded.
+You can use the command line tool `jq` to pretty-print the workflow .ga files:
 
-## beautifying wofklow JSON's
+```console
+cat wf.ga | jq . -S > out.ga
+```
 
-To reformat Galaxy's JSON files, this service comes in handy: https://jsonformatter.org/
+or this webservice: https://jsonformatter.org/
+
