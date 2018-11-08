@@ -16,7 +16,7 @@
                     "name": "mutant_R1.fastq"
                 }
             ],
-            "label": null,
+            "label": "mutant_R1.fastq",
             "name": "Input dataset",
             "outputs": [],
             "position": {
@@ -42,7 +42,7 @@
                     "name": "mutant_R2.fastq"
                 }
             ],
-            "label": null,
+            "label": "mutant_R2.fastq",
             "name": "Input dataset",
             "outputs": [],
             "position": {
