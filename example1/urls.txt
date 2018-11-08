@@ -1,2 +1,0 @@
-https://raw.githubusercontent.com/jmchilton/planemo-workflow-test-template/master/example1/GSE37268_mof3.out.hpeak.txt
-https://raw.githubusercontent.com/jmchilton/planemo-workflow-test-template/master/example1/Genes.bed

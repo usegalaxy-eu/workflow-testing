@@ -1,6 +1,6 @@
 GSE37268_mof3:
   class: File
-  path: GSE37268_mof3.out.hpeak.txt
+  location: "https://raw.githubusercontent.com/jmchilton/planemo-workflow-test-template/master/example1/GSE37268_mof3.out.hpeak.txt"
 Genes:
   class: File
-  path: Genes.bed
+  location: "https://raw.githubusercontent.com/jmchilton/planemo-workflow-test-template/master/example1/Genes.bed"
