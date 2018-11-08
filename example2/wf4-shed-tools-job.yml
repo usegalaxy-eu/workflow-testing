@@ -1,15 +1,15 @@
 mutant_R1:
   class: File
-  path: mutant_R1.fastq
+  location: https://raw.githubusercontent.com/jmchilton/planemo-workflow-test-template/master/example2/mutant_R1.fastq
 mutant_R2:
   class: File
-  path: mutant_R2.fastq
+  location: https://raw.githubusercontent.com/jmchilton/planemo-workflow-test-template/master/example2/mutant_R2.fastq
 wildtype.fna:
   class: File
-  path: wildtype.fna
+  location: https://raw.githubusercontent.com/jmchilton/planemo-workflow-test-template/master/example2/wildtype.fna
 wildtype.gbk:
   class: File
-  path: wildtype.gbk
+  location: https://raw.githubusercontent.com/jmchilton/planemo-workflow-test-template/master/example2/wildtype.gbk
 wildtype.gff:
   class: File
-  path: wildtype.gff
+  location: https://raw.githubusercontent.com/jmchilton/planemo-workflow-test-template/master/example2/wildtype.gff
