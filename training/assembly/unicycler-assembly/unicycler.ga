@@ -15,11 +15,11 @@
             "uuid": "1e8ef78c-1cb2-4376-9fc5-3f9d47acfe69",
             "errors": null,
             "name": "Input dataset",
-            "label": "Forward reads",
+            "label": "forward_reads",
             "inputs": [
                 {
                     "name": "forward_reads",
-                    "description": ""
+                    "description": "Forward reads"
                 }
             ], 
             "position": {
@@ -41,11 +41,11 @@
             "uuid": "251d7a96-2b0d-4b8c-bf34-d24b65b32b41",
             "errors": null,
             "name": "Input dataset",
-            "label": "Reverse Reads",
+            "label": "reverse_reads",
             "inputs": [
                 {
                     "name": "reverse_reads",
-                    "description": ""
+                    "description": "Reverse Reads"
                 }
             ],
             "position": {
@@ -67,11 +67,11 @@
             "uuid": "80a96186-0c6f-448e-a8cd-11f18e04629d",
             "errors": null,
             "name": "Input dataset",
-            "label": "Long Reads",
+            "label": "long_reads",
             "inputs": [
                 {
                     "name": "long_reads",
-                    "description": ""
+                    "description": "Long Reads"
                 }
             ],
             "position": {
