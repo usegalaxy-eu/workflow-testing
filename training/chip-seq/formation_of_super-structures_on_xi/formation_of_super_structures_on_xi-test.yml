@@ -1,6 +1,38 @@
 ---
 - doc: "Test sample data for ChIP-seq:formation_of_super_structures_on_xi"
-  job: formation_of_super_structures_on_xi-job.yml
+  job:
+    wt_H3K4me3_read1:
+      class: File
+      location: https://zenodo.org/record/1324070/files/wt_H3K4me3_read1.fastq.gz
+      filetype: fastqsanger.gz
+    wt_H3K4me3_read2:
+      class: File
+      location: https://zenodo.org/record/1324070/files/wt_H3K4me3_read2.fastq.gz
+      filetype: fastqsanger.gz
+    wt_CTCF_rep1:
+      class: File
+      location: https://zenodo.org/record/1324070/files/wt_CTCF_rep1.bam
+    wt_CTCF_rep2:
+      class: File
+      location: https://zenodo.org/record/1324070/files/wt_CTCF_rep2.bam
+    wt_H3K4me3_rep1:
+      class: File
+      location: https://zenodo.org/record/1324070/files/wt_H3K4me3_rep1.bam
+    wt_H3K4me3_rep2:
+      class: File
+      location: https://zenodo.org/record/1324070/files/wt_H3K4me3_rep2.bam
+    wt_H3K27me3_rep1:
+      class: File
+      location: https://zenodo.org/record/1324070/files/wt_H3K27me3_rep1.bam
+    wt_H3K27me3_rep2:
+      class: File
+      location: https://zenodo.org/record/1324070/files/wt_H3K27me3_rep2.bam
+    wt_input_rep1:
+      class: File
+      location: https://zenodo.org/record/1324070/files/wt_input_rep1.bam
+    wt_input_rep2:
+      class: File
+      location: https://zenodo.org/record/1324070/files/wt_input_rep2.bam
   outputs:
     wt_H3K4me3_rep1_read1_fastqc:
       asserts:
@@ -29,7 +61,7 @@
     wt_H3K4me3_input_rep1_bamcompare:
       asserts:
         has_text:
-          text: '-0.874559'
+          text: '-0.540416'
     wt_H3K4me3_input_rep1_macs2:
       asserts:
         has_text:

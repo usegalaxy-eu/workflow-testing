@@ -8,13 +8,7 @@
       "tool_id": null,
       "tool_version": null,
       "outputs": [],
-      "workflow_outputs": [
-        {
-          "output_name": "output",
-          "uuid": "2bd5131d-79f3-479e-9977-4f5a1f4a4e06",
-          "label": null
-        }
-      ],
+      "workflow_outputs": [],
       "input_connections": {},
       "tool_state": "{}",
       "id": 0,
@@ -35,13 +29,7 @@
       "tool_id": null,
       "tool_version": null,
       "outputs": [],
-      "workflow_outputs": [
-        {
-          "output_name": "output",
-          "uuid": "ec212d6c-3709-4fb2-b33b-21721c23a984",
-          "label": null
-        }
-      ],
+      "workflow_outputs": [],
       "input_connections": {},
       "tool_state": "{}",
       "id": 1,
@@ -62,13 +50,7 @@
       "tool_id": null,
       "tool_version": null,
       "outputs": [],
-      "workflow_outputs": [
-        {
-          "output_name": "output",
-          "uuid": "27a07d42-9ac0-427c-a37e-335032cd6a48",
-          "label": null
-        }
-      ],
+      "workflow_outputs": [],
       "input_connections": {},
       "tool_state": "{}",
       "id": 2,
@@ -89,13 +71,7 @@
       "tool_id": null,
       "tool_version": null,
       "outputs": [],
-      "workflow_outputs": [
-        {
-          "output_name": "output",
-          "uuid": "b9c35037-39dd-41a9-be68-4d9a93dcf91f",
-          "label": null
-        }
-      ],
+      "workflow_outputs": [],
       "input_connections": {},
       "tool_state": "{\"name\": \"wt_input_rep1\"}",
       "id": 3,
@@ -121,13 +97,7 @@
       "tool_id": null,
       "tool_version": null,
       "outputs": [],
-      "workflow_outputs": [
-        {
-          "output_name": "output",
-          "uuid": "335cb804-d327-4763-8173-1b08e0458758",
-          "label": null
-        }
-      ],
+      "workflow_outputs": [],
       "input_connections": {},
       "tool_state": "{\"name\": \"wt_CTCF_rep2\"}",
       "id": 4,
@@ -153,13 +123,7 @@
       "tool_id": null,
       "tool_version": null,
       "outputs": [],
-      "workflow_outputs": [
-        {
-          "output_name": "output",
-          "uuid": "50ccae0b-e051-45f6-a48e-af1bc027842c",
-          "label": null
-        }
-      ],
+      "workflow_outputs": [],
       "input_connections": {},
       "tool_state": "{}",
       "id": 5,
@@ -180,13 +144,7 @@
       "tool_id": null,
       "tool_version": null,
       "outputs": [],
-      "workflow_outputs": [
-        {
-          "output_name": "output",
-          "uuid": "d8372f9a-eb1c-4f99-8464-353239537e56",
-          "label": null
-        }
-      ],
+      "workflow_outputs": [],
       "input_connections": {},
       "tool_state": "{\"name\": \"wt_CTCF_rep1\"}",
       "id": 6,
@@ -212,13 +170,7 @@
       "tool_id": null,
       "tool_version": null,
       "outputs": [],
-      "workflow_outputs": [
-        {
-          "output_name": "output",
-          "uuid": "e4d0b2fa-d718-4358-8fd0-4736e3f6e7e0",
-          "label": null
-        }
-      ],
+      "workflow_outputs": [],
       "input_connections": {},
       "tool_state": "{\"name\": \"wt_input_rep2\"}",
       "id": 7,
@@ -244,13 +196,7 @@
       "tool_id": null,
       "tool_version": null,
       "outputs": [],
-      "workflow_outputs": [
-        {
-          "output_name": "output",
-          "uuid": "9f4bd4e8-bd77-4de5-afd6-655f0b34debb",
-          "label": null
-        }
-      ],
+      "workflow_outputs": [],
       "input_connections": {},
       "tool_state": "{\"name\": \"wt_H3K4me3_rep2\"}",
       "id": 8,
@@ -276,13 +222,7 @@
       "tool_id": null,
       "tool_version": null,
       "outputs": [],
-      "workflow_outputs": [
-        {
-          "output_name": "output",
-          "uuid": "5d841d48-693b-4724-bae4-10071026ae44",
-          "label": null
-        }
-      ],
+      "workflow_outputs": [],
       "input_connections": {},
       "tool_state": "{\"name\": \"wt_H3K27me3_rep2\"}",
       "id": 9,
@@ -883,7 +823,7 @@
       ],
       "workflow_outputs": [
         {
-          "output_name": "output_tabular",
+          "output_name": "output_narrowpeaks",
           "uuid": "e91d3fd9-f101-47e0-b510-a0b5d9327756",
           "label": "wt_H3K4me3_input_rep1_macs2"
         }
@@ -917,11 +857,6 @@
         },
         "HideDatasetActionoutput_control_lambda": {
           "output_name": "output_control_lambda",
-          "action_type": "HideDatasetAction",
-          "action_arguments": {}
-        },
-        "HideDatasetActionoutput_narrowpeaks": {
-          "output_name": "output_narrowpeaks",
           "action_type": "HideDatasetAction",
           "action_arguments": {}
         },
