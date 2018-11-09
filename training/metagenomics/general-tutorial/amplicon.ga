@@ -12,11 +12,11 @@
             "input_connections": {}, 
             "inputs": [
                 {
-                    "description": "", 
+                    "description": "SILVA Reference", 
                     "name": "silva"
                 }
             ],
-            "label": "SILVA Reference", 
+            "label": "silva", 
             "name": "Input dataset", 
             "outputs": [], 
             "position": {
@@ -38,11 +38,11 @@
             "input_connections": {}, 
             "inputs": [
                 {
-                    "description": "", 
+                    "description": "Anguil Soil Sample", 
                     "name": "anguil_soil_sample"
                 }
             ],
-            "label": "Anguil Soil Sample", 
+            "label": "anguil_soil_sample", 
             "name": "Input dataset", 
             "outputs": [], 
             "position": {
@@ -64,11 +64,11 @@
             "input_connections": {}, 
             "inputs": [
                 {
-                    "description": "", 
+                    "description": "Pampa Soil Sample", 
                     "name": "pampa_soil_sample"
                 }
             ],
-            "label": "Pampa Soil Sample", 
+            "label": "pampa_soil_sample", 
             "name": "Input dataset", 
             "outputs": [], 
             "position": {
@@ -90,11 +90,11 @@
             "input_connections": {}, 
             "inputs": [
                 {
-                    "description": "", 
+                    "description": "Trainset PDS alignment", 
                     "name": "trainset_alignment"
                 }
             ],
-            "label": "Trainset PDS alignment", 
+            "label": "trainset_alignment", 
             "name": "Input dataset", 
             "outputs": [], 
             "position": {
@@ -117,10 +117,10 @@
             "inputs": [
                 {
                     "description": "", 
-                    "name": "trainset_taxonomy"
+                    "name": "Trainset PDS taxonomy"
                 }
             ],
-            "label": "Trainset PDS taxonomy", 
+            "label": "trainset_taxonomy", 
             "name": "Input dataset", 
             "outputs": [], 
             "position": {
