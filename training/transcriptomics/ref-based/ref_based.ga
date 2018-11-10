@@ -405,7 +405,7 @@
         {
           "output_name": "text_file",
           "uuid": "39ff31d1-506c-457b-9a91-bad1f1538729",
-          "label": "GSM46177_1_fastqc"
+          "label": "GSM461177_1_fastqc"
         }
       ],
       "input_connections": {
@@ -1285,7 +1285,7 @@
         {
           "output_name": "stats",
           "uuid": "b6c3b208-b557-44f0-8592-c0afd7dcbdcf",
-          "label": "GSM461177_1_fastqc"
+          "label": "GSM461177_1_multiqc"
         }
       ],
       "input_connections": {
