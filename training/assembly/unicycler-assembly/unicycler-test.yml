@@ -25,4 +25,4 @@
     tbl:
       asserts:
         has_text:
-          line: '			product	DNA polymerase III, holoenzyme'
+          text: '			product	DNA polymerase III, holoenzyme'
