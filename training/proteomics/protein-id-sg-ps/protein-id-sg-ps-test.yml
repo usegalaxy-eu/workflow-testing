@@ -1,0 +1,18 @@
+---
+- doc: "Peptide and Protein ID using SearchGUI and PeptideShaker"
+  job:
+    mzml:
+      class: File
+      location: https://zenodo.org/record/892005/files/qExactive01819_profile.mzml
+      filetype: mzml
+    fasta:
+      class: File
+      location: https://zenodo.org/record/892005/files/Human_database_%28cRAP_and_Mycoplasma_added%29.fasta
+      filetype: fasta
+  outputs:
+    grep:
+      asserts:
+        has_text:
+          text: '1	O75947	ATP synthase subunit d, mitochondrial (ATP5H_HUMAN)	ATP5H		18.479495513670578	86.96	19.25	'
+        has_text:
+          text: '					Single Protein		O75947	2	2	2	2	2	2	2	2	100.0	Confident'
