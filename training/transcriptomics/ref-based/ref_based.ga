@@ -8,13 +8,7 @@
       "tool_id": null,
       "tool_version": null,
       "outputs": [],
-      "workflow_outputs": [
-        {
-          "output_name": "output",
-          "uuid": "2e3ba614-6bca-4150-a853-11916ba46807",
-          "label": null
-        }
-      ],
+      "workflow_outputs": [],
       "input_connections": {},
       "tool_state": "{\"name\": \"GSM461177_1\"}",
       "id": 0,
@@ -40,13 +34,7 @@
       "tool_id": null,
       "tool_version": null,
       "outputs": [],
-      "workflow_outputs": [
-        {
-          "output_name": "output",
-          "uuid": "52829abe-2b61-4b6e-b518-a4e90e58c27b",
-          "label": null
-        }
-      ],
+      "workflow_outputs": [],
       "input_connections": {},
       "tool_state": "{\"name\": \"GSM461177_2\"}",
       "id": 1,
@@ -72,13 +60,7 @@
       "tool_id": null,
       "tool_version": null,
       "outputs": [],
-      "workflow_outputs": [
-        {
-          "output_name": "output",
-          "uuid": "8d77b709-b211-4de7-a7d8-8cf8843e18cf",
-          "label": null
-        }
-      ],
+      "workflow_outputs": [],
       "input_connections": {},
       "tool_state": "{\"name\": \"GSM461180_1\"}",
       "id": 2,
@@ -104,13 +86,7 @@
       "tool_id": null,
       "tool_version": null,
       "outputs": [],
-      "workflow_outputs": [
-        {
-          "output_name": "output",
-          "uuid": "64e42088-eb30-4cf8-a28a-e675059a8397",
-          "label": null
-        }
-      ],
+      "workflow_outputs": [],
       "input_connections": {},
       "tool_state": "{\"name\": \"GSM461180_2\"}",
       "id": 3,
@@ -136,13 +112,7 @@
       "tool_id": null,
       "tool_version": null,
       "outputs": [],
-      "workflow_outputs": [
-        {
-          "output_name": "output",
-          "uuid": "009836d2-5b0b-4dab-9592-9e0cd3b76d29",
-          "label": null
-        }
-      ],
+      "workflow_outputs": [],
       "input_connections": {},
       "tool_state": "{\"name\": \"Drosophila_melanogaster.BDGP6.87.gtf\"}",
       "id": 4,
@@ -168,13 +138,7 @@
       "tool_id": null,
       "tool_version": null,
       "outputs": [],
-      "workflow_outputs": [
-        {
-          "output_name": "output",
-          "uuid": "274648b5-f2c4-4b1f-811e-dbb85416733c",
-          "label": null
-        }
-      ],
+      "workflow_outputs": [],
       "input_connections": {},
       "tool_state": "{\"name\": \"GSM461176_untreat_single.counts\"}",
       "id": 5,
@@ -200,13 +164,7 @@
       "tool_id": null,
       "tool_version": null,
       "outputs": [],
-      "workflow_outputs": [
-        {
-          "output_name": "output",
-          "uuid": "5a72788a-867f-47a8-b0d2-5cb7f1df363c",
-          "label": null
-        }
-      ],
+      "workflow_outputs": [],
       "input_connections": {},
       "tool_state": "{\"name\": \"GSM461177_untreat_paired.counts\"}",
       "id": 6,
@@ -232,13 +190,7 @@
       "tool_id": null,
       "tool_version": null,
       "outputs": [],
-      "workflow_outputs": [
-        {
-          "output_name": "output",
-          "uuid": "34f87519-eaf2-4637-8878-57203cc421af",
-          "label": null
-        }
-      ],
+      "workflow_outputs": [],
       "input_connections": {},
       "tool_state": "{\"name\": \"GSM461178_untreat_paired.counts\"}",
       "id": 7,
@@ -264,13 +216,7 @@
       "tool_id": null,
       "tool_version": null,
       "outputs": [],
-      "workflow_outputs": [
-        {
-          "output_name": "output",
-          "uuid": "8c7df4c0-efd3-46a7-90a0-de7c723c82a6",
-          "label": null
-        }
-      ],
+      "workflow_outputs": [],
       "input_connections": {},
       "tool_state": "{\"name\": \"GSM461179_treat_single.counts\"}",
       "id": 8,
@@ -296,13 +242,7 @@
       "tool_id": null,
       "tool_version": null,
       "outputs": [],
-      "workflow_outputs": [
-        {
-          "output_name": "output",
-          "uuid": "7b02ea79-2b65-4b2f-8b56-66fee591bb79",
-          "label": null
-        }
-      ],
+      "workflow_outputs": [],
       "input_connections": {},
       "tool_state": "{\"name\": \"GSM461180_treat_paired.counts\"}",
       "id": 9,
@@ -328,13 +268,7 @@
       "tool_id": null,
       "tool_version": null,
       "outputs": [],
-      "workflow_outputs": [
-        {
-          "output_name": "output",
-          "uuid": "54df1e59-81ca-47ca-9995-3e82d8599947",
-          "label": null
-        }
-      ],
+      "workflow_outputs": [],
       "input_connections": {},
       "tool_state": "{\"name\": \"GSM461181_treat_paired.counts\"}",
       "id": 10,
@@ -360,13 +294,7 @@
       "tool_id": null,
       "tool_version": null,
       "outputs": [],
-      "workflow_outputs": [
-        {
-          "output_name": "output",
-          "uuid": "fccd7656-5b17-4b9d-941c-7c4226c4f98e",
-          "label": null
-        }
-      ],
+      "workflow_outputs": [],
       "input_connections": {},
       "tool_state": "{\"name\": \"GSM461182_untreat_single.counts\"}",
       "id": 11,
