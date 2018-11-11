@@ -28,13 +28,7 @@
             "tool_version": null,
             "type": "data_input",
             "uuid": "1e8ef78c-1cb2-4376-9fc5-3f9d47acfe69",
-            "workflow_outputs": [
-                {
-                    "label": null,
-                    "output_name": "output",
-                    "uuid": "ac805483-cb3c-45dd-8e37-03ac811c5ffd"
-                }
-            ]
+            "workflow_outputs": []
         },
         "1": {
             "annotation": "",
@@ -60,13 +54,7 @@
             "tool_version": null,
             "type": "data_input",
             "uuid": "251d7a96-2b0d-4b8c-bf34-d24b65b32b41",
-            "workflow_outputs": [
-                {
-                    "label": null,
-                    "output_name": "output",
-                    "uuid": "692a4288-8f0a-4804-acd2-5b85b98f93fe"
-                }
-            ]
+            "workflow_outputs": []
         },
         "2": {
             "annotation": "",
@@ -92,13 +80,7 @@
             "tool_version": null,
             "type": "data_input",
             "uuid": "80a96186-0c6f-448e-a8cd-11f18e04629d",
-            "workflow_outputs": [
-                {
-                    "label": null,
-                    "output_name": "output",
-                    "uuid": "2d4fb0e9-e95c-41d7-8c4b-6db6af887ca5"
-                }
-            ]
+            "workflow_outputs": []
         },
         "3": {
             "annotation": "",
@@ -153,18 +135,7 @@
             "tool_version": "0.71",
             "type": "tool",
             "uuid": "ca4cf888-bf14-4cc9-9bc1-202b3ed818d0",
-            "workflow_outputs": [
-                {
-                    "label": null,
-                    "output_name": "html_file",
-                    "uuid": "f8968cb6-76d6-4e35-a7a5-a71c1a2913c9"
-                },
-                {
-                    "label": null,
-                    "output_name": "text_file",
-                    "uuid": "59cd39c3-09ac-43aa-9ed5-b0eb04c4aae1"
-                }
-            ]
+            "workflow_outputs": []
         },
         "4": {
             "annotation": "",
@@ -219,18 +190,7 @@
             "tool_version": "0.71",
             "type": "tool",
             "uuid": "988ebf23-99af-4b76-a476-28b58f505f61",
-            "workflow_outputs": [
-                {
-                    "label": null,
-                    "output_name": "html_file",
-                    "uuid": "c8ed32ee-7209-4844-b1d1-ae8185ecf207"
-                },
-                {
-                    "label": null,
-                    "output_name": "text_file",
-                    "uuid": "04804780-6813-421e-97dc-93104067d543"
-                }
-            ]
+            "workflow_outputs": []
         },
         "5": {
             "annotation": "",
@@ -301,18 +261,7 @@
             "tool_version": "0.2.0",
             "type": "tool",
             "uuid": "f469e49a-5729-4dbd-8f08-f5be3fca6191",
-            "workflow_outputs": [
-                {
-                    "label": null,
-                    "output_name": "assembly_grapth",
-                    "uuid": "3479e377-6c04-4671-93b4-35db27630ac6"
-                },
-                {
-                    "label": null,
-                    "output_name": "assembly",
-                    "uuid": "bcfa6ca4-57df-431d-a10e-672129909f8a"
-                }
-            ]
+            "workflow_outputs": []
         },
         "6": {
             "annotation": "",
@@ -395,48 +344,7 @@
             "tool_version": "4.6.3",
             "type": "tool",
             "uuid": "f20468eb-8292-4273-ac9e-b0d9c09b9e2e",
-            "workflow_outputs": [
-                {
-                    "label": null,
-                    "output_name": "report_pdf",
-                    "uuid": "dbda0527-d978-4091-b9ec-a73300717bcf"
-                },
-                {
-                    "label": null,
-                    "output_name": "report_html",
-                    "uuid": "8c5bcb60-4eae-4122-9b91-8bce216662e2"
-                },
-                {
-                    "label": null,
-                    "output_name": "quast_tsv",
-                    "uuid": "ee1c8a73-8b4d-4cbd-821b-bdc0557db545"
-                },
-                {
-                    "label": null,
-                    "output_name": "log_txt",
-                    "uuid": "81ce486e-f588-481f-b9f0-3f09dd0313be"
-                },
-                {
-                    "label": null,
-                    "output_name": "mis_ass_tsv",
-                    "uuid": "75bf9b0c-afae-44b0-b0bb-1793a05fe115"
-                },
-                {
-                    "label": null,
-                    "output_name": "alignment_viewer",
-                    "uuid": "aa38a287-4968-48e5-a9c0-4dd8b3996c90"
-                },
-                {
-                    "label": null,
-                    "output_name": "unalign_tsv",
-                    "uuid": "3ec6fb4b-ce1f-487f-968e-39de1cd276b5"
-                },
-                {
-                    "label": null,
-                    "output_name": "contig_size_viewer",
-                    "uuid": "04f03d95-6933-485c-aeca-c31b3b1bf9db"
-                }
-            ]
+            "workflow_outputs": []
         },
         "7": {
             "annotation": "",
@@ -525,24 +433,9 @@
             "uuid": "9a6e8f35-351c-42c4-bbe0-9a9da64ae1a8",
             "workflow_outputs": [
                 {
-                    "label": null,
-                    "output_name": "out_sqn",
-                    "uuid": "44671c15-90eb-4228-839c-00c33047ed85"
-                },
-                {
-                    "label": null,
-                    "output_name": "out_txt",
-                    "uuid": "ae4a9a16-217e-428d-baad-5aa771458d7c"
-                },
-                {
                     "label": "tbl",
                     "output_name": "out_tbl",
                     "uuid": "58b12ef3-7eeb-4721-9251-6caa5e9f37bd"
-                },
-                {
-                    "label": null,
-                    "output_name": "out_err",
-                    "uuid": "bd76d600-4e81-4227-8c51-5d71c23e96cb"
                 },
                 {
                     "label": "ffn",
@@ -550,34 +443,9 @@
                     "uuid": "acdffc98-771b-4fb1-839e-4b23c65c23c7"
                 },
                 {
-                    "label": null,
-                    "output_name": "out_fsa",
-                    "uuid": "ee7c39ed-6187-468c-8533-16ac64932936"
-                },
-                {
-                    "label": null,
-                    "output_name": "out_fna",
-                    "uuid": "2b9f8c6a-657b-4c6e-b607-2081b39fbd28"
-                },
-                {
-                    "label": null,
-                    "output_name": "out_log",
-                    "uuid": "8d161f6e-d0a0-4940-be65-51f59cd6f4ef"
-                },
-                {
-                    "label": null,
-                    "output_name": "out_faa",
-                    "uuid": "83545e6b-1f3d-493f-98da-38f979307c1c"
-                },
-                {
                     "label": "gbk",
                     "output_name": "out_gbk",
                     "uuid": "2068af55-321a-4275-8017-52608940ce79"
-                },
-                {
-                    "label": null,
-                    "output_name": "out_gff",
-                    "uuid": "505f0623-db86-4eb0-b21b-28ae4fd87fec"
                 }
             ]
         }
