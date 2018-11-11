@@ -1283,8 +1283,7 @@
       ],
       "workflow_outputs": [
         {
-          "output_name": "stats",
-          "uuid": "b6c3b208-b557-44f0-8592-c0afd7dcbdcf",
+          "output_name": "html_report",
           "label": "GSM461177_1_multiqc"
         }
       ],
