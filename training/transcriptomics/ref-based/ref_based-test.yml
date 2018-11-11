@@ -62,7 +62,7 @@
     GSM461177_star:
       asserts:
         has_text:
-          text: '79.00%'
+          text: '83.11%'
     GSM461180_star:
       asserts:
         has_text:
