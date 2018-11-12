@@ -1,6 +1,0 @@
-- doc: HiCExplorern scratch to contact matrix workflow
-  job: scratch-to-contact-job.yml
-  outputs:
-    hicmatrix:
-      compare: "sim_size" 
-      delta: 1000

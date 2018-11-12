@@ -1,0 +1,31 @@
+- doc:  Hi-C analysis of Drosophila melanogaster cells using HiCExplorer 
+  job:
+    R1.fastq:
+      class: File
+      location: https://zenodo.org/record/1183661/files/HiC_S2_1p_10min_lowU_R1.fastq.gz
+      filetype: fastqsanger.gz
+    R2.fastq:
+      class: File
+      location: https://zenodo.org/record/1183661/files/HiC_S2_1p_10min_lowU_R2.fastq.gz
+      filetype: fastqsanger.gz
+    H4K16ac.bw:
+      class: File
+      location: https://zenodo.org/record/1183661/files/H4K16ac.bw
+      filetype: bigwig
+    H3K36me3.bw:
+      class: File
+      location: https://zenodo.org/record/1183661/files/H3K36me3.bw
+      filetype: bigwig
+    H3K27me3.bw:
+      class: File
+      location: https://zenodo.org/record/1183661/files/H3K27me3.bw
+      filetype: bigwig
+    dm3_genes.bed:
+      class: File
+      location: https://zenodo.org/record/1176070/files/dm6_genes.bed
+      filetype: bed
+  outputs:
+    hicfindtads_tad_score:
+      asserts:
+        has_text:
+          text: 'chr2L	20000	30000	0.250755	0.165764	0.642241	0.549168'
