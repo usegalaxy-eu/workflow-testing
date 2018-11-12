@@ -1,5 +1,13 @@
 - doc: HiCExplorern scratch to contact matrix workflow
-  job: scratch-to-contact-job.yml
+  job:
+    Reverse:
+      class: File
+      path: small_test_R1_unsorted.sam
+      filetype: sam
+    Forward:
+      class: File
+      path: small_test_R2_unsorted.sam 
+      filetype: sam
   outputs:
     hicmatrix:
       compare: "sim_size" 
