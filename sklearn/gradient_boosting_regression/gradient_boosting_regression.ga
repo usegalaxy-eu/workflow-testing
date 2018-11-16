@@ -16,7 +16,7 @@
         }
       ],
       "input_connections": {},
-      tool_state": "{\"name\": \"train_data.tabular\"}",
+      "tool_state": "{\"name\": \"train_data.tabular\"}",
       "id": 0,
       "uuid": "c592e42e-5316-49e6-9f4e-3e2835b06d1d",
       "errors": null,
@@ -244,17 +244,17 @@
         {
           "output_name": "output_scatter_plot",
           "uuid": "b473c830-fea7-490d-828d-0b4ca8e4f9d8",
-          "label": "output_scatter_plot"
+          "label": "output_scatter_file"
         },
         {
           "output_name": "output_actual_vs_pred",
           "uuid": "bb982de6-621a-4627-a798-388a5a5b89d6",
-          "label": "output_actual_vs_pred"
+          "label": "output_actual_vs_pred_file"
         },
         {
           "output_name": "output_residual_plot",
           "uuid": "238ccf1a-604d-41e0-b6fd-4d0f44d160a2",
-          "label": "output_residual_plot"
+          "label": "output_residual_file"
         }
       ],
       "input_connections": {

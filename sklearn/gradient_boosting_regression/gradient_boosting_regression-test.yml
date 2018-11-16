@@ -14,15 +14,15 @@
       location: https://zenodo.org/record/1475816/files/test_target.tabular
       filetype: tabular
   outputs:
-    output_scatter_plot:
+    output_scatter_file:
       asserts:
         has_text:
           text: '<html>'
-    output_actual_vs_pred:
+    output_actual_vs_pred_file:
       asserts:
         has_text:
           text: '<html>'
-    output_residual_plot:
+    output_residual_file:
       asserts:
         has_text:
           text: '<html>'
