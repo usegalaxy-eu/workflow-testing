@@ -8,13 +8,7 @@
       "tool_id": null,
       "tool_version": null,
       "outputs": [],
-      "workflow_outputs": [
-        {
-          "output_name": "output",
-          "uuid": "54c338e0-718a-4133-98fe-e53ddb1d9fb1",
-          "label": null
-        }
-      ],
+      "workflow_outputs": [],
       "input_connections": {},
       "tool_state": "{\"name\": \"train_data.tabular\"}",
       "id": 0,
@@ -40,13 +34,7 @@
       "tool_id": null,
       "tool_version": null,
       "outputs": [],
-      "workflow_outputs": [
-        {
-          "output_name": "output",
-          "uuid": "dbf9f770-dfda-477c-9024-f7bacb5a3860",
-          "label": null
-        }
-      ],
+      "workflow_outputs": [],
       "input_connections": {},
       "tool_state": "{\"name\": \"test_data.tabular\"}",
       "id": 1,
@@ -72,13 +60,7 @@
       "tool_id": null,
       "tool_version": null,
       "outputs": [],
-      "workflow_outputs": [
-        {
-          "output_name": "output",
-          "uuid": "ddba0d95-8465-472f-86e1-62fe5c1bdd9b",
-          "label": null
-        }
-      ],
+      "workflow_outputs": [],
       "input_connections": {},
       "tool_state": "{\"name\": \"test_target.tabular\"}",
       "id": 2,

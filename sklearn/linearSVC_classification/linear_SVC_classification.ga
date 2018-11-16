@@ -8,13 +8,7 @@
       "tool_id": null,
       "tool_version": null,
       "outputs": [],
-      "workflow_outputs": [
-        {
-          "output_name": "output",
-          "uuid": "b117e099-2ab4-40e0-8ecf-8e20f7c6555a",
-          "label": null
-        }
-      ],
+      "workflow_outputs": [],
       "input_connections": {},
       "tool_state": "{\"name\": \"breast_w_train\"}",
       "id": 0,
@@ -40,13 +34,7 @@
       "tool_id": null,
       "tool_version": null,
       "outputs": [],
-      "workflow_outputs": [
-        {
-          "output_name": "output",
-          "uuid": "2cd44b21-475e-4bb9-ad1b-d8c2d65d6d90",
-          "label": null
-        }
-      ],
+      "workflow_outputs": [],
       "input_connections": {},
       "tool_state": "{\"name\": \"breast_w_targets\"}",
       "id": 1,
@@ -72,13 +60,7 @@
       "tool_id": null,
       "tool_version": null,
       "outputs": [],
-      "workflow_outputs": [
-        {
-          "output_name": "output",
-          "uuid": "103e5e5a-5922-4df3-9c12-37da46cd147f",
-          "label": null
-        }
-      ],
+      "workflow_outputs": [],
       "input_connections": {},
       "tool_state": "{\"name\": \"breast_w_test\"}",
       "id": 2,
