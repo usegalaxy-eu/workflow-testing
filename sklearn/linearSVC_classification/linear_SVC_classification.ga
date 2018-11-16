@@ -48,7 +48,7 @@
         }
       ],
       "input_connections": {},
-      "tool_state": "{\"name\": \"breast-w_test\"}",
+      "tool_state": "{\"name\": \"breast-w_targets\"}",
       "id": 1,
       "uuid": "46af2a1b-8f8b-4e5a-a520-2f7d95386222",
       "errors": null,
@@ -57,7 +57,7 @@
       "inputs": [
           {
               "description": "", 
-              "name": "breast-w_test"
+              "name": "breast-w_targets"
           }
       ],
       "position": {
@@ -80,7 +80,7 @@
         }
       ],
       "input_connections": {},
-      "tool_state": "{\"name\": \"breast-w_targets\"}",
+      "tool_state": "{\"name\": \"breast-w_test\"}",
       "id": 2,
       "uuid": "3f9950f5-1e5d-45aa-87b2-001e98136671",
       "errors": null,
@@ -89,7 +89,7 @@
       "inputs": [
           {
               "description": "", 
-              "name": "breast-w_targets"
+              "name": "breast-w_test"
           }
       ],
       "position": {

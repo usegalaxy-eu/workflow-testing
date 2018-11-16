@@ -17,18 +17,12 @@
     output_roc:
       asserts:
         has_text:
-          text: 'mean_test_score'
-        has_n_columns:
-          n: "12"
+          text: '<html>'
     output_confusion:
       asserts:
         has_text:
-          text: 'mean_test_score'
-        has_n_columns:
-          n: "12"
+          text: '<html>'
     output_prf:
       asserts:
         has_text:
-          text: 'mean_test_score'
-        has_n_columns:
-          n: "12"
+          text: '<html>'
