@@ -8,13 +8,7 @@
             "tool_id": null,
             "tool_version": null,
             "outputs": [],
-            "workflow_outputs": [
-                {
-                    "output_name": "output",
-                    "uuid": "7f55c595-c565-4386-a0a6-f17793cd127a",
-                    "label": null
-                }
-            ],
+            "workflow_outputs": [],
             "input_connections": {},
             "tool_state": "{\"name\": \"mutant_R1.fastq\"}",
             "id": 0,
@@ -40,13 +34,7 @@
             "tool_id": null,
             "tool_version": null,
             "outputs": [],
-            "workflow_outputs": [
-                {
-                    "output_name": "output",
-                    "uuid": "90f25049-da43-4f18-b7f2-7711eb4d04c9",
-                    "label": null
-                }
-            ],
+            "workflow_outputs": [],
             "input_connections": {},
             "tool_state": "{\"name\": \"mutant_R2.fastq\"}",
             "id": 1,
@@ -81,18 +69,7 @@
                     "name": "text_file"
                 }
             ],
-            "workflow_outputs": [
-                {
-                    "output_name": "html_file",
-                    "uuid": "855e26b9-0f13-4991-8c91-1d4bf04d98b6",
-                    "label": null
-                },
-                {
-                    "output_name": "text_file",
-                    "uuid": "97c6fe3d-4591-4dde-a9c7-56f82dc879e7",
-                    "label": null
-                }
-            ],
+            "workflow_outputs": [],
             "input_connections": {
                 "input_file": {
                     "output_name": "output",
@@ -152,16 +129,6 @@
                 }
             ],
             "workflow_outputs": [
-                {
-                    "output_name": "contigs",
-                    "uuid": "d028e33a-aa7a-4534-bb54-52ad90bf61ea",
-                    "label": null
-                },
-                {
-                    "output_name": "logfile",
-                    "uuid": "253a6aca-25dc-405a-b7b9-c62722480d2b",
-                    "label": null
-                },
                 {
                     "output_name": "stats",
                     "uuid": "2a5e670b-3bf0-4484-bc01-92a30ae92e5a",
