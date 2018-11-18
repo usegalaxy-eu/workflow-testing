@@ -1,8 +1,14 @@
 ---
 - doc: Test sample data for the unicycler assembly workflow
-  job: assembly-general-introduction-job.yml
+  job:
+    mutant_R1.fastq:
+      class: File
+      location: https://zenodo.org/record/582600/files/mutant_R1.fastq
+    mutant_R2.fastq:
+      class: File
+      location: https://zenodo.org/record/582600/files/mutant_R2.fastq
   outputs:
-    fasta_stats_tabular:
+    velvetoptimizer_stats:
       asserts:
         has_line:
           line: 'GC_content	33.6'
