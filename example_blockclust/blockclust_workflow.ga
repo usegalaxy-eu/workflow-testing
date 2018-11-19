@@ -2,7 +2,7 @@
   "a_galaxy_workflow": "true",
   "annotation": "",
   "format-version": "0.1",
-  "name": "blockclust_workflow",
+  "name": "blockclust 1.1.0 clustering",
   "steps": {
     "0": {
       "annotation": "",
@@ -10,84 +10,247 @@
       "errors": null,
       "id": 0,
       "input_connections": {},
-      "inputs": [
-        {
-          "description": "",
-          "name": "blockclust_input"
-        }
-      ],
+      "inputs": [],
       "label": "blockclust_input",
       "name": "Input dataset",
       "outputs": [],
       "position": {
-        "left": 132.5,
-        "top": 257.5
+        "left": 245,
+        "top": 409
       },
       "tool_id": null,
-      "tool_state": "{\"name\": \"blockclust_input\"}",
+      "tool_state": "{}",
       "tool_version": null,
       "type": "data_input",
-      "uuid": "db26f352-07df-4188-909e-55e9224287b3",
+      "uuid": "b6e23dd8-46ca-4bd6-87f3-2f6b741b459b",
       "workflow_outputs": [
         {
           "label": null,
           "output_name": "output",
-          "uuid": "c353237b-7a61-4677-aa20-58d459935357"
+          "uuid": "d8c12432-a0db-4cba-a815-aba6a2de9626"
         }
       ]
     },
     "1": {
       "annotation": "",
-      "content_id": "sort1",
+      "content_id": "toolshed.g2.bx.psu.edu/repos/devteam/samtools_sort/samtools_sort/2.0.2",
       "errors": null,
       "id": 1,
       "input_connections": {
-        "input": {
+        "input1": {
           "id": 0,
           "output_name": "output"
         }
       },
       "inputs": [
         {
+          "description": "runtime parameter for tool Samtools sort",
+          "name": "input1"
+        }
+      ],
+      "label": null,
+      "name": "Samtools sort",
+      "outputs": [
+        {
+          "name": "output1",
+          "type": "bam"
+        }
+      ],
+      "position": {
+        "left": 470,
+        "top": 276
+      },
+      "post_job_actions": {
+        "HideDatasetActionoutput1": {
+          "action_arguments": {},
+          "action_type": "HideDatasetAction",
+          "output_name": "output1"
+        }
+      },
+      "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/samtools_sort/samtools_sort/2.0.2",
+      "tool_shed_repository": {
+        "changeset_revision": "f56bdb93ae58",
+        "name": "samtools_sort",
+        "owner": "devteam",
+        "tool_shed": "toolshed.g2.bx.psu.edu"
+      },
+      "tool_state": "{\"__page__\": null, \"__rerun_remap_job_id__\": null, \"input1\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"prim_key_cond\": \"{\\\"prim_key_select\\\": \\\"\\\", \\\"__current_case__\\\": 0}\"}",
+      "tool_version": "2.0.2",
+      "type": "tool",
+      "uuid": "327e9b59-6d4e-482e-bcdf-c7cc5d8505c9",
+      "workflow_outputs": []
+    },
+    "2": {
+      "annotation": "",
+      "content_id": "toolshed.g2.bx.psu.edu/repos/rnateam/blockclust/blockclust/1.1.0",
+      "errors": null,
+      "id": 2,
+      "input_connections": {
+        "tool_mode|reads_bam": {
+          "id": 1,
+          "output_name": "output1"
+        }
+      },
+      "inputs": [
+        {
+          "description": "runtime parameter for tool BlockClust",
+          "name": "tool_mode"
+        }
+      ],
+      "label": null,
+      "name": "BlockClust",
+      "outputs": [
+        {
+          "name": "tags_bed",
+          "type": "bed"
+        },
+        {
+          "name": "hclust_plot",
+          "type": "pdf"
+        },
+        {
+          "name": "clusters",
+          "type": "bed"
+        },
+        {
+          "name": "model_based_pred_bed",
+          "type": "bed"
+        },
+        {
+          "name": "nearest_neighbour_pred_bed",
+          "type": "bed"
+        },
+        {
+          "name": "sim_tab_out",
+          "type": "tabular"
+        },
+        {
+          "name": "cluster_dist",
+          "type": "pdf"
+        },
+        {
+          "name": "cluster_hclust",
+          "type": "pdf"
+        }
+      ],
+      "position": {
+        "left": 764,
+        "top": 231
+      },
+      "post_job_actions": {
+        "HideDatasetActioncluster_dist": {
+          "action_arguments": {},
+          "action_type": "HideDatasetAction",
+          "output_name": "cluster_dist"
+        },
+        "HideDatasetActioncluster_hclust": {
+          "action_arguments": {},
+          "action_type": "HideDatasetAction",
+          "output_name": "cluster_hclust"
+        },
+        "HideDatasetActionclusters": {
+          "action_arguments": {},
+          "action_type": "HideDatasetAction",
+          "output_name": "clusters"
+        },
+        "HideDatasetActionhclust_plot": {
+          "action_arguments": {},
+          "action_type": "HideDatasetAction",
+          "output_name": "hclust_plot"
+        },
+        "HideDatasetActionmodel_based_pred_bed": {
+          "action_arguments": {},
+          "action_type": "HideDatasetAction",
+          "output_name": "model_based_pred_bed"
+        },
+        "HideDatasetActionnearest_neighbour_pred_bed": {
+          "action_arguments": {},
+          "action_type": "HideDatasetAction",
+          "output_name": "nearest_neighbour_pred_bed"
+        },
+        "HideDatasetActionsim_tab_out": {
+          "action_arguments": {},
+          "action_type": "HideDatasetAction",
+          "output_name": "sim_tab_out"
+        }
+      },
+      "tool_id": "toolshed.g2.bx.psu.edu/repos/rnateam/blockclust/blockclust/1.1.0",
+      "tool_shed_repository": {
+        "changeset_revision": "aab6cf87b40a",
+        "name": "blockclust",
+        "owner": "rnateam",
+        "tool_shed": "toolshed.g2.bx.psu.edu"
+      },
+      "tool_state": "{\"tool_mode\": \"{\\\"operation\\\": \\\"pre\\\", \\\"reads_bam\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}, \\\"__current_case__\\\": 0}\", \"__rerun_remap_job_id__\": null, \"__page__\": null}",
+      "tool_version": "1.1.0",
+      "type": "tool",
+      "uuid": "fd3043d3-609e-4303-bcb5-448cb749a319",
+      "workflow_outputs": [
+        {
+          "label": "tags_bed",
+          "output_name": "tags_bed",
+          "uuid": "39f8722a-8444-42f8-8104-f81201804c9c"
+        }
+      ]
+    },
+    "3": {
+      "annotation": "",
+      "content_id": "toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_sort_header_tool/1.1.1",
+      "errors": null,
+      "id": 3,
+      "input_connections": {
+        "infile": {
+          "id": 2,
+          "output_name": "tags_bed"
+        }
+      },
+      "inputs": [
+        {
           "description": "runtime parameter for tool Sort",
-          "name": "input"
+          "name": "infile"
         }
       ],
       "label": null,
       "name": "Sort",
       "outputs": [
         {
-          "name": "out_file1",
+          "name": "outfile",
           "type": "input"
         }
       ],
       "position": {
-        "left": 299,
-        "top": 441.5
+        "left": 1060,
+        "top": 222
       },
       "post_job_actions": {
-        "HideDatasetActionout_file1": {
+        "HideDatasetActionoutfile": {
           "action_arguments": {},
           "action_type": "HideDatasetAction",
-          "output_name": "out_file1"
+          "output_name": "outfile"
         }
       },
-      "tool_id": "sort1",
-      "tool_state": "{\"__page__\": null, \"style\": \"\\\"alpha\\\"\", \"column\": \"\\\"1\\\"\", \"__rerun_remap_job_id__\": null, \"order\": \"\\\"ASC\\\"\", \"input\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"header_lines\": \"\\\"0\\\"\", \"column_set\": \"[{\\\"other_order\\\": \\\"ASC\\\", \\\"__index__\\\": 0, \\\"other_column\\\": \\\"6\\\", \\\"other_style\\\": \\\"alpha\\\"}, {\\\"other_order\\\": \\\"ASC\\\", \\\"__index__\\\": 1, \\\"other_column\\\": \\\"2\\\", \\\"other_style\\\": \\\"num\\\"}, {\\\"other_order\\\": \\\"ASC\\\", \\\"__index__\\\": 2, \\\"other_column\\\": \\\"3\\\", \\\"other_style\\\": \\\"num\\\"}]\"}",
-      "tool_version": "1.1.0",
+      "tool_id": "toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_sort_header_tool/1.1.1",
+      "tool_shed_repository": {
+        "changeset_revision": "74a8bef53a00",
+        "name": "text_processing",
+        "owner": "bgruening",
+        "tool_shed": "toolshed.g2.bx.psu.edu"
+      },
+      "tool_state": "{\"sortkeys\": \"[{\\\"column\\\": \\\"1\\\", \\\"__index__\\\": 0, \\\"style\\\": \\\"\\\", \\\"order\\\": \\\"\\\"}, {\\\"column\\\": \\\"6\\\", \\\"__index__\\\": 1, \\\"style\\\": \\\"\\\", \\\"order\\\": \\\"\\\"}, {\\\"column\\\": \\\"2\\\", \\\"__index__\\\": 2, \\\"style\\\": \\\"n\\\", \\\"order\\\": \\\"\\\"}, {\\\"column\\\": \\\"3\\\", \\\"__index__\\\": 3, \\\"style\\\": \\\"n\\\", \\\"order\\\": \\\"\\\"}]\", \"__page__\": null, \"ignore_case\": \"\\\"true\\\"\", \"__rerun_remap_job_id__\": null, \"header\": \"\\\"0\\\"\", \"unique\": \"\\\"false\\\"\", \"infile\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\"}",
+      "tool_version": "1.1.1",
       "type": "tool",
-      "uuid": "7e7b3683-a1ad-4dcc-b2a9-dbc7be0311f4",
+      "uuid": "ecaa7fb8-a10a-457c-9ce0-3b7f0647d1b4",
       "workflow_outputs": []
     },
-    "2": {
+    "4": {
       "annotation": "",
-      "content_id": "toolshed.g2.bx.psu.edu/repos/rnateam/blockbuster/blockbuster/0.1.1.1",
+      "content_id": "toolshed.g2.bx.psu.edu/repos/rnateam/blockbuster/blockbuster/0.1.2",
       "errors": null,
-      "id": 2,
+      "id": 4,
       "input_connections": {
         "input": {
-          "id": 1,
-          "output_name": "out_file1"
+          "id": 3,
+          "output_name": "outfile"
         }
       },
       "inputs": [
@@ -105,37 +268,37 @@
         }
       ],
       "position": {
-        "left": 459.5,
-        "top": 200
+        "left": 1295,
+        "top": 216
       },
-      "post_job_actions": {
-        "HideDatasetActionoutput": {
-          "action_arguments": {},
-          "action_type": "HideDatasetAction",
-          "output_name": "output"
-        }
-      },
-      "tool_id": "toolshed.g2.bx.psu.edu/repos/rnateam/blockbuster/blockbuster/0.1.1.1",
+      "post_job_actions": {},
+      "tool_id": "toolshed.g2.bx.psu.edu/repos/rnateam/blockbuster/blockbuster/0.1.2",
       "tool_shed_repository": {
-        "changeset_revision": "0f3d3f9f120f",
+        "changeset_revision": "7c7ff7a3503f",
         "name": "blockbuster",
         "owner": "rnateam",
         "tool_shed": "toolshed.g2.bx.psu.edu"
       },
-      "tool_state": "{\"distance\": \"\\\"40\\\"\", \"scale\": \"\\\"0.5\\\"\", \"__page__\": null, \"__rerun_remap_job_id__\": null, \"print\": \"\\\"2\\\"\", \"tagFilter\": \"\\\"0\\\"\", \"merge\": \"\\\"0\\\"\", \"minBlockHeight\": \"\\\"1.0\\\"\", \"input\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"minClusterHeight\": \"\\\"50.0\\\"\"}",
-      "tool_version": "0.1.1.1",
+      "tool_state": "{\"distance\": \"\\\"40\\\"\", \"scale\": \"\\\"0.5\\\"\", \"__page__\": null, \"__rerun_remap_job_id__\": null, \"print\": \"\\\"bbf_reads\\\"\", \"tagFilter\": \"\\\"0\\\"\", \"merge\": \"\\\"0\\\"\", \"minBlockHeight\": \"\\\"1.0\\\"\", \"input\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"minClusterHeight\": \"\\\"50.0\\\"\"}",
+      "tool_version": "0.1.2",
       "type": "tool",
-      "uuid": "a06722b4-948c-449c-a5a5-e728033cc1ee",
-      "workflow_outputs": []
+      "uuid": "8a3db40c-ae03-49ca-b47c-559ac455d712",
+      "workflow_outputs": [
+        {
+          "label": "blockbuster_out",
+          "output_name": "output",
+          "uuid": "95c21ce9-e988-44b9-978e-10a27b74d18e"
+        }
+      ]
     },
-    "3": {
+    "5": {
       "annotation": "",
-      "content_id": "toolshed.g2.bx.psu.edu/repos/rnateam/blockclust/blockclust/1.0.0",
+      "content_id": "toolshed.g2.bx.psu.edu/repos/rnateam/blockclust/blockclust/1.1.0",
       "errors": null,
-      "id": 3,
+      "id": 5,
       "input_connections": {
         "tool_mode|input_bbo": {
-          "id": 2,
+          "id": 4,
           "output_name": "output"
         }
       },
@@ -182,8 +345,8 @@
         }
       ],
       "position": {
-        "left": 617.5,
-        "top": 409
+        "left": 1589,
+        "top": 216
       },
       "post_job_actions": {
         "HideDatasetActioncluster_dist": {
@@ -196,26 +359,6 @@
           "action_type": "HideDatasetAction",
           "output_name": "cluster_hclust"
         },
-        "HideDatasetActionclusters": {
-          "action_arguments": {},
-          "action_type": "HideDatasetAction",
-          "output_name": "clusters"
-        },
-        "HideDatasetActionhclust_plot": {
-          "action_arguments": {},
-          "action_type": "HideDatasetAction",
-          "output_name": "hclust_plot"
-        },
-        "HideDatasetActionmodel_based_pred_bed": {
-          "action_arguments": {},
-          "action_type": "HideDatasetAction",
-          "output_name": "model_based_pred_bed"
-        },
-        "HideDatasetActionnearest_neighbour_pred_bed": {
-          "action_arguments": {},
-          "action_type": "HideDatasetAction",
-          "output_name": "nearest_neighbour_pred_bed"
-        },
         "HideDatasetActionsim_tab_out": {
           "action_arguments": {},
           "action_type": "HideDatasetAction",
@@ -227,20 +370,41 @@
           "output_name": "tags_bed"
         }
       },
-      "tool_id": "toolshed.g2.bx.psu.edu/repos/rnateam/blockclust/blockclust/1.0.0",
+      "tool_id": "toolshed.g2.bx.psu.edu/repos/rnateam/blockclust/blockclust/1.1.0",
       "tool_shed_repository": {
-        "changeset_revision": "6ecd674b5b62",
+        "changeset_revision": "aab6cf87b40a",
         "name": "blockclust",
         "owner": "rnateam",
         "tool_shed": "toolshed.g2.bx.psu.edu"
       },
-      "tool_state": "{\"tool_mode\": \"{\\\"reference\\\": \\\"hg19\\\", \\\"input_bbo\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}, \\\"pred\\\": {\\\"pred_mode\\\": \\\"model_based\\\", \\\"__current_case__\\\": 0, \\\"enable_pred\\\": \\\"yes\\\"}, \\\"nochr\\\": \\\"false\\\", \\\"__current_case__\\\": 1, \\\"operation\\\": \\\"clust\\\"}\", \"__rerun_remap_job_id__\": null, \"__page__\": null}",
-      "tool_version": "1.0.0",
+      "tool_state": "{\"tool_mode\": \"{\\\"reference\\\": \\\"hg19\\\", \\\"input_bbo\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}, \\\"pred\\\": {\\\"pred_mode\\\": \\\"MODEL\\\", \\\"__current_case__\\\": 0, \\\"enable_pred\\\": \\\"yes\\\"}, \\\"nochr\\\": \\\"false\\\", \\\"__current_case__\\\": 1, \\\"operation\\\": \\\"analysis\\\"}\", \"__rerun_remap_job_id__\": null, \"__page__\": null}",
+      "tool_version": "1.1.0",
       "type": "tool",
-      "uuid": "a6ec4d94-c110-4f27-a2a2-7c3291cab692",
-      "workflow_outputs": []
+      "uuid": "e41a16eb-4edd-4f9e-b615-44d0c2988b63",
+      "workflow_outputs": [
+        {
+          "label": "clusters_bed",
+          "output_name": "clusters",
+          "uuid": "287b4bae-55a1-4f38-b1c3-62ae60b4d950"
+        },
+        {
+          "label": "nearest_neighbour_pred_bed",
+          "output_name": "nearest_neighbour_pred_bed",
+          "uuid": "0e51d01a-3f84-4bf1-a4b9-6938b5fcb9e2"
+        },
+        {
+          "label": null,
+          "output_name": "hclust_plot",
+          "uuid": "01744525-c294-4534-814d-547e87f7cc49"
+        },
+        {
+          "label": "model_based_pred_bed",
+          "output_name": "model_based_pred_bed",
+          "uuid": "04c1de5d-d039-4dff-9981-ba1d72e3cbca"
+        }
+      ]
     }
   },
   "tags": [],
-  "uuid": "b7d07982-01cd-4e9a-848d-f894dffef2e9"
+  "uuid": "ea8eb90d-4cb2-4496-a280-ffce05ec3df0"
 }
