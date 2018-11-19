@@ -23,13 +23,7 @@
       "tool_version": null,
       "type": "data_input",
       "uuid": "b6e23dd8-46ca-4bd6-87f3-2f6b741b459b",
-      "workflow_outputs": [
-        {
-          "label": null,
-          "output_name": "output",
-          "uuid": "d8c12432-a0db-4cba-a815-aba6a2de9626"
-        }
-      ]
+      "workflow_outputs": []
     },
     "1": {
       "annotation": "",
@@ -386,16 +380,6 @@
           "label": "clusters_bed",
           "output_name": "clusters",
           "uuid": "287b4bae-55a1-4f38-b1c3-62ae60b4d950"
-        },
-        {
-          "label": "nearest_neighbour_pred_bed",
-          "output_name": "nearest_neighbour_pred_bed",
-          "uuid": "0e51d01a-3f84-4bf1-a4b9-6938b5fcb9e2"
-        },
-        {
-          "label": null,
-          "output_name": "hclust_plot",
-          "uuid": "01744525-c294-4534-814d-547e87f7cc49"
         },
         {
           "label": "model_based_pred_bed",
