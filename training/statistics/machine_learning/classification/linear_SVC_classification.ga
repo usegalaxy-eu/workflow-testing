@@ -15,7 +15,7 @@
       "uuid": "f8e9ec52-4c2a-47a1-ad91-f192169ed348",
       "errors": null,
       "name": "Input dataset",
-      "label": "Training_data",
+      "label": null,
       "inputs": [
           {
               "description": "", 
@@ -41,7 +41,7 @@
       "uuid": "46af2a1b-8f8b-4e5a-a520-2f7d95386222",
       "errors": null,
       "name": "Input dataset",
-      "label": "Test_data_targets",
+      "label": null,
       "inputs": [
           {
               "description": "", 
@@ -67,7 +67,7 @@
       "uuid": "3f9950f5-1e5d-45aa-87b2-001e98136671",
       "errors": null,
       "name": "Input dataset",
-      "label": "Test_data",
+      "label": null,
       "inputs": [
           {
               "description": "", 
