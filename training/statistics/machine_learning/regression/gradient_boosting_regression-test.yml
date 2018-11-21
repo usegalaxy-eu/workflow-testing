@@ -1,0 +1,28 @@
+---
+- doc: Test sample data for Gradient Boosting regressor workflow
+  job:
+    train_data.tabular:
+      class: File
+      location: https://zenodo.org/record/1475816/files/train_data.tabular
+      filetype: tabular
+    test_data.tabular:
+      class: File
+      location: https://zenodo.org/record/1475816/files/test_data.tabular
+      filetype: tabular
+    test_target.tabular:
+      class: File
+      location: https://zenodo.org/record/1475816/files/test_target.tabular
+      filetype: tabular
+  outputs:
+    output_scatter_file:
+      asserts:
+        has_text:
+          text: '<html>'
+    output_actual_vs_pred_file:
+      asserts:
+        has_text:
+          text: '<html>'
+    output_residual_file:
+      asserts:
+        has_text:
+          text: '<html>'
