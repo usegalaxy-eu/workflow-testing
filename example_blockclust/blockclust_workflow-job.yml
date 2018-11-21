@@ -1,3 +1,0 @@
-blockclust_input:
-  class: File
-  path: blockclust1.bed

@@ -1,8 +1,0 @@
-- doc: Test blockclust workflow in Galaxy Europe
-  job: blockclust_workflow-job.yml
-  outputs:
-    blockclust_hclust_plot:
-      asserts:
-        has_line:
-          line: 'chr1	147962192	147962580	CCDS989.1_cds_0_0_chr1_147962193_r	0	-'
-
