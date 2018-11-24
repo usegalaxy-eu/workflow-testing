@@ -30,6 +30,10 @@ training/statistics/machine_learning/classification/linear_SVC_classification.ga
 training/statistics/machine_learning/regression/gradient_boosting_regression.ga                 | [![Build Status](https://build.galaxyproject.eu/job/usegalaxy-eu/job/workflow-testing/PYTHON=System-CPython-2.7,WORKFLOW=training%2Fstatistics%2Fmachine_learning%2Fregression%2Fgradient_boosting_regression.ga/badge/icon)](https://build.galaxyproject.eu/job/usegalaxy-eu/job/workflow-testing/PYTHON=System-CPython-2.7,WORKFLOW=training%2Fstatistics%2Fmachine_learning%2Fregression%2Fgradient_boosting_regression.ga/)
 
 
+## Contributing
+
+An introduction to workflow testing and a tutorial can be found at the [Galaxy Training Network](https://galaxyproject.github.io/training-material/topics/contributing/tutorials/create-new-tutorial-technical/tutorial.html#testing-the-workflow-recommended).
+
 ## Pretty-printing Worfklow JSON
 
 You can use the command line tool `jq` to pretty-print the workflow .ga files:
