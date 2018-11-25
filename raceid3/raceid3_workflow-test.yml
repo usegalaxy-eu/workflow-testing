@@ -1,0 +1,30 @@
+- doc: Test RaceID workflow in Galaxy Europe
+  job:
+    count_matrix:
+      class: File
+      location: https://zenodo.org/record/1511582/files/intestinalData.tsv
+      filetype: tabular
+  outputs:
+    filterlog:
+      asserts:
+        has_text_matching:
+          expression: '::  100.0 % of genes remain, 66.6 % of cells remain'
+    clustering_log:
+      asserts:
+        has_text_matching:
+          expression: 'determine final clustering partition 14'
+    clustering_genelist:
+      asserts:
+        has_text_matching:
+          expression: 'Reg3g\s+1'
+        has_text_matching:
+          expression: 'Ppia\s+3'
+        has_text_matching:
+          expression: 'Reg3g2\s+14'
+    lineagebranch_stemid_diffgenes:
+      asserts:
+        has_text_matching:
+          expression: '"Ces2a"\s+1\.[0-9]+'
+        has_text_matching:
+          expression: '"St3gal4"\s+1\.[0-9]+'
+         
