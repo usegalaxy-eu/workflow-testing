@@ -89,6 +89,71 @@
             "annotation": "",
             "content_id": "toolshed.g2.bx.psu.edu/repos/iuc/raceid_filtnormconf/raceid_filtnormconf/3.0.2.1",
             "type": "tool"
+        },
+        "2": {
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/raceid_clustering/raceid_clustering/3.0.2.1",
+            "tool_version": "3.0.2.1",
+            "outputs": [
+                {
+                    "type": "pdf",
+                    "name": "outpdf"
+                },
+                {
+                    "type": "rdata",
+                    "name": "outrdat"
+                },
+                {
+                    "type": "tabular",
+                    "name": "outgenelist"
+                },
+                {
+                    "type": "txt",
+                    "name": "outlog"
+                }
+            ],
+            "workflow_outputs": [
+                {
+                    "label": "clustering_genelist",
+                    "output_name": "outgenelist"
+                },
+                {
+                    "label": "clustering_log",
+                    "output_name": "outlog"
+                }
+            ],
+            "input_connections": {
+                "inputrds": {
+                    "output_name": "outrdat",
+                    "id": 1
+                }
+            },
+            "tool_state": "{\"__page__\": null, \"clust\": \"{\\\"funcluster\\\": \\\"kmedoids\\\", \\\"metric\\\": \\\"pearson\\\", \\\"use\\\": {\\\"__current_case__\\\": 0, \\\"def\\\": \\\"yes\\\"}}\", \"outlier\": \"{\\\"outlg\\\": \\\"2\\\", \\\"use\\\": {\\\"__current_case__\\\": 0, \\\"def\\\": \\\"yes\\\"}, \\\"outminc\\\": \\\"5\\\", \\\"final\\\": \\\"false\\\"}\", \"tsne\": \"{\\\"perplexity\\\": \\\"30\\\", \\\"knn\\\": \\\"10\\\", \\\"use\\\": {\\\"__current_case__\\\": 0, \\\"def\\\": \\\"yes\\\"}}\", \"__rerun_remap_job_id__\": null, \"extra\": \"{\\\"plotlim\\\": \\\"10\\\", \\\"foldchange\\\": \\\"1.0\\\", \\\"pvalue\\\": \\\"0.01\\\", \\\"tablelim\\\": \\\"25\\\"}\", \"inputrds\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\"}",
+            "id": 2,
+            "tool_shed_repository": {
+                "owner": "iuc",
+                "changeset_revision": "4ea021bd7513",
+                "name": "raceid_clustering",
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            },
+            "uuid": "1e2cdc00-219a-421c-9b2c-76da52d4f6c6",
+            "errors": null,
+            "name": "Clustering using RaceID",
+            "post_job_actions": {
+            },
+            "label": "Computing Clusters",
+            "inputs": [
+                {
+                    "name": "inputrds",
+                    "description": "runtime parameter for tool Clustering using RaceID"
+                }
+            ],
+            "position": {
+                "top": 526,
+                "left": 322
+            },
+            "annotation": "",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/iuc/raceid_clustering/raceid_clustering/3.0.2.1",
+            "type": "tool"
         }
     }
 }
