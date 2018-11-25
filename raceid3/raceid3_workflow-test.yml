@@ -2,7 +2,7 @@
   job:
     count_matrix:
       class: File
-      location: use.intestinal
+      location: https://zenodo.org/record/1511582/files/intestinalData.tsv
       filetype: tabular
   outputs:
     filterlog:
