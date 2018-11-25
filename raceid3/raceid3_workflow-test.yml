@@ -11,8 +11,8 @@
           expression: '::  100.0 % of genes remain, 66.6 % of cells remain'
     clustering_log:
       asserts:
-        has_line:
-          line: 'determine final clustering partition 14'
+        has_text_matching:
+          expression: 'determine final clustering partition 14'
     clustering_genelist:
       asserts:
         has_text_matching:
