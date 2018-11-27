@@ -23,4 +23,3 @@
     #     asserts:
     #       has_text:
     #         text: "1234"
-
