@@ -1,8 +1,26 @@
 - doc: Test sample FASTQ for celseq2 mm10 data
-  job: files.yml
-  outputs:
-    the_count_matrix:
-      asserts:
-        has_text:
-          text: "1234"
+  job:
+      musc_pair:
+        class: Collection
+        collection_type: paired
+        filetype: fastq.gz
+        label: "Input FastQ Pair"
+        elements:
+          - identifier: forward
+            class: File
+            location: https://zenodo.org/record/1345635/files/SRR5683689_1.fastq.gz
+          - identifier: reverse
+            class: File
+            location: https://zenodo.org/record/1345635/files/SRR5683689_2.fastq.gz
+      musc_ref:
+        class: File
+        location: https://zenodo.org/record/1345635/files/Mus_musculus.GRCm38.93.mm10.UCSC.ncbiRefSeq.gtf
+      mpi_barcodes:
+        class: File
+        location: https://zenodo.org/record/1345635/files/celseq_barcodes.192.tabular
+    # outputs:
+    #   the_count_matrix:
+    #     asserts:
+    #       has_text:
+    #         text: "1234"
 
