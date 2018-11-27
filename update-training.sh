@@ -26,7 +26,7 @@ notify() {
 	echo "And add the following to the readme:"
 	echo
 
-	for training in $(find training -name '*-test.yml' | sed 's/-test.yml/.ga/'); do
+	for training in $(find training -name '*-test.yml' | sed 's/-test.yml/.ga/' | sort); do
 		training_escape=$(echo $training | sed 's|/|%2F|g')
 		echo "$training |  [![Build Status](https://build.galaxyproject.eu/job/usegalaxy-eu/job/workflow-testing/PYTHON=System-CPython-2.7,WORKFLOW=${training_escape}/badge/icon)](https://build.galaxyproject.eu/job/usegalaxy-eu/job/workflow-testing/PYTHON=System-CPython-2.7,WORKFLOW=${training_escape}/)"
 	done
@@ -34,5 +34,5 @@ notify() {
 
 
 #clone
-update_workflows
+#update_workflows
 notify
