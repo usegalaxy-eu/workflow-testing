@@ -1,0 +1,24 @@
+---
+- doc: "Test for Diploid calling variants workflow"
+  job: ref_based-job.yml
+    GIAB-Ashkenazim-Trio.tabular:
+      class: File
+      location: https://zenodo.org/record/60520/files/GIAB-Ashkenazim-Trio.txt?download=1
+      filetype: tabular
+    GIAB-Ashkenazim-Trio-hg19.bam:
+      class: File
+      location: https://zenodo.org/record/60520/files/GIAB-Ashkenazim-Trio-hg19.gz?download=1
+      filetype: bam
+  outputs:
+    GEMINI_query1:
+      asserts:
+        has_text:
+          text: 'rs144281668'
+    GEMINI_query2:
+      asserts:
+        has_text:
+          text: '21'
+    GEMINI_db_info:
+      asserts:
+        has_text:
+          text: 'variants'
