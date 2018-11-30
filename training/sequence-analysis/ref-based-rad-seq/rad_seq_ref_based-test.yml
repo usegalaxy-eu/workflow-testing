@@ -1,0 +1,32 @@
+---
+- doc: "Test sample data for Sequence analysis:RAD-Seq Reference-based data analysis"
+  job: ref_based-job.yml
+    Barcode_SRR034310.txt:
+      class: File
+      location: https://zenodo.org/record/1134547/files/Barcode_SRR034310.txt?download=1
+      filetype: tabular
+    Details_Barcode_Population_SRR034310.txt:
+      class: File
+      location: https://zenodo.org/record/1134547/files/Details_Barcode_Population_SRR034310.txt?download=1
+      filetype: tabular
+    Reference_genome_11_chromosomes.fasta:
+      class: File
+      location: https://zenodo.org/record/1134547/files/Reference_genome_11_chromosomes.fasta?download=1
+      filetype: fasta
+    SRR034310/SRR034310.fastq.gz:
+      class: File
+      location: ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR034/SRR034310/SRR034310.fastq.gz
+      filetype: fastqsanger.gz
+  outputs:
+    merged:
+      asserts:
+        has_text:
+          text: '626265'
+    summary:
+      asserts:
+        has_text:
+          text: '217.658'
+    count:
+      asserts:
+        has_text:
+          text: '0.9333'
