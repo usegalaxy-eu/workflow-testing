@@ -727,7 +727,7 @@
       "uuid": "95585425-60c9-4921-9f1b-6cd817f15ae5",
       "workflow_outputs": [
         {
-          "label": null,
+          "label": "merged",
           "output_name": "out_file1",
           "uuid": "d5c29c70-1a58-48c7-8fc6-711e540d3394"
         }
@@ -1438,7 +1438,7 @@
       "uuid": "1a46faee-9cc2-45e9-9a37-dee0962a6a13",
       "workflow_outputs": [
         {
-          "label": null,
+          "label": "summary",
           "output_name": "out_file1",
           "uuid": "43d397a7-928d-40d2-9926-d3300baf257b"
         }
@@ -1530,7 +1530,7 @@
       "uuid": "9249ec6a-0d91-4926-ab5d-747d97c2da28",
       "workflow_outputs": [
         {
-          "label": null,
+          "label": "count",
           "output_name": "out_file1",
           "uuid": "b9f84661-518a-476c-b830-bb84b80d9311"
         }

@@ -1,6 +1,6 @@
 ---
 - doc: "Test sample data for Sequence analysis:RAD-Seq Reference-based data analysis"
-  job: ref_based-job.yml
+  job:
     Barcode_SRR034310.txt:
       class: File
       location: https://zenodo.org/record/1134547/files/Barcode_SRR034310.txt?download=1
