@@ -401,7 +401,7 @@
       "uuid": "7f7f05f6-00b9-472b-8de9-044dc4feeb8c",
       "workflow_outputs": [
         {
-          "label": null,
+          "label": "GEMINI_db_info",
           "output_name": "outfile",
           "uuid": "7e61f96f-fc5a-436b-8433-dc78b10e5cea"
         }
@@ -450,7 +450,7 @@
       "uuid": "7e13bb42-cf27-4251-85bb-9f695d711127",
       "workflow_outputs": [
         {
-          "label": null,
+          "label": "GEMINI_query2",
           "output_name": "outfile",
           "uuid": "2ff2734e-c1c6-448b-95eb-e3f47329bc65"
         }
@@ -499,7 +499,7 @@
       "uuid": "00092a96-787b-444b-9b64-fe096588368b",
       "workflow_outputs": [
         {
-          "label": null,
+          "label": "GEMINI_query1",
           "output_name": "outfile",
           "uuid": "2522c327-28ec-4e30-ac5f-cd751769e5ac"
         }

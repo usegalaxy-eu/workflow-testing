@@ -1,6 +1,6 @@
 ---
 - doc: "Test for Diploid calling variants workflow"
-  job: ref_based-job.yml
+  job:
     GIAB-Ashkenazim-Trio.tabular:
       class: File
       location: https://zenodo.org/record/60520/files/GIAB-Ashkenazim-Trio.txt
