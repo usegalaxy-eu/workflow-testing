@@ -23,9 +23,7 @@
       location: https://zenodo.org/record/839701/files/Gene_Ontology_Terms.tabular
       filetype: tabular
   outputs:
-    grep:
+    query_results:
       asserts:
         has_text:
-          text: '#description bering_peptides bering_psm'
-        has_text:
-          text: 'Candidatus Pelagibacter  350 46'
+          text: 'AADGHTMHFDVITGEK'
