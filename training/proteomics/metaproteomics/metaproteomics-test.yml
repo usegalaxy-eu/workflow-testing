@@ -1,0 +1,31 @@
+---
+- doc: "Metaproteomics Training Workflow"
+  job:
+    input1:
+      class: Collection
+      collection_type: list
+      elements:
+        - identifier: mgf1
+          class: File
+          location: https://zenodo.org/record/839701/files/2016_Jan_12_QE2_45.mgf
+        - identifier: mgf2
+          class: File
+          location: https://zenodo.org/record/839701/files/2016_Jan_12_QE2_46.mgf
+        - identifier: mgf3
+          class: File
+          location: https://zenodo.org/record/839701/files/2016_Jan_12_QE2_47.mgf
+    fasta:
+      class: File
+      location: https://zenodo.org/record/839701/files/FASTA_Bering_Strait_Trimmed_metapeptides_cRAP.fasta
+      filetype: fasta
+    tabular:
+      class: File
+      location: https://zenodo.org/record/839701/files/Gene_Ontology_Terms.tabular
+      filetype: tabular
+  outputs:
+    grep:
+      asserts:
+        has_text:
+          text: '#description bering_peptides bering_psm'
+        has_text:
+          text: 'Candidatus Pelagibacter  350 46'
