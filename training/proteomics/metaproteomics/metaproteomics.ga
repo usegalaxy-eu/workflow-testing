@@ -2,7 +2,7 @@
     "a_galaxy_workflow": "true", 
     "annotation": "", 
     "format-version": "0.1", 
-    "name": "Metaproteomics Training Workflow (December 2018)", 
+    "name": "Metaproteomics training workflow", 
     "steps": {
         "0": {
             "annotation": "", 
@@ -11,7 +11,7 @@
             "id": 0, 
             "input_connections": {}, 
             "inputs": [], 
-            "label": "Sixgill generated protein FASTA File", 
+            "label": "metapeptides", 
             "name": "Input dataset", 
             "outputs": [], 
             "position": {
@@ -22,12 +22,12 @@
             "tool_state": "{}", 
             "tool_version": null, 
             "type": "data_input", 
-            "uuid": "407821f0-ba46-4040-9fd0-04eacf38ee08", 
+            "uuid": "1d6388bd-8c1b-4ca5-a4bf-e55cec6d8064", 
             "workflow_outputs": [
                 {
                     "label": null, 
                     "output_name": "output", 
-                    "uuid": "725ef599-520a-42ee-a199-5886ac3b574a"
+                    "uuid": "43546ba1-2fca-4856-a2f6-57a6753b0961"
                 }
             ]
         }, 
@@ -38,7 +38,7 @@
             "id": 1, 
             "input_connections": {}, 
             "inputs": [], 
-            "label": "Dataset Collection of Bering Strait MGF Files", 
+            "label": "mgf_input_list", 
             "name": "Input dataset collection", 
             "outputs": [], 
             "position": {
@@ -49,12 +49,12 @@
             "tool_state": "{\"collection_type\": \"list\"}", 
             "tool_version": null, 
             "type": "data_collection_input", 
-            "uuid": "f93ec9fa-229f-4aef-bffa-e7c92f8818ad", 
+            "uuid": "1db5ec18-5c48-4130-b838-5fcd2f128c7f", 
             "workflow_outputs": [
                 {
                     "label": null, 
                     "output_name": "output", 
-                    "uuid": "6b186c52-c2cd-439e-b15a-45d11406a9b0"
+                    "uuid": "83c5f3e4-1c84-466b-bc7f-d3c490170f0e"
                 }
             ]
         }, 
@@ -65,7 +65,7 @@
             "id": 2, 
             "input_connections": {}, 
             "inputs": [], 
-            "label": "Gene Ontology Terms (Selected)", 
+            "label": "gene_ontology_terms", 
             "name": "Input dataset", 
             "outputs": [], 
             "position": {
@@ -76,12 +76,12 @@
             "tool_state": "{}", 
             "tool_version": null, 
             "type": "data_input", 
-            "uuid": "27a701c0-8ace-412c-b9f2-36f766a80379", 
+            "uuid": "b4d3c21a-de3d-49a5-a584-ba922dd8799f", 
             "workflow_outputs": [
                 {
                     "label": null, 
                     "output_name": "output", 
-                    "uuid": "d292b7d5-b4eb-4c8e-800a-090779a51f04"
+                    "uuid": "a2c564fd-92f9-4a6a-9fc6-da5fec5878e4"
                 }
             ]
         }, 
@@ -139,7 +139,7 @@
             "tool_state": "{\"__page__\": null, \"peak_lists\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"protein_database_options\": \"{\\\"update_gene_mapping\\\": \\\"false\\\", \\\"use_gene_mapping\\\": \\\"false\\\", \\\"create_decoy\\\": \\\"true\\\"}\", \"protein_digest_options\": \"{\\\"digestion\\\": {\\\"cleavage\\\": \\\"0\\\", \\\"digests\\\": [{\\\"__index__\\\": 0, \\\"enzyme\\\": \\\"Trypsin\\\", \\\"missed_cleavages\\\": \\\"2\\\"}], \\\"__current_case__\\\": 0}}\", \"__rerun_remap_job_id__\": null, \"search_engines_options\": \"{\\\"engines\\\": [\\\"X!Tandem\\\"]}\", \"precursor_options\": \"{\\\"forward_ion\\\": \\\"b\\\", \\\"max_charge\\\": \\\"6\\\", \\\"fragment_tol_units\\\": \\\"0\\\", \\\"max_isotope\\\": \\\"1\\\", \\\"precursor_ion_tol_units\\\": \\\"1\\\", \\\"min_isotope\\\": \\\"0\\\", \\\"fragment_tol\\\": \\\"0.02\\\", \\\"min_charge\\\": \\\"2\\\", \\\"reverse_ion\\\": \\\"y\\\", \\\"precursor_ion_tol\\\": \\\"10.0\\\"}\", \"advanced_options\": \"{\\\"ms_amanda\\\": {\\\"ms_amanda_advanced\\\": \\\"no\\\", \\\"__current_case__\\\": 0}, \\\"searchgui_advanced\\\": {\\\"searchgui_advanced_selector\\\": \\\"basic\\\", \\\"__current_case__\\\": 0}, \\\"myrimatch\\\": {\\\"__current_case__\\\": 0, \\\"myrimatch_advanced\\\": \\\"no\\\"}, \\\"xtandem\\\": {\\\"xtandem_quick_acetyl\\\": \\\"false\\\", \\\"xtandem_min_peaks\\\": \\\"15\\\", \\\"xtandem_quick_pyro\\\": \\\"false\\\", \\\"xtandem_stp_bias\\\": \\\"false\\\", \\\"xtandem_advanced\\\": \\\"yes\\\", \\\"xtandem_dynamic_range\\\": \\\"100\\\", \\\"xtandem_min_prec_mass\\\": \\\"200\\\", \\\"xtandem_output_sequences\\\": \\\"false\\\", \\\"__current_case__\\\": 1, \\\"xtandem_output_proteins\\\": \\\"false\\\", \\\"xtandem_output_spectra\\\": \\\"true\\\", \\\"xtandem_npeaks\\\": \\\"50\\\", \\\"xtandem_noise_suppr\\\": \\\"true\\\", \\\"xtandem_min_frag_mz\\\": \\\"200\\\", \\\"xtandem_evalue\\\": \\\"100.0\\\", \\\"xtandem_refine\\\": {\\\"xtandem_refine_selector\\\": \\\"no\\\", \\\"__current_case__\\\": 0}}, \\\"tide\\\": {\\\"tide_advanced\\\": \\\"no\\\", \\\"__current_case__\\\": 0}, \\\"msgf\\\": {\\\"msgf_advanced\\\": \\\"no\\\", \\\"__current_case__\\\": 0}, \\\"directtag\\\": {\\\"directtag_advanced\\\": \\\"no\\\", \\\"__current_case__\\\": 0}, \\\"comet\\\": {\\\"comet_advanced\\\": \\\"no\\\", \\\"__current_case__\\\": 0}, \\\"omssa\\\": {\\\"omssa_advanced\\\": \\\"no\\\", \\\"__current_case__\\\": 0}, \\\"novor\\\": {\\\"novor_advanced\\\": \\\"no\\\", \\\"__current_case__\\\": 0}}\", \"input_database\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"protein_modification_options\": \"{\\\"variable_modifications\\\": [\\\"Oxidation of M\\\"], \\\"fixed_modifications\\\": [\\\"Carbamidomethylation of C\\\"]}\"}", 
             "tool_version": null, 
             "type": "tool", 
-            "uuid": "07426549-6d86-4dec-add1-053a5cbc1cee", 
+            "uuid": "dd9436f8-f079-4e55-bbdd-1b21d5ff68f7", 
             "workflow_outputs": []
         }, 
         "4": {
@@ -277,17 +277,17 @@
             "tool_state": "{\"__page__\": null, \"outputs\": \"[\\\"3\\\", \\\"0\\\"]\", \"__rerun_remap_job_id__\": null, \"filtering_options\": \"{\\\"filtering_options_selector\\\": \\\"no\\\", \\\"__current_case__\\\": 0}\", \"searchgui_input\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"contact_options\": \"{\\\"contact_options_selector\\\": \\\"no\\\", \\\"__current_case__\\\": 0}\", \"processing_options\": \"{\\\"processing_options_selector\\\": \\\"no\\\", \\\"__current_case__\\\": 0}\", \"include_sequences\": \"\\\"false\\\"\"}", 
             "tool_version": null, 
             "type": "tool", 
-            "uuid": "a204c57d-8026-408f-ac21-970a8e652b9a", 
+            "uuid": "08e6c84a-be50-49fe-822a-83fb543f8bdf", 
             "workflow_outputs": [
                 {
                     "label": null, 
                     "output_name": "output_certificate", 
-                    "uuid": "8b731d8d-e74e-49f3-884c-fdd18ce0032c"
+                    "uuid": "fa42402c-37ae-4651-bad4-809b1730e8f3"
                 }, 
                 {
                     "label": null, 
                     "output_name": "output_psm", 
-                    "uuid": "07a0cfac-c454-4a22-8a73-f2fc15c62c6e"
+                    "uuid": "453b9691-5a82-48ce-a9fb-cbff04b3793c"
                 }
             ]
         }, 
@@ -341,12 +341,12 @@
             "tool_state": "{\"tables\": \"[{\\\"tbl_opts\\\": {\\\"pkey_autoincr\\\": \\\"\\\", \\\"load_named_columns\\\": \\\"true\\\", \\\"indexes\\\": [], \\\"table_name\\\": \\\"psm\\\", \\\"col_names\\\": \\\"id,,sequence,,,,,,,,,,,,,,,,,,,,confidence,validation\\\", \\\"column_names_from_first_line\\\": \\\"false\\\"}, \\\"__index__\\\": 0, \\\"input_opts\\\": {\\\"linefilters\\\": [{\\\"filter\\\": {\\\"regex_action\\\": \\\"include_match\\\", \\\"regex_pattern\\\": \\\"^\\\\\\\\d\\\", \\\"__current_case__\\\": 6, \\\"filter_type\\\": \\\"regex\\\"}, \\\"__index__\\\": 0}]}, \\\"table\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}}]\", \"save_db\": \"\\\"false\\\"\", \"__page__\": null, \"__rerun_remap_job_id__\": null, \"sqlquery\": \"\\\"SELECT distinct sequence \\\\nFROM psm \\\\nWHERE confidence >= 95 \\\\nORDER BY sequence\\\"\", \"add_to_database\": \"{\\\"withdb\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}}\", \"query_result\": \"{\\\"header\\\": \\\"no\\\", \\\"__current_case__\\\": 1}\", \"workdb\": \"\\\"workdb.sqlite\\\"\"}", 
             "tool_version": null, 
             "type": "tool", 
-            "uuid": "bbcfd0d1-99e3-4ff8-b5f7-5433e1df6602", 
+            "uuid": "4702ee10-35ef-4617-aa9f-8d30ec147577", 
             "workflow_outputs": [
                 {
                     "label": null, 
                     "output_name": "output", 
-                    "uuid": "775b4456-63dc-4ddd-9f29-d31bd983db2c"
+                    "uuid": "1c29919e-51a4-4c42-bde9-30b1deb6cb17"
                 }
             ]
         }, 
@@ -418,12 +418,12 @@
             "tool_state": "{\"__page__\": null, \"outputs\": \"[\\\"tsv\\\"]\", \"__rerun_remap_job_id__\": null, \"peptide_src\": \"{\\\"column\\\": \\\"1\\\", \\\"fmt\\\": \\\"tabular\\\", \\\"input_tsv\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}, \\\"__current_case__\\\": 1}\", \"strict\": \"\\\"false\\\"\", \"unipept\": \"{\\\"api\\\": \\\"pept2prot\\\", \\\"equate_il\\\": \\\"true\\\", \\\"__current_case__\\\": 2, \\\"extra\\\": \\\"true\\\"}\"}", 
             "tool_version": null, 
             "type": "tool", 
-            "uuid": "21124ebd-41b2-488b-a170-6c319a8dfd3d", 
+            "uuid": "2850287e-ce22-4323-8d2c-100a28b38ee3", 
             "workflow_outputs": [
                 {
                     "label": null, 
                     "output_name": "output_tsv", 
-                    "uuid": "768d2ed1-4357-4703-8d19-4fd4b0422baf"
+                    "uuid": "41f88eb2-2b5e-4a68-a4c3-a1d48a1781c9"
                 }
             ]
         }, 
@@ -497,17 +497,17 @@
             "tool_state": "{\"__page__\": null, \"outputs\": \"[\\\"tsv\\\", \\\"json\\\"]\", \"__rerun_remap_job_id__\": null, \"peptide_src\": \"{\\\"column\\\": \\\"1\\\", \\\"fmt\\\": \\\"tabular\\\", \\\"input_tsv\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}, \\\"__current_case__\\\": 1}\", \"strict\": \"\\\"false\\\"\", \"unipept\": \"{\\\"allfields\\\": \\\"false\\\", \\\"extra\\\": \\\"false\\\", \\\"api\\\": \\\"pept2lca\\\", \\\"names\\\": \\\"true\\\", \\\"__current_case__\\\": 0, \\\"equate_il\\\": \\\"true\\\"}\"}", 
             "tool_version": null, 
             "type": "tool", 
-            "uuid": "eb45faac-b43e-4d8f-9cee-a78fdf213855", 
+            "uuid": "914cd8be-e4a0-4788-99e5-3ce5b5be2e56", 
             "workflow_outputs": [
                 {
                     "label": null, 
-                    "output_name": "output_json", 
-                    "uuid": "85952860-edcf-49e9-b8c6-e69c98c30ea0"
+                    "output_name": "output_tsv", 
+                    "uuid": "d3b26577-b132-440f-b25c-5db4eef245a3"
                 }, 
                 {
                     "label": null, 
-                    "output_name": "output_tsv", 
-                    "uuid": "3339b8aa-57a0-4f97-be50-da1ecd6d3e1d"
+                    "output_name": "output_json", 
+                    "uuid": "ad2a2f40-d90d-4bfa-a544-a616a3f3b119"
                 }
             ]
         }, 
@@ -575,17 +575,17 @@
             "tool_state": "{\"tables\": \"[{\\\"tbl_opts\\\": {\\\"pkey_autoincr\\\": \\\"\\\", \\\"load_named_columns\\\": \\\"false\\\", \\\"indexes\\\": [{\\\"__index__\\\": 0, \\\"unique\\\": \\\"false\\\", \\\"index_columns\\\": \\\"aspect,go_id\\\"}], \\\"table_name\\\": \\\"go\\\", \\\"col_names\\\": \\\"aspect,go_id,description\\\", \\\"column_names_from_first_line\\\": \\\"false\\\"}, \\\"__index__\\\": 0, \\\"input_opts\\\": {\\\"linefilters\\\": [{\\\"filter\\\": {\\\"skip_lines\\\": \\\"1\\\", \\\"__current_case__\\\": 0, \\\"filter_type\\\": \\\"skip\\\"}, \\\"__index__\\\": 0}]}, \\\"table\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}}, {\\\"tbl_opts\\\": {\\\"pkey_autoincr\\\": \\\"\\\", \\\"load_named_columns\\\": \\\"false\\\", \\\"indexes\\\": [{\\\"__index__\\\": 0, \\\"unique\\\": \\\"false\\\", \\\"index_columns\\\": \\\"id,peptide\\\"}], \\\"table_name\\\": \\\"bering_prot\\\", \\\"col_names\\\": \\\"id,peptide,uniprot_id,taxon_id,taxon_name,ec_references,go_references,refseq_ids,refseq_protein_ids,insdc_ids,insdc_protein_ids\\\", \\\"column_names_from_first_line\\\": \\\"false\\\"}, \\\"__index__\\\": 1, \\\"input_opts\\\": {\\\"linefilters\\\": [{\\\"filter\\\": {\\\"skip_lines\\\": \\\"1\\\", \\\"__current_case__\\\": 0, \\\"filter_type\\\": \\\"skip\\\"}, \\\"__index__\\\": 0}, {\\\"filter\\\": {\\\"__current_case__\\\": 2, \\\"filter_type\\\": \\\"prepend_line_num\\\"}, \\\"__index__\\\": 1}]}, \\\"table\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}}, {\\\"tbl_opts\\\": {\\\"pkey_autoincr\\\": \\\"\\\", \\\"load_named_columns\\\": \\\"false\\\", \\\"indexes\\\": [{\\\"__index__\\\": 0, \\\"unique\\\": \\\"false\\\", \\\"index_columns\\\": \\\"go_reference,id\\\"}], \\\"table_name\\\": \\\"bering_prot_go\\\", \\\"col_names\\\": \\\"id,go_reference\\\", \\\"column_names_from_first_line\\\": \\\"false\\\"}, \\\"__index__\\\": 2, \\\"input_opts\\\": {\\\"linefilters\\\": [{\\\"filter\\\": {\\\"skip_lines\\\": \\\"\\\", \\\"__current_case__\\\": 0, \\\"filter_type\\\": \\\"skip\\\"}, \\\"__index__\\\": 0}, {\\\"filter\\\": {\\\"__current_case__\\\": 2, \\\"filter_type\\\": \\\"prepend_line_num\\\"}, \\\"__index__\\\": 1}, {\\\"filter\\\": {\\\"columns\\\": \\\"1,7\\\", \\\"__current_case__\\\": 7, \\\"filter_type\\\": \\\"select_columns\\\"}, \\\"__index__\\\": 2}, {\\\"filter\\\": {\\\"columns\\\": \\\"2\\\", \\\"separator\\\": \\\" \\\", \\\"__current_case__\\\": 9, \\\"filter_type\\\": \\\"normalize\\\"}, \\\"__index__\\\": 3}]}, \\\"table\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}}, {\\\"tbl_opts\\\": {\\\"pkey_autoincr\\\": \\\"\\\", \\\"load_named_columns\\\": \\\"true\\\", \\\"indexes\\\": [{\\\"__index__\\\": 0, \\\"unique\\\": \\\"false\\\", \\\"index_columns\\\": \\\"sequence,id\\\"}], \\\"table_name\\\": \\\"bering_psms\\\", \\\"col_names\\\": \\\"id,sequence,confidence,validation\\\", \\\"column_names_from_first_line\\\": \\\"false\\\"}, \\\"__index__\\\": 3, \\\"input_opts\\\": {\\\"linefilters\\\": [{\\\"filter\\\": {\\\"regex_action\\\": \\\"include_match\\\", \\\"regex_pattern\\\": \\\"^\\\\\\\\d\\\", \\\"__current_case__\\\": 6, \\\"filter_type\\\": \\\"regex\\\"}, \\\"__index__\\\": 0}, {\\\"filter\\\": {\\\"columns\\\": \\\"1,3,23,24\\\", \\\"__current_case__\\\": 7, \\\"filter_type\\\": \\\"select_columns\\\"}, \\\"__index__\\\": 1}]}, \\\"table\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}}]\", \"save_db\": \"\\\"true\\\"\", \"__page__\": null, \"__rerun_remap_job_id__\": null, \"sqlquery\": \"\\\"SELECT sequence as \\\\\\\"peptide\\\\\\\", count(id) as \\\\\\\"PSMs\\\\\\\"\\\\nFROM bering_psms\\\\nWHERE confidence >= 95\\\\nGROUP BY sequence\\\\nORDER BY sequence\\\\n\\\"\", \"add_to_database\": \"{\\\"withdb\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}}\", \"query_result\": \"{\\\"header\\\": \\\"yes\\\", \\\"header_prefix\\\": \\\"35\\\", \\\"__current_case__\\\": 0}\", \"workdb\": \"\\\"workdb.sqlite\\\"\"}", 
             "tool_version": null, 
             "type": "tool", 
-            "uuid": "97f6f9a5-b2ea-4dbf-8fa6-d9660dd5dde6", 
+            "uuid": "599e9b77-5510-4d88-a67a-f250f9f80c82", 
             "workflow_outputs": [
                 {
                     "label": null, 
                     "output_name": "output", 
-                    "uuid": "12e83da4-38bf-4aa0-9fb3-559be3b8e828"
+                    "uuid": "96a26e4b-a340-4b14-9f25-b1abaade5a65"
                 }, 
                 {
                     "label": null, 
                     "output_name": "sqlitedb", 
-                    "uuid": "78667bff-bc4d-4769-ab24-5b942f509a0e"
+                    "uuid": "bf2bdaae-22f2-4a7d-a188-8be3ece3de51"
                 }
             ]
         }, 
@@ -645,17 +645,17 @@
             "tool_state": "{\"tables\": \"[{\\\"tbl_opts\\\": {\\\"pkey_autoincr\\\": \\\"\\\", \\\"load_named_columns\\\": \\\"true\\\", \\\"indexes\\\": [], \\\"table_name\\\": \\\"psm\\\", \\\"col_names\\\": \\\",,sequence,,,,,,,,,,,,,,,,,,,,confidence,validation\\\", \\\"column_names_from_first_line\\\": \\\"false\\\"}, \\\"__index__\\\": 0, \\\"input_opts\\\": {\\\"linefilters\\\": [{\\\"filter\\\": {\\\"regex_action\\\": \\\"include_match\\\", \\\"regex_pattern\\\": \\\"^\\\\\\\\d\\\", \\\"__current_case__\\\": 6, \\\"filter_type\\\": \\\"regex\\\"}, \\\"__index__\\\": 0}]}, \\\"table\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}}, {\\\"tbl_opts\\\": {\\\"pkey_autoincr\\\": \\\"\\\", \\\"load_named_columns\\\": \\\"true\\\", \\\"indexes\\\": [], \\\"table_name\\\": \\\"lca\\\", \\\"col_names\\\": \\\"peptide,,,,,,,,,,,,,,,,,,,,,genus\\\", \\\"column_names_from_first_line\\\": \\\"false\\\"}, \\\"__index__\\\": 1, \\\"input_opts\\\": {\\\"linefilters\\\": [{\\\"filter\\\": {\\\"regex_action\\\": \\\"exclude_match\\\", \\\"regex_pattern\\\": \\\"#peptide\\\", \\\"__current_case__\\\": 6, \\\"filter_type\\\": \\\"regex\\\"}, \\\"__index__\\\": 0}]}, \\\"table\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}}]\", \"save_db\": \"\\\"true\\\"\", \"__page__\": null, \"__rerun_remap_job_id__\": null, \"sqlquery\": \"\\\"SELECT lca.genus,count(psm.sequence) as \\\\\\\"PSMs\\\\\\\",count(distinct psm.sequence) as \\\\\\\"DISTINCT PEPTIDES\\\\\\\" \\\\nFROM psm LEFT JOIN lca ON psm.sequence = lca.peptide \\\\nWHERE confidence >= 95 \\\\nGROUP BY lca.genus \\\\nORDER BY PSMs desc, 'DISTINCT PEPTIDES' desc\\\"\", \"add_to_database\": \"{\\\"withdb\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}}\", \"query_result\": \"{\\\"header\\\": \\\"yes\\\", \\\"header_prefix\\\": \\\"35\\\", \\\"__current_case__\\\": 0}\", \"workdb\": \"\\\"workdb.sqlite\\\"\"}", 
             "tool_version": null, 
             "type": "tool", 
-            "uuid": "69ec2278-61c1-43d4-88ce-fc84a6ee3d58", 
+            "uuid": "e60fb174-ac24-418b-ab23-e7afb91c1b14", 
             "workflow_outputs": [
                 {
                     "label": null, 
                     "output_name": "output", 
-                    "uuid": "3eae07e9-5d0b-4718-9bc5-b61589682c45"
+                    "uuid": "77169c48-9390-4d1d-86b6-d02164ebaada"
                 }, 
                 {
                     "label": null, 
                     "output_name": "sqlitedb", 
-                    "uuid": "01c03ee8-9345-4e28-8bc1-ac5d3900c78d"
+                    "uuid": "76b20cf1-97f8-462d-86df-981435b45b42"
                 }
             ]
         }, 
@@ -707,12 +707,12 @@
             "tool_state": "{\"sqlquery\": \"\\\"SELECT go.description, \\\\ncount(distinct bering_psms.sequence) as \\\\\\\"bering_peptides\\\\\\\", count(distinct bering_psms.id) as \\\\\\\"bering_psms\\\\\\\" \\\\nFROM go JOIN bering_prot_go ON go.go_id = bering_prot_go.go_reference JOIN bering_prot on bering_prot_go.id = bering_prot.id JOIN bering_psms ON bering_prot.peptide = bering_psms.sequence\\\\nWHERE go.aspect = 'biological_process'\\\\nGROUP BY go.description\\\\nORDER BY  bering_peptides desc,bering_psms desc\\\"\", \"__page__\": null, \"sqlitedb\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"query_result\": \"{\\\"header\\\": \\\"yes\\\", \\\"header_prefix\\\": \\\"35\\\", \\\"__current_case__\\\": 0}\", \"__rerun_remap_job_id__\": null}", 
             "tool_version": null, 
             "type": "tool", 
-            "uuid": "9d9634a3-436e-44fc-b43d-a606d1feae7b", 
+            "uuid": "95adecc1-e6af-49e1-a014-4d54cedb90c8", 
             "workflow_outputs": [
                 {
                     "label": null, 
                     "output_name": "query_results", 
-                    "uuid": "d76ff1b1-b2e4-4e74-825f-2f5c3d6c491e"
+                    "uuid": "ee56e93b-6b65-49c0-804f-89142102ba50"
                 }
             ]
         }, 
@@ -764,12 +764,12 @@
             "tool_state": "{\"sqlquery\": \"\\\"SELECT go.description, \\\\ncount(distinct bering_psms.sequence) as \\\\\\\"bering_peptides\\\\\\\", count(distinct bering_psms.id) as \\\\\\\"bering_psms\\\\\\\" \\\\nFROM go JOIN bering_prot_go ON go.go_id = bering_prot_go.go_reference JOIN bering_prot on bering_prot_go.id = bering_prot.id JOIN bering_psms ON bering_prot.peptide = bering_psms.sequence\\\\nWHERE go.aspect = 'molecular_function'\\\\nGROUP BY go.description\\\\nORDER BY  bering_peptides desc,bering_psms desc\\\"\", \"__page__\": null, \"sqlitedb\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"query_result\": \"{\\\"header\\\": \\\"yes\\\", \\\"header_prefix\\\": \\\"35\\\", \\\"__current_case__\\\": 0}\", \"__rerun_remap_job_id__\": null}", 
             "tool_version": null, 
             "type": "tool", 
-            "uuid": "cda64807-67a0-4429-a2ed-598f43a7699e", 
+            "uuid": "fb2f8439-b740-4f9d-bed3-91a24926630c", 
             "workflow_outputs": [
                 {
                     "label": null, 
                     "output_name": "query_results", 
-                    "uuid": "c4e8a3de-ad0d-4a4b-b9d7-582b00db1bec"
+                    "uuid": "1f061853-ce51-4fc3-8844-966d7257fefe"
                 }
             ]
         }, 
@@ -821,16 +821,16 @@
             "tool_state": "{\"sqlquery\": \"\\\"SELECT go.description, \\\\ncount(distinct bering_psms.sequence) as \\\\\\\"bering_peptides\\\\\\\", count(distinct bering_psms.id) as \\\\\\\"bering_psms\\\\\\\" \\\\nFROM go JOIN bering_prot_go ON go.go_id = bering_prot_go.go_reference JOIN bering_prot on bering_prot_go.id = bering_prot.id JOIN bering_psms ON bering_prot.peptide = bering_psms.sequence\\\\nWHERE go.aspect = 'cellular_component'\\\\nGROUP BY go.description\\\\nORDER BY  bering_peptides desc,bering_psms desc\\\"\", \"__page__\": null, \"sqlitedb\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"query_result\": \"{\\\"header\\\": \\\"yes\\\", \\\"header_prefix\\\": \\\"35\\\", \\\"__current_case__\\\": 0}\", \"__rerun_remap_job_id__\": null}", 
             "tool_version": null, 
             "type": "tool", 
-            "uuid": "c1215128-692b-4014-816d-c0ba324daed4", 
+            "uuid": "3260c5b6-59a0-46b1-a4f5-2fb3de6f71d3", 
             "workflow_outputs": [
                 {
-                    "label": "query_results", 
+                    "label": "go_terms_cellular_localization", 
                     "output_name": "query_results", 
-                    "uuid": "30006e21-45b7-400c-9ac8-ca86797c87a4"
+                    "uuid": "6fb10d3a-b00b-441c-bbb4-5836253d01fb"
                 }
             ]
         }
     }, 
     "tags": [], 
-    "uuid": "20f22612-ac07-4618-a6b9-71bb5864f187"
+    "uuid": "142bb5a3-498b-469b-9b9b-d4932c499878"
 }
