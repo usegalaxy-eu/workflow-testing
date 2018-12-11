@@ -1,0 +1,45 @@
+---
+- doc: "Metaproteomics Training Workflow"
+  job:
+    mgf_input_list:
+      class: Collection
+      collection_type: list
+      elements:
+        - identifier: mgf1
+          class: File
+          location: https://zenodo.org/record/839701/files/2016_Jan_12_QE2_45.mgf
+        - identifier: mgf2
+          class: File
+          location: https://zenodo.org/record/839701/files/2016_Jan_12_QE2_46.mgf
+        - identifier: mgf3
+          class: File
+          location: https://zenodo.org/record/839701/files/2016_Jan_12_QE2_47.mgf
+    metapeptides:
+      class: File
+      location: https://zenodo.org/record/839701/files/FASTA_Bering_Strait_Trimmed_metapeptides_cRAP.fasta
+      filetype: fasta
+    gene_ontology_terms:
+      class: File
+      location: https://zenodo.org/record/839701/files/Gene_Ontology_Terms.tabular
+      filetype: tabular
+  outputs:
+    go_terms_cellular_localization:
+      asserts:
+        has_text:
+          text: 'cytoplasm'
+    go_terms_molecular_function:
+      asserts:
+        has_text:
+          text: 'ATP binding'
+    go_terms_biological_processes:
+      asserts:
+        has_text:
+          text: 'translation'
+    genera_psms_peptides:
+      asserts:
+        has_text:
+          text: 'Candidatus Pelagibacter'
+    peptides:
+      asserts:
+        has_text:
+          text: 'AADGHTMHFDVITGEK'
