@@ -27,3 +27,19 @@
       asserts:
         has_text:
           text: 'cytoplasm'
+    go_terms_molecular_function:
+      asserts:
+        has_text:
+          text: 'ATP binding'
+    go_terms_biological_processes:
+      asserts:
+        has_text:
+          text: 'translation'
+    genera_psms_peptides:
+      asserts:
+        has_text:
+          text: 'Candidatus Pelagibacter'
+    peptides:
+      asserts:
+        has_text:
+          text: 'AADGHTMHFDVITGEK'

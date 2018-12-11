@@ -524,7 +524,13 @@
             "tool_version": null, 
             "type": "tool", 
             "uuid": "599e9b77-5510-4d88-a67a-f250f9f80c82", 
-            "workflow_outputs": []
+            "workflow_outputs": [
+                {
+                    "label": "peptides", 
+                    "output_name": "sqlitedb", 
+                    "uuid": "bf2bdaae-22f2-4a7d-a188-8be3ece3de51"
+                }
+            ]
         }, 
         "9": {
             "annotation": "", 
@@ -583,7 +589,13 @@
             "tool_version": null, 
             "type": "tool", 
             "uuid": "e60fb174-ac24-418b-ab23-e7afb91c1b14", 
-            "workflow_outputs": []
+            "workflow_outputs": [
+                {
+                    "label": "genera_psms_peptides", 
+                    "output_name": "output", 
+                    "uuid": "77169c48-9390-4d1d-86b6-d02164ebaada"
+                }
+            ]
         }, 
         "10": {
             "annotation": "", 
@@ -634,7 +646,13 @@
             "tool_version": null, 
             "type": "tool", 
             "uuid": "95adecc1-e6af-49e1-a014-4d54cedb90c8", 
-            "workflow_outputs": []
+            "workflow_outputs": [
+                {
+                    "label": "go_terms_biological_processes", 
+                    "output_name": "query_results", 
+                    "uuid": "ee56e93b-6b65-49c0-804f-89142102ba50"
+                }
+            ]
         }, 
         "11": {
             "annotation": "", 
@@ -685,7 +703,13 @@
             "tool_version": null, 
             "type": "tool", 
             "uuid": "fb2f8439-b740-4f9d-bed3-91a24926630c", 
-            "workflow_outputs": []
+            "workflow_outputs": [
+                {
+                    "label": "go_terms_molecular_function", 
+                    "output_name": "query_results", 
+                    "uuid": "1f061853-ce51-4fc3-8844-966d7257fefe"
+                }
+            ]
         }, 
         "12": {
             "annotation": "", 
