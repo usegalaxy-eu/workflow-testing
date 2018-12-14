@@ -23,7 +23,13 @@
       "tool_version": null,
       "type": "data_input",
       "uuid": "152538f5-0be8-4a4a-8ec3-a5b67c27baf2",
-      "workflow_outputs": []
+      "workflow_outputs": [
+        {
+          "label": null,
+          "output_name": "output",
+          "uuid": "ec997208-d0dd-459f-a418-cc07edbbe20a"
+        }
+      ]
     },
     "1": {
       "annotation": "",
@@ -223,7 +229,13 @@
       "tool_version": "1.1",
       "type": "tool",
       "uuid": "19091bb8-15fd-4202-b7db-b7cee45f4970",
-      "workflow_outputs": []
+      "workflow_outputs": [
+        {
+          "label": "long_peptide_qt",
+          "output_name": "output",
+          "uuid": "bd09bcac-7fe2-4555-bd7e-cb25b75d6407"
+        }
+      ]
     },
     "13": {
       "annotation": "",
@@ -809,7 +821,13 @@
       "tool_version": "1.1",
       "type": "tool",
       "uuid": "ffbb1b42-fc2a-4f3b-9e4a-6f7e18b60690",
-      "workflow_outputs": []
+      "workflow_outputs": [
+        {
+          "label": "short_peptide_traditional",
+          "output_name": "output",
+          "uuid": "7e91c5b6-6198-4452-8276-734bcd8c2a82"
+        }
+      ]
     },
     "24": {
       "annotation": "",
@@ -860,7 +878,13 @@
       "tool_version": "1.1",
       "type": "tool",
       "uuid": "74f8f43a-af84-4586-be46-20d832955059",
-      "workflow_outputs": []
+      "workflow_outputs": [
+        {
+          "label": "long_peptide_traditional",
+          "output_name": "output",
+          "uuid": "23561cc6-b7a4-4c80-a0c6-a354cced6169"
+        }
+      ]
     },
     "3": {
       "annotation": "",
