@@ -3,10 +3,22 @@
   job:
     PeptideShaker_PSM_Report:
       class: File
-      location: https://zenodo.org/record/2280276/files/Sample_Peptide_Shaker_PSM_Report.tabular
+      location: https://zenodo.org/record/2283682/files/Sample_PSM_Report_metaproteomics.tabular
       filetype: tabular
   outputs:
     short_peptide_qt:
       asserts:
         has_text:
           text: "KLEAPMPSHK"
+    long_peptide_qt:
+      asserts:
+        has_text:
+          text: "IADVGATSAAISGLKPLQYDPLEPTQVLAAVGHYK"
+    short_peptide_traditional:
+      asserts:
+        has_text:
+          text: "KLEAPMPSHK"
+    long_peptide_traditional:
+      asserts:
+        has_text:
+          text: "IADVGATSAAISGLKPLQYDPLEPTQVLAAVGHYK"
