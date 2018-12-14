@@ -1,0 +1,283 @@
+{
+  "a_galaxy_workflow": "true",
+  "annotation": "",
+  "format-version": "0.1",
+  "name": "imported: Query Tabular F1000 Metabolomics: Mass Adjustment",
+  "steps": {
+    "0": {
+      "annotation": "",
+      "content_id": null,
+      "errors": null,
+      "id": 0,
+      "input_connections": {},
+      "inputs": [],
+      "label": "data_matrix",
+      "name": "Input dataset",
+      "outputs": [],
+      "position": {
+        "left": 381,
+        "top": 258
+      },
+      "tool_id": null,
+      "tool_state": "{}",
+      "tool_version": null,
+      "type": "data_input",
+      "uuid": "311e7729-341d-426b-867a-29d64a3f66af",
+      "workflow_outputs": [
+        {
+          "label": null,
+          "output_name": "output",
+          "uuid": "e6ca3650-5bf0-438d-981c-ecb5c51cbf47"
+        }
+      ]
+    },
+    "1": {
+      "annotation": "",
+      "content_id": null,
+      "errors": null,
+      "id": 1,
+      "input_connections": {},
+      "inputs": [],
+      "label": "sample_metadata",
+      "name": "Input dataset",
+      "outputs": [],
+      "position": {
+        "left": 383,
+        "top": 367
+      },
+      "tool_id": null,
+      "tool_state": "{}",
+      "tool_version": null,
+      "type": "data_input",
+      "uuid": "48565a0d-432b-4211-98f0-19ea37fc4cc7",
+      "workflow_outputs": [
+        {
+          "label": null,
+          "output_name": "output",
+          "uuid": "3056d917-8c84-48ba-9265-916622f1fdb9"
+        }
+      ]
+    },
+    "2": {
+      "annotation": "",
+      "content_id": null,
+      "errors": null,
+      "id": 2,
+      "input_connections": {},
+      "inputs": [],
+      "label": "variable_metadata",
+      "name": "Input dataset",
+      "outputs": [],
+      "position": {
+        "left": 409,
+        "top": 476
+      },
+      "tool_id": null,
+      "tool_state": "{}",
+      "tool_version": null,
+      "type": "data_input",
+      "uuid": "1178cd10-d91a-4382-8006-6d95ad4ac366",
+      "workflow_outputs": [
+        {
+          "label": null,
+          "output_name": "output",
+          "uuid": "aa65b6dc-87e5-44ce-80a0-a47be5078baa"
+        }
+      ]
+    },
+    "3": {
+      "annotation": "",
+      "content_id": "testtoolshed.g2.bx.psu.edu/repos/eslerm/vkmz_qt/vkmz_qt/1.3.1",
+      "errors": null,
+      "id": 3,
+      "input_connections": {
+        "mode|datamatrix": {
+          "id": 0,
+          "output_name": "output"
+        },
+        "mode|samplemetadata": {
+          "id": 1,
+          "output_name": "output"
+        },
+        "mode|variablemetadata": {
+          "id": 2,
+          "output_name": "output"
+        }
+      },
+      "inputs": [
+        {
+          "description": "runtime parameter for tool vkmz_qt",
+          "name": "mode"
+        },
+        {
+          "description": "runtime parameter for tool vkmz_qt",
+          "name": "mode"
+        },
+        {
+          "description": "runtime parameter for tool vkmz_qt",
+          "name": "mode"
+        }
+      ],
+      "label": null,
+      "name": "vkmz_qt",
+      "outputs": [
+        {
+          "name": "output",
+          "type": "tabular"
+        },
+        {
+          "name": "output_html",
+          "type": "html"
+        }
+      ],
+      "position": {
+        "left": 638,
+        "top": 365.5
+      },
+      "post_job_actions": {
+        "HideDatasetActionoutput_html": {
+          "action_arguments": {},
+          "action_type": "HideDatasetAction",
+          "output_name": "output_html"
+        }
+      },
+      "tool_id": "testtoolshed.g2.bx.psu.edu/repos/eslerm/vkmz_qt/vkmz_qt/1.3.1",
+      "tool_shed_repository": {
+        "changeset_revision": "e85e0a79bb9b",
+        "name": "vkmz_qt",
+        "owner": "eslerm",
+        "tool_shed": "testtoolshed.g2.bx.psu.edu"
+      },
+      "tool_state": "{\"__page__\": null, \"advanced_input\": \"{\\\"polarity\\\": \\\"positive\\\", \\\"no_adjustment\\\": \\\"false\\\"}\", \"__rerun_remap_job_id__\": null, \"mode\": \"{\\\"datamatrix\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}, \\\"samplemetadata\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}, \\\"__current_case__\\\": 0, \\\"mode_selector\\\": \\\"xcms\\\", \\\"variablemetadata\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}}\", \"prediction\": \"{\\\"unique\\\": \\\"false\\\", \\\"database_type\\\": {\\\"database_type_selector\\\": \\\"heuristic\\\", \\\"__current_case__\\\": 0, \\\"database\\\": \\\"databases/bmrb-light.tsv\\\"}, \\\"error\\\": \\\"2000.0\\\"}\"}",
+      "tool_version": "1.3.1",
+      "type": "tool",
+      "uuid": "ba8b9721-b87c-42cf-8779-93f26eb86f29",
+      "workflow_outputs": [
+        {
+          "label": null,
+          "output_name": "output",
+          "uuid": "80572b2e-0299-404f-a7e1-dbb7369e1787"
+        }
+      ]
+    },
+    "4": {
+      "annotation": "",
+      "content_id": "toolshed.g2.bx.psu.edu/repos/iuc/query_tabular/query_tabular/2.0.0",
+      "errors": null,
+      "id": 4,
+      "input_connections": {
+        "tables_0|table": {
+          "id": 3,
+          "output_name": "output"
+        }
+      },
+      "inputs": [
+        {
+          "description": "runtime parameter for tool Query Tabular",
+          "name": "add_to_database"
+        }
+      ],
+      "label": null,
+      "name": "Query Tabular",
+      "outputs": [
+        {
+          "name": "sqlitedb",
+          "type": "sqlite"
+        },
+        {
+          "name": "output",
+          "type": "tabular"
+        }
+      ],
+      "position": {
+        "left": 835.5,
+        "top": 363
+      },
+      "post_job_actions": {
+        "HideDatasetActionsqlitedb": {
+          "action_arguments": {},
+          "action_type": "HideDatasetAction",
+          "output_name": "sqlitedb"
+        }
+      },
+      "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/query_tabular/query_tabular/2.0.0",
+      "tool_shed_repository": {
+        "changeset_revision": "1ea4e668bf73",
+        "name": "query_tabular",
+        "owner": "iuc",
+        "tool_shed": "toolshed.g2.bx.psu.edu"
+      },
+      "tool_state": "{\"tables\": \"[{\\\"tbl_opts\\\": {\\\"pkey_autoincr\\\": \\\"\\\", \\\"load_named_columns\\\": \\\"false\\\", \\\"indexes\\\": [], \\\"table_name\\\": \\\"\\\", \\\"col_names\\\": \\\"\\\", \\\"column_names_from_first_line\\\": \\\"true\\\"}, \\\"__index__\\\": 0, \\\"input_opts\\\": {\\\"linefilters\\\": []}, \\\"table\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}}]\", \"save_db\": \"\\\"false\\\"\", \"__page__\": null, \"__rerun_remap_job_id__\": null, \"sqlquery\": \"\\\"SELECT sample_id,\\\\n                 polarity,\\\\n                 mz * (1 + avg_rel_err) AS mz,\\\\n                 rt,\\\\n                 intensity,\\\\n                 mz AS original_mz\\\\nFROM t1,\\\\n             ( SELECT avg(predicted_delta / predicted_mass) AS avg_rel_err FROM t1 WHERE mz < 250 ) AS t2\\\"\", \"add_to_database\": \"{\\\"withdb\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}}\", \"query_result\": \"{\\\"header\\\": \\\"yes\\\", \\\"header_prefix\\\": \\\"\\\", \\\"__current_case__\\\": 0}\", \"workdb\": \"\\\"workdb.sqlite\\\"\"}",
+      "tool_version": "2.0.0",
+      "type": "tool",
+      "uuid": "74ec2bcc-d94f-48a7-aabe-86ebcda46f6e",
+      "workflow_outputs": [
+        {
+          "label": null,
+          "output_name": "output",
+          "uuid": "6d32fb2f-8985-4dce-8c49-3f4fc75930bd"
+        }
+      ]
+    },
+    "5": {
+      "annotation": "",
+      "content_id": "testtoolshed.g2.bx.psu.edu/repos/eslerm/vkmz_qt/vkmz_qt/1.3.1",
+      "errors": null,
+      "id": 5,
+      "input_connections": {
+        "mode|input": {
+          "id": 4,
+          "output_name": "output"
+        }
+      },
+      "inputs": [
+        {
+          "description": "runtime parameter for tool vkmz_qt",
+          "name": "mode"
+        }
+      ],
+      "label": "vkmz_qt_output",
+      "name": "vkmz_qt",
+      "outputs": [
+        {
+          "name": "output",
+          "type": "tabular"
+        },
+        {
+          "name": "output_html",
+          "type": "html"
+        }
+      ],
+      "position": {
+        "left": 1129,
+        "top": 366.5
+      },
+      "post_job_actions": {},
+      "tool_id": "testtoolshed.g2.bx.psu.edu/repos/eslerm/vkmz_qt/vkmz_qt/1.3.1",
+      "tool_shed_repository": {
+        "changeset_revision": "e85e0a79bb9b",
+        "name": "vkmz_qt",
+        "owner": "eslerm",
+        "tool_shed": "testtoolshed.g2.bx.psu.edu"
+      },
+      "tool_state": "{\"__page__\": null, \"advanced_input\": \"{\\\"polarity\\\": \\\"NA\\\", \\\"no_adjustment\\\": \\\"false\\\"}\", \"__rerun_remap_job_id__\": null, \"mode\": \"{\\\"input\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}, \\\"__current_case__\\\": 1, \\\"mode_selector\\\": \\\"tsv\\\"}\", \"prediction\": \"{\\\"unique\\\": \\\"false\\\", \\\"database_type\\\": {\\\"database_type_selector\\\": \\\"heuristic\\\", \\\"__current_case__\\\": 0, \\\"database\\\": \\\"databases/bmrb-light.tsv\\\"}, \\\"error\\\": \\\"2000.0\\\"}\"}",
+      "tool_version": "1.3.1",
+      "type": "tool",
+      "uuid": "7b63d6ba-e0df-4330-9233-870dd7963b58",
+      "workflow_outputs": [
+        {
+          "label": "vkmz_qt_output_tabular",
+          "output_name": "output",
+          "uuid": "556922f9-2ab9-4eed-84e8-fb5cb656d433"
+        },
+        {
+          "label": "vkmz_qt_output_html",
+          "output_name": "output_html",
+          "uuid": "bdbf09c2-715c-44d2-97eb-468d93055172"
+        }
+      ]
+    }
+  },
+  "tags": [],
+  "uuid": "4ce3a57c-25c9-4a65-b75c-1d56f2beedff"
+}
