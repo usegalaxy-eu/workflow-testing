@@ -1,0 +1,12 @@
+---
+- doc: "Query Tabular F1000 Metaproteomics: PSM Report to Blast Input Peptides"
+  job:
+    PeptideShaker_PSM_Report:
+      class: File
+      location: https://zenodo.org/record/2280276/files/Sample_Peptide_Shaker_PSM_Report.tabular
+      filetype: tabular
+  outputs:
+    short_peptide_qt:
+      asserts:
+        has_text:
+          text: "KLEAPMPSHK"
