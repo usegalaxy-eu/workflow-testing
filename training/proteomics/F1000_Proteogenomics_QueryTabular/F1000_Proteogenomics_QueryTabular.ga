@@ -1,0 +1,705 @@
+{
+  "a_galaxy_workflow": "true",
+  "annotation": "",
+  "format-version": "0.1",
+  "name": "Query Tabular F1000 Proteogenomics: PSM Report to Novel Peptides",
+  "steps": {
+    "0": {
+      "annotation": "",
+      "content_id": null,
+      "errors": null,
+      "id": 0,
+      "input_connections": {},
+      "inputs": [],
+      "label": "PSM_Report",
+      "name": "Input dataset",
+      "outputs": [],
+      "position": {
+        "left": 200,
+        "top": 515
+      },
+      "tool_id": null,
+      "tool_state": "{}",
+      "tool_version": null,
+      "type": "data_input",
+      "uuid": "55c1588d-8e1a-433c-a5a7-30f9d8bae7c4",
+      "workflow_outputs": [
+        {
+          "label": null,
+          "output_name": "output",
+          "uuid": "709f9680-5991-48b0-b508-3ee1f988d93e"
+        }
+      ]
+    },
+    "1": {
+      "annotation": "",
+      "content_id": null,
+      "errors": null,
+      "id": 1,
+      "input_connections": {},
+      "inputs": [],
+      "label": "Database_Mouse_nr",
+      "name": "Input dataset",
+      "outputs": [],
+      "position": {
+        "left": 188,
+        "top": 769
+      },
+      "tool_id": null,
+      "tool_state": "{}",
+      "tool_version": null,
+      "type": "data_input",
+      "uuid": "5d89d67a-e2e9-4bb2-9f48-a7409df7af3d",
+      "workflow_outputs": [
+        {
+          "label": null,
+          "output_name": "output",
+          "uuid": "41a34dd8-b14d-42cf-b0dd-25a11c72221d"
+        }
+      ]
+    },
+    "10": {
+      "annotation": "",
+      "content_id": "toolshed.g2.bx.psu.edu/repos/devteam/fasta_filter_by_length/fasta_filter_by_length/1.1",
+      "errors": null,
+      "id": 10,
+      "input_connections": {
+        "input": {
+          "id": 8,
+          "output_name": "output"
+        }
+      },
+      "inputs": [
+        {
+          "description": "runtime parameter for tool Filter sequences by length",
+          "name": "input"
+        }
+      ],
+      "label": "Select peptides with length >= 8 and <= 30",
+      "name": "Filter sequences by length",
+      "outputs": [
+        {
+          "name": "output",
+          "type": "fasta"
+        }
+      ],
+      "position": {
+        "left": 476,
+        "top": 515
+      },
+      "post_job_actions": {
+        "HideDatasetActionoutput": {
+          "action_arguments": {},
+          "action_type": "HideDatasetAction",
+          "output_name": "output"
+        }
+      },
+      "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/fasta_filter_by_length/fasta_filter_by_length/1.1",
+      "tool_shed_repository": {
+        "changeset_revision": "2fd6033d0e9c",
+        "name": "fasta_filter_by_length",
+        "owner": "devteam",
+        "tool_shed": "toolshed.g2.bx.psu.edu"
+      },
+      "tool_state": "{\"__page__\": null, \"min_length\": \"\\\"8\\\"\", \"__rerun_remap_job_id__\": null, \"max_length\": \"\\\"30\\\"\", \"input\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\"}",
+      "tool_version": "1.1",
+      "type": "tool",
+      "uuid": "13fba9d3-6079-4508-92c4-33ea7e99def6",
+      "workflow_outputs": []
+    },
+    "11": {
+      "annotation": "Run BLAST against mouse database to identify peptides that are part of known proteins",
+      "content_id": "testtoolshed.g2.bx.psu.edu/repos/devteam/ncbi_blast_plus/ncbi_blastp_wrapper/0.2.02",
+      "errors": null,
+      "id": 11,
+      "input_connections": {
+        "db_opts|subject": {
+          "id": 1,
+          "output_name": "output"
+        },
+        "query": {
+          "id": 10,
+          "output_name": "output"
+        }
+      },
+      "inputs": [
+        {
+          "description": "runtime parameter for tool NCBI BLAST+ blastp",
+          "name": "db_opts"
+        },
+        {
+          "description": "runtime parameter for tool NCBI BLAST+ blastp",
+          "name": "query"
+        }
+      ],
+      "label": null,
+      "name": "NCBI BLAST+ blastp",
+      "outputs": [
+        {
+          "name": "output1",
+          "type": "tabular"
+        }
+      ],
+      "position": {
+        "left": 934,
+        "top": 471
+      },
+      "post_job_actions": {
+        "HideDatasetActionoutput1": {
+          "action_arguments": {},
+          "action_type": "HideDatasetAction",
+          "output_name": "output1"
+        }
+      },
+      "tool_id": "testtoolshed.g2.bx.psu.edu/repos/devteam/ncbi_blast_plus/ncbi_blastp_wrapper/0.2.02",
+      "tool_shed_repository": {
+        "changeset_revision": "d724d9af93ee",
+        "name": "ncbi_blast_plus",
+        "owner": "devteam",
+        "tool_shed": "testtoolshed.g2.bx.psu.edu"
+      },
+      "tool_state": "{\"evalue_cutoff\": \"\\\"200000.0\\\"\", \"__page__\": null, \"adv_opts\": \"{\\\"adv_optional_id_files_opts\\\": {\\\"__current_case__\\\": 0, \\\"adv_optional_id_files_opts_selector\\\": \\\"none\\\"}, \\\"use_sw_tback\\\": \\\"false\\\", \\\"matrix_gapcosts\\\": {\\\"gap_costs\\\": \\\"-gapopen 9 -gapextend 1\\\", \\\"matrix\\\": \\\"PAM30\\\", \\\"__current_case__\\\": 8}, \\\"parse_deflines\\\": \\\"false\\\", \\\"max_hsps\\\": \\\"1\\\", \\\"adv_opts_selector\\\": \\\"advanced\\\", \\\"comp_based_stats\\\": \\\"0\\\", \\\"window_size\\\": \\\"40\\\", \\\"filter_query\\\": \\\"false\\\", \\\"word_size\\\": \\\"2\\\", \\\"__current_case__\\\": 1, \\\"threshold\\\": \\\"11\\\", \\\"qcov_hsp_perc\\\": \\\"0.0\\\", \\\"max_hits\\\": \\\"1\\\"}\", \"__rerun_remap_job_id__\": null, \"db_opts\": \"{\\\"db_opts_selector\\\": \\\"file\\\", \\\"subject\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}, \\\"histdb\\\": \\\"\\\", \\\"__current_case__\\\": 2, \\\"database\\\": \\\"\\\"}\", \"query\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"blast_type\": \"\\\"blastp-short\\\"\", \"output\": \"{\\\"out_format\\\": \\\"ext\\\", \\\"__current_case__\\\": 1}\"}",
+      "tool_version": "0.2.02",
+      "type": "tool",
+      "uuid": "68402a41-5df6-4d4c-87d6-e788283526d3",
+      "workflow_outputs": []
+    },
+    "12": {
+      "annotation": "Compute alignment length over query length.",
+      "content_id": "toolshed.g2.bx.psu.edu/repos/devteam/column_maker/Add_a_column1/1.1.0",
+      "errors": null,
+      "id": 12,
+      "input_connections": {
+        "input": {
+          "id": 11,
+          "output_name": "output1"
+        }
+      },
+      "inputs": [
+        {
+          "description": "runtime parameter for tool Compute",
+          "name": "input"
+        }
+      ],
+      "label": null,
+      "name": "Compute",
+      "outputs": [
+        {
+          "name": "out_file1",
+          "type": "input"
+        }
+      ],
+      "position": {
+        "left": 1259,
+        "top": 334
+      },
+      "post_job_actions": {
+        "HideDatasetActionout_file1": {
+          "action_arguments": {},
+          "action_type": "HideDatasetAction",
+          "output_name": "out_file1"
+        }
+      },
+      "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/column_maker/Add_a_column1/1.1.0",
+      "tool_shed_repository": {
+        "changeset_revision": "626658afe4cb",
+        "name": "column_maker",
+        "owner": "devteam",
+        "tool_shed": "toolshed.g2.bx.psu.edu"
+      },
+      "tool_state": "{\"input\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"__rerun_remap_job_id__\": null, \"cond\": \"\\\"(c4/c23)*100\\\"\", \"round\": \"\\\"no\\\"\", \"__page__\": null}",
+      "tool_version": "1.1.0",
+      "type": "tool",
+      "uuid": "adef1ca9-02bc-40f5-9fe6-9e30296e4839",
+      "workflow_outputs": []
+    },
+    "13": {
+      "annotation": "Select only peptides where\n(1) percentage identical matches is less than 100, or (2) there exists one or more gaps, or (3) alignment length is less than query length",
+      "content_id": "Filter1",
+      "errors": null,
+      "id": 13,
+      "input_connections": {
+        "input": {
+          "id": 12,
+          "output_name": "out_file1"
+        }
+      },
+      "inputs": [
+        {
+          "description": "runtime parameter for tool Filter",
+          "name": "input"
+        }
+      ],
+      "label": null,
+      "name": "Filter",
+      "outputs": [
+        {
+          "name": "out_file1",
+          "type": "input"
+        }
+      ],
+      "position": {
+        "left": 1258,
+        "top": 437
+      },
+      "post_job_actions": {
+        "HideDatasetActionout_file1": {
+          "action_arguments": {},
+          "action_type": "HideDatasetAction",
+          "output_name": "out_file1"
+        }
+      },
+      "tool_id": "Filter1",
+      "tool_state": "{\"input\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"__rerun_remap_job_id__\": null, \"header_lines\": \"\\\"0\\\"\", \"cond\": \"\\\"c3<100 or c17>=1 or c26<100\\\"\", \"__page__\": null}",
+      "tool_version": "1.1.0",
+      "type": "tool",
+      "uuid": "2531df74-0110-4afd-81bf-fe49bca33759",
+      "workflow_outputs": []
+    },
+    "14": {
+      "annotation": "Select peptide column.",
+      "content_id": "Cut1",
+      "errors": null,
+      "id": 14,
+      "input_connections": {
+        "input": {
+          "id": 13,
+          "output_name": "out_file1"
+        }
+      },
+      "inputs": [
+        {
+          "description": "runtime parameter for tool Cut",
+          "name": "input"
+        }
+      ],
+      "label": "Novel_Peptides_traditional",
+      "name": "Cut",
+      "outputs": [
+        {
+          "name": "out_file1",
+          "type": "tabular"
+        }
+      ],
+      "position": {
+        "left": 1258,
+        "top": 538
+      },
+      "post_job_actions": {},
+      "tool_id": "Cut1",
+      "tool_state": "{\"columnList\": \"\\\"c1\\\"\", \"input\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"delimiter\": \"\\\"T\\\"\", \"__rerun_remap_job_id__\": null, \"__page__\": null}",
+      "tool_version": "1.0.2",
+      "type": "tool",
+      "uuid": "88a2f3b2-4938-45b0-babd-192f390342f8",
+      "workflow_outputs": [
+        {
+          "label": "Novel_Peptides_traditional",
+          "output_name": "out_file1",
+          "uuid": "f0395061-157d-4f1c-8d13-d9a5162b9564"
+        }
+      ]
+    },
+    "2": {
+      "annotation": "",
+      "content_id": "Remove beginning1",
+      "errors": null,
+      "id": 2,
+      "input_connections": {
+        "input": {
+          "id": 0,
+          "output_name": "output"
+        }
+      },
+      "inputs": [
+        {
+          "description": "runtime parameter for tool Remove beginning",
+          "name": "input"
+        }
+      ],
+      "label": "Remove header line",
+      "name": "Remove beginning",
+      "outputs": [
+        {
+          "name": "out_file1",
+          "type": "input"
+        }
+      ],
+      "position": {
+        "left": 501,
+        "top": 178
+      },
+      "post_job_actions": {
+        "HideDatasetActionout_file1": {
+          "action_arguments": {},
+          "action_type": "HideDatasetAction",
+          "output_name": "out_file1"
+        }
+      },
+      "tool_id": "Remove beginning1",
+      "tool_state": "{\"input\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"__rerun_remap_job_id__\": null, \"num_lines\": \"\\\"1\\\"\", \"__page__\": null}",
+      "tool_version": "1.0.0",
+      "type": "tool",
+      "uuid": "e0a7b738-56e3-469c-a093-fa20be479e95",
+      "workflow_outputs": []
+    },
+    "3": {
+      "annotation": "",
+      "content_id": "toolshed.g2.bx.psu.edu/repos/iuc/query_tabular/query_tabular/2.0.0",
+      "errors": null,
+      "id": 3,
+      "input_connections": {
+        "tables_0|table": {
+          "id": 0,
+          "output_name": "output"
+        }
+      },
+      "inputs": [
+        {
+          "description": "runtime parameter for tool Query Tabular",
+          "name": "add_to_database"
+        }
+      ],
+      "label": null,
+      "name": "Query Tabular",
+      "outputs": [
+        {
+          "name": "sqlitedb",
+          "type": "sqlite"
+        },
+        {
+          "name": "output",
+          "type": "tabular"
+        }
+      ],
+      "position": {
+        "left": 451,
+        "top": 635
+      },
+      "post_job_actions": {
+        "HideDatasetActionoutput": {
+          "action_arguments": {},
+          "action_type": "HideDatasetAction",
+          "output_name": "output"
+        },
+        "HideDatasetActionsqlitedb": {
+          "action_arguments": {},
+          "action_type": "HideDatasetAction",
+          "output_name": "sqlitedb"
+        }
+      },
+      "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/query_tabular/query_tabular/2.0.0",
+      "tool_shed_repository": {
+        "changeset_revision": "1ea4e668bf73",
+        "name": "query_tabular",
+        "owner": "iuc",
+        "tool_shed": "toolshed.g2.bx.psu.edu"
+      },
+      "tool_state": "{\"tables\": \"[{\\\"tbl_opts\\\": {\\\"pkey_autoincr\\\": \\\"\\\", \\\"load_named_columns\\\": \\\"false\\\", \\\"indexes\\\": [], \\\"table_name\\\": \\\"\\\", \\\"col_names\\\": \\\"\\\", \\\"column_names_from_first_line\\\": \\\"false\\\"}, \\\"__index__\\\": 0, \\\"input_opts\\\": {\\\"linefilters\\\": [{\\\"filter\\\": {\\\"skip_lines\\\": \\\"1\\\", \\\"__current_case__\\\": 0, \\\"filter_type\\\": \\\"skip\\\"}, \\\"__index__\\\": 0}]}, \\\"table\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}}]\", \"save_db\": \"\\\"false\\\"\", \"__page__\": null, \"__rerun_remap_job_id__\": null, \"sqlquery\": \"\\\"SELECT DISTINCT c3\\\\nFROM t1\\\\nWHERE LENGTH(c3) >= 8 AND LENGTH(c3) <= 30\\\"\", \"add_to_database\": \"{\\\"withdb\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}}\", \"query_result\": \"{\\\"header\\\": \\\"yes\\\", \\\"header_prefix\\\": \\\"35\\\", \\\"__current_case__\\\": 0}\", \"workdb\": \"\\\"workdb.sqlite\\\"\"}",
+      "tool_version": "2.0.0",
+      "type": "tool",
+      "uuid": "24fb37ce-1c34-4964-a10c-ff236ea3f66e",
+      "workflow_outputs": []
+    },
+    "4": {
+      "annotation": "",
+      "content_id": "Cut1",
+      "errors": null,
+      "id": 4,
+      "input_connections": {
+        "input": {
+          "id": 2,
+          "output_name": "out_file1"
+        }
+      },
+      "inputs": [
+        {
+          "description": "runtime parameter for tool Cut",
+          "name": "input"
+        }
+      ],
+      "label": "Get peptide column",
+      "name": "Cut",
+      "outputs": [
+        {
+          "name": "out_file1",
+          "type": "tabular"
+        }
+      ],
+      "position": {
+        "left": 508,
+        "top": 289
+      },
+      "post_job_actions": {
+        "HideDatasetActionout_file1": {
+          "action_arguments": {},
+          "action_type": "HideDatasetAction",
+          "output_name": "out_file1"
+        }
+      },
+      "tool_id": "Cut1",
+      "tool_state": "{\"columnList\": \"\\\"c3\\\"\", \"input\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"delimiter\": \"\\\"T\\\"\", \"__rerun_remap_job_id__\": null, \"__page__\": null}",
+      "tool_version": "1.0.2",
+      "type": "tool",
+      "uuid": "f61d7880-bb82-4686-9184-1d403df59742",
+      "workflow_outputs": []
+    },
+    "5": {
+      "annotation": "",
+      "content_id": "toolshed.g2.bx.psu.edu/repos/devteam/tabular_to_fasta/tab2fasta/1.1.0",
+      "errors": null,
+      "id": 5,
+      "input_connections": {
+        "input": {
+          "id": 3,
+          "output_name": "output"
+        }
+      },
+      "inputs": [
+        {
+          "description": "runtime parameter for tool Tabular-to-FASTA",
+          "name": "input"
+        }
+      ],
+      "label": null,
+      "name": "Tabular-to-FASTA",
+      "outputs": [
+        {
+          "name": "output",
+          "type": "fasta"
+        }
+      ],
+      "position": {
+        "left": 744,
+        "top": 636
+      },
+      "post_job_actions": {
+        "HideDatasetActionoutput": {
+          "action_arguments": {},
+          "action_type": "HideDatasetAction",
+          "output_name": "output"
+        }
+      },
+      "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/tabular_to_fasta/tab2fasta/1.1.0",
+      "tool_shed_repository": {
+        "changeset_revision": "0b4e36026794",
+        "name": "tabular_to_fasta",
+        "owner": "devteam",
+        "tool_shed": "toolshed.g2.bx.psu.edu"
+      },
+      "tool_state": "{\"title_col\": \"\\\"1\\\"\", \"seq_col\": \"\\\"1\\\"\", \"__page__\": null, \"__rerun_remap_job_id__\": null, \"input\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\"}",
+      "tool_version": "1.1.0",
+      "type": "tool",
+      "uuid": "f6b76932-7e1a-477b-8d65-8de9eb5f904e",
+      "workflow_outputs": []
+    },
+    "6": {
+      "annotation": "",
+      "content_id": "Grouping1",
+      "errors": null,
+      "id": 6,
+      "input_connections": {
+        "input1": {
+          "id": 4,
+          "output_name": "out_file1"
+        }
+      },
+      "inputs": [
+        {
+          "description": "runtime parameter for tool Group",
+          "name": "input1"
+        }
+      ],
+      "label": "Deduplicate peptides",
+      "name": "Group",
+      "outputs": [
+        {
+          "name": "out_file1",
+          "type": "tabular"
+        }
+      ],
+      "position": {
+        "left": 508,
+        "top": 401
+      },
+      "post_job_actions": {
+        "HideDatasetActionout_file1": {
+          "action_arguments": {},
+          "action_type": "HideDatasetAction",
+          "output_name": "out_file1"
+        }
+      },
+      "tool_id": "Grouping1",
+      "tool_state": "{\"operations\": \"[]\", \"__page__\": null, \"input1\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"ignorelines\": \"null\", \"groupcol\": \"\\\"1\\\"\", \"__rerun_remap_job_id__\": null, \"ignorecase\": \"\\\"false\\\"\"}",
+      "tool_version": "2.1.1",
+      "type": "tool",
+      "uuid": "9bf71dd0-b87d-4aca-92a8-34d46f8c9d4a",
+      "workflow_outputs": []
+    },
+    "7": {
+      "annotation": "Run BLAST against mouse database to identify peptides that are part of known proteins",
+      "content_id": "testtoolshed.g2.bx.psu.edu/repos/devteam/ncbi_blast_plus/ncbi_blastp_wrapper/0.2.02",
+      "errors": null,
+      "id": 7,
+      "input_connections": {
+        "db_opts|subject": {
+          "id": 1,
+          "output_name": "output"
+        },
+        "query": {
+          "id": 5,
+          "output_name": "output"
+        }
+      },
+      "inputs": [
+        {
+          "description": "runtime parameter for tool NCBI BLAST+ blastp",
+          "name": "db_opts"
+        },
+        {
+          "description": "runtime parameter for tool NCBI BLAST+ blastp",
+          "name": "query"
+        }
+      ],
+      "label": null,
+      "name": "NCBI BLAST+ blastp",
+      "outputs": [
+        {
+          "name": "output1",
+          "type": "tabular"
+        }
+      ],
+      "position": {
+        "left": 902,
+        "top": 761
+      },
+      "post_job_actions": {
+        "HideDatasetActionoutput1": {
+          "action_arguments": {},
+          "action_type": "HideDatasetAction",
+          "output_name": "output1"
+        }
+      },
+      "tool_id": "testtoolshed.g2.bx.psu.edu/repos/devteam/ncbi_blast_plus/ncbi_blastp_wrapper/0.2.02",
+      "tool_shed_repository": {
+        "changeset_revision": "d724d9af93ee",
+        "name": "ncbi_blast_plus",
+        "owner": "devteam",
+        "tool_shed": "testtoolshed.g2.bx.psu.edu"
+      },
+      "tool_state": "{\"evalue_cutoff\": \"\\\"200000.0\\\"\", \"__page__\": null, \"adv_opts\": \"{\\\"adv_optional_id_files_opts\\\": {\\\"__current_case__\\\": 0, \\\"adv_optional_id_files_opts_selector\\\": \\\"none\\\"}, \\\"use_sw_tback\\\": \\\"false\\\", \\\"matrix_gapcosts\\\": {\\\"gap_costs\\\": \\\"-gapopen 9 -gapextend 1\\\", \\\"matrix\\\": \\\"PAM30\\\", \\\"__current_case__\\\": 8}, \\\"parse_deflines\\\": \\\"false\\\", \\\"max_hsps\\\": \\\"1\\\", \\\"adv_opts_selector\\\": \\\"advanced\\\", \\\"comp_based_stats\\\": \\\"0\\\", \\\"window_size\\\": \\\"40\\\", \\\"filter_query\\\": \\\"false\\\", \\\"word_size\\\": \\\"2\\\", \\\"__current_case__\\\": 1, \\\"threshold\\\": \\\"11\\\", \\\"qcov_hsp_perc\\\": \\\"0.0\\\", \\\"max_hits\\\": \\\"1\\\"}\", \"__rerun_remap_job_id__\": null, \"db_opts\": \"{\\\"db_opts_selector\\\": \\\"file\\\", \\\"subject\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}, \\\"histdb\\\": \\\"\\\", \\\"__current_case__\\\": 2, \\\"database\\\": \\\"\\\"}\", \"query\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"blast_type\": \"\\\"blastp-short\\\"\", \"output\": \"{\\\"out_format\\\": \\\"ext\\\", \\\"__current_case__\\\": 1}\"}",
+      "tool_version": "0.2.02",
+      "type": "tool",
+      "uuid": "77af617e-a72f-4b8e-91d2-a55e17c2f4d1",
+      "workflow_outputs": []
+    },
+    "8": {
+      "annotation": "",
+      "content_id": "toolshed.g2.bx.psu.edu/repos/devteam/tabular_to_fasta/tab2fasta/1.1.0",
+      "errors": null,
+      "id": 8,
+      "input_connections": {
+        "input": {
+          "id": 6,
+          "output_name": "out_file1"
+        }
+      },
+      "inputs": [
+        {
+          "description": "runtime parameter for tool Tabular-to-FASTA",
+          "name": "input"
+        }
+      ],
+      "label": null,
+      "name": "Tabular-to-FASTA",
+      "outputs": [
+        {
+          "name": "output",
+          "type": "fasta"
+        }
+      ],
+      "position": {
+        "left": 740,
+        "top": 420
+      },
+      "post_job_actions": {
+        "HideDatasetActionoutput": {
+          "action_arguments": {},
+          "action_type": "HideDatasetAction",
+          "output_name": "output"
+        }
+      },
+      "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/tabular_to_fasta/tab2fasta/1.1.0",
+      "tool_shed_repository": {
+        "changeset_revision": "0b4e36026794",
+        "name": "tabular_to_fasta",
+        "owner": "devteam",
+        "tool_shed": "toolshed.g2.bx.psu.edu"
+      },
+      "tool_state": "{\"title_col\": \"\\\"1\\\"\", \"seq_col\": \"\\\"1\\\"\", \"__page__\": null, \"__rerun_remap_job_id__\": null, \"input\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\"}",
+      "tool_version": "1.1.0",
+      "type": "tool",
+      "uuid": "4f952478-fb21-4b3c-80ac-1a2df6bf6f3a",
+      "workflow_outputs": []
+    },
+    "9": {
+      "annotation": "",
+      "content_id": "toolshed.g2.bx.psu.edu/repos/iuc/query_tabular/query_tabular/2.0.0",
+      "errors": null,
+      "id": 9,
+      "input_connections": {
+        "tables_0|table": {
+          "id": 7,
+          "output_name": "output1"
+        }
+      },
+      "inputs": [
+        {
+          "description": "runtime parameter for tool Query Tabular",
+          "name": "add_to_database"
+        }
+      ],
+      "label": "Novel_Peptides_qt",
+      "name": "Query Tabular",
+      "outputs": [
+        {
+          "name": "sqlitedb",
+          "type": "sqlite"
+        },
+        {
+          "name": "output",
+          "type": "tabular"
+        }
+      ],
+      "position": {
+        "left": 1259,
+        "top": 733
+      },
+      "post_job_actions": {
+        "HideDatasetActionsqlitedb": {
+          "action_arguments": {},
+          "action_type": "HideDatasetAction",
+          "output_name": "sqlitedb"
+        }
+      },
+      "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/query_tabular/query_tabular/2.0.0",
+      "tool_shed_repository": {
+        "changeset_revision": "1ea4e668bf73",
+        "name": "query_tabular",
+        "owner": "iuc",
+        "tool_shed": "toolshed.g2.bx.psu.edu"
+      },
+      "tool_state": "{\"tables\": \"[{\\\"tbl_opts\\\": {\\\"pkey_autoincr\\\": \\\"\\\", \\\"load_named_columns\\\": \\\"false\\\", \\\"indexes\\\": [], \\\"table_name\\\": \\\"\\\", \\\"col_names\\\": \\\"\\\", \\\"column_names_from_first_line\\\": \\\"false\\\"}, \\\"__index__\\\": 0, \\\"input_opts\\\": {\\\"linefilters\\\": []}, \\\"table\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}}]\", \"save_db\": \"\\\"false\\\"\", \"__page__\": null, \"__rerun_remap_job_id__\": null, \"sqlquery\": \"\\\"SELECT c1\\\\nFROM t1\\\\nWHERE (c3 < 100) OR (c4/c23*100 < 100) OR (c17 >= 1)\\\\nORDER BY c1\\\"\", \"add_to_database\": \"{\\\"withdb\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}}\", \"query_result\": \"{\\\"header\\\": \\\"no\\\", \\\"__current_case__\\\": 1}\", \"workdb\": \"\\\"workdb.sqlite\\\"\"}",
+      "tool_version": "2.0.0",
+      "type": "tool",
+      "uuid": "10dc0682-9c25-4c54-917d-0e32cae5ee10",
+      "workflow_outputs": [
+        {
+          "label": "Novel_Peptides_qt",
+          "output_name": "output",
+          "uuid": "999cbc10-694c-4a46-9b1a-f78919a61f5e"
+        }
+      ]
+    }
+  },
+  "uuid": "a2f6df80-b898-4ca2-a2e3-f050b724d2dd"
+}
