@@ -1,0 +1,1244 @@
+{
+  "a_galaxy_workflow": "true",
+  "annotation": "",
+  "format-version": "0.1",
+  "name": "Query Tabular F1000 Metaproteomics: PSM Report to Blast Input Peptides",
+  "steps": {
+    "0": {
+      "annotation": "",
+      "content_id": null,
+      "errors": null,
+      "id": 0,
+      "input_connections": {},
+      "inputs": [],
+      "label": "PeptideShaker_PSM_Report",
+      "name": "Input dataset",
+      "outputs": [],
+      "position": {
+        "left": 216.96875,
+        "top": 864.953125
+      },
+      "tool_id": null,
+      "tool_state": "{}",
+      "tool_version": null,
+      "type": "data_input",
+      "uuid": "152538f5-0be8-4a4a-8ec3-a5b67c27baf2",
+      "workflow_outputs": [
+        {
+          "label": null,
+          "output_name": "output",
+          "uuid": "ec997208-d0dd-459f-a418-cc07edbbe20a"
+        }
+      ]
+    },
+    "1": {
+      "annotation": "",
+      "content_id": "Cut1",
+      "errors": null,
+      "id": 1,
+      "input_connections": {
+        "input": {
+          "id": 0,
+          "output_name": "output"
+        }
+      },
+      "inputs": [
+        {
+          "description": "runtime parameter for tool Cut",
+          "name": "input"
+        }
+      ],
+      "label": null,
+      "name": "Cut",
+      "outputs": [
+        {
+          "name": "out_file1",
+          "type": "tabular"
+        }
+      ],
+      "position": {
+        "left": 595.53125,
+        "top": 267
+      },
+      "post_job_actions": {
+        "HideDatasetActionout_file1": {
+          "action_arguments": {},
+          "action_type": "HideDatasetAction",
+          "output_name": "out_file1"
+        }
+      },
+      "tool_id": "Cut1",
+      "tool_state": "{\"columnList\": \"\\\"c3\\\"\", \"input\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"delimiter\": \"\\\"T\\\"\", \"__rerun_remap_job_id__\": null, \"__page__\": null}",
+      "tool_version": "1.0.2",
+      "type": "tool",
+      "uuid": "d216d697-0ea7-4be7-ae84-409e7add48ac",
+      "workflow_outputs": []
+    },
+    "10": {
+      "annotation": "",
+      "content_id": "toolshed.g2.bx.psu.edu/repos/devteam/tabular_to_fasta/tab2fasta/1.1.0",
+      "errors": null,
+      "id": 10,
+      "input_connections": {
+        "input": {
+          "id": 8,
+          "output_name": "output"
+        }
+      },
+      "inputs": [
+        {
+          "description": "runtime parameter for tool Tabular-to-FASTA",
+          "name": "input"
+        }
+      ],
+      "label": null,
+      "name": "Tabular-to-FASTA",
+      "outputs": [
+        {
+          "name": "output",
+          "type": "fasta"
+        }
+      ],
+      "position": {
+        "left": 913.53125,
+        "top": 433.96875
+      },
+      "post_job_actions": {
+        "HideDatasetActionoutput": {
+          "action_arguments": {},
+          "action_type": "HideDatasetAction",
+          "output_name": "output"
+        }
+      },
+      "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/tabular_to_fasta/tab2fasta/1.1.0",
+      "tool_shed_repository": {
+        "changeset_revision": "0b4e36026794",
+        "name": "tabular_to_fasta",
+        "owner": "devteam",
+        "tool_shed": "toolshed.g2.bx.psu.edu"
+      },
+      "tool_state": "{\"title_col\": \"[\\\"1\\\", \\\"2\\\"]\", \"__page__\": null, \"seq_col\": \"\\\"1\\\"\", \"__rerun_remap_job_id__\": null, \"__workflow_invocation_uuid__\": \"\\\"5010416223b811e7a548fa163e14a73a\\\"\", \"input\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"chromInfo\": \"\\\"/panfs/roc/website/galaxyp.msi.umn.edu/GALAXYP/tool-data/shared/ucsc/chrom/?.len\\\"\"}",
+      "tool_version": "1.1.0",
+      "type": "tool",
+      "uuid": "e481e60e-19a9-4aeb-b631-7a8b1249583b",
+      "workflow_outputs": []
+    },
+    "11": {
+      "annotation": "",
+      "content_id": "toolshed.g2.bx.psu.edu/repos/devteam/fasta_filter_by_length/fasta_filter_by_length/1.1",
+      "errors": null,
+      "id": 11,
+      "input_connections": {
+        "input": {
+          "id": 9,
+          "output_name": "outfile"
+        }
+      },
+      "inputs": [
+        {
+          "description": "runtime parameter for tool Filter sequences by length",
+          "name": "input"
+        }
+      ],
+      "label": null,
+      "name": "Filter sequences by length",
+      "outputs": [
+        {
+          "name": "output",
+          "type": "fasta"
+        }
+      ],
+      "position": {
+        "left": 2187.515625,
+        "top": 1196.640625
+      },
+      "post_job_actions": {
+        "RenameDatasetActionoutput": {
+          "action_arguments": {
+            "newname": "short_peptide_fasta_QT"
+          },
+          "action_type": "RenameDatasetAction",
+          "output_name": "output"
+        }
+      },
+      "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/fasta_filter_by_length/fasta_filter_by_length/1.1",
+      "tool_shed_repository": {
+        "changeset_revision": "2fd6033d0e9c",
+        "name": "fasta_filter_by_length",
+        "owner": "devteam",
+        "tool_shed": "toolshed.g2.bx.psu.edu"
+      },
+      "tool_state": "{\"__page__\": null, \"min_length\": \"\\\"8\\\"\", \"__rerun_remap_job_id__\": null, \"max_length\": \"\\\"30\\\"\", \"input\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\"}",
+      "tool_version": "1.1",
+      "type": "tool",
+      "uuid": "fedf712b-65a1-452e-a881-06932e98aca0",
+      "workflow_outputs": [
+        {
+          "label": "short_peptide_qt",
+          "output_name": "output",
+          "uuid": "04c9ed94-743e-4e27-9db4-ffa9d848903d"
+        }
+      ]
+    },
+    "12": {
+      "annotation": "",
+      "content_id": "toolshed.g2.bx.psu.edu/repos/devteam/fasta_filter_by_length/fasta_filter_by_length/1.1",
+      "errors": null,
+      "id": 12,
+      "input_connections": {
+        "input": {
+          "id": 9,
+          "output_name": "outfile"
+        }
+      },
+      "inputs": [
+        {
+          "description": "runtime parameter for tool Filter sequences by length",
+          "name": "input"
+        }
+      ],
+      "label": null,
+      "name": "Filter sequences by length",
+      "outputs": [
+        {
+          "name": "output",
+          "type": "fasta"
+        }
+      ],
+      "position": {
+        "left": 2191.484375,
+        "top": 1617.625
+      },
+      "post_job_actions": {
+        "RenameDatasetActionoutput": {
+          "action_arguments": {
+            "newname": "long_peptide_fasta_QT"
+          },
+          "action_type": "RenameDatasetAction",
+          "output_name": "output"
+        }
+      },
+      "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/fasta_filter_by_length/fasta_filter_by_length/1.1",
+      "tool_shed_repository": {
+        "changeset_revision": "2fd6033d0e9c",
+        "name": "fasta_filter_by_length",
+        "owner": "devteam",
+        "tool_shed": "toolshed.g2.bx.psu.edu"
+      },
+      "tool_state": "{\"__page__\": null, \"min_length\": \"\\\"31\\\"\", \"__rerun_remap_job_id__\": null, \"max_length\": \"\\\"75\\\"\", \"input\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\"}",
+      "tool_version": "1.1",
+      "type": "tool",
+      "uuid": "19091bb8-15fd-4202-b7db-b7cee45f4970",
+      "workflow_outputs": [
+        {
+          "label": "long_peptide_qt",
+          "output_name": "output",
+          "uuid": "bd09bcac-7fe2-4555-bd7e-cb25b75d6407"
+        }
+      ]
+    },
+    "13": {
+      "annotation": "",
+      "content_id": "toolshed.g2.bx.psu.edu/repos/devteam/fasta_filter_by_length/fasta_filter_by_length/1.1",
+      "errors": null,
+      "id": 13,
+      "input_connections": {
+        "input": {
+          "id": 10,
+          "output_name": "output"
+        }
+      },
+      "inputs": [
+        {
+          "description": "runtime parameter for tool Filter sequences by length",
+          "name": "input"
+        }
+      ],
+      "label": null,
+      "name": "Filter sequences by length",
+      "outputs": [
+        {
+          "name": "output",
+          "type": "fasta"
+        }
+      ],
+      "position": {
+        "left": 1164.5,
+        "top": 235.96875
+      },
+      "post_job_actions": {
+        "HideDatasetActionoutput": {
+          "action_arguments": {},
+          "action_type": "HideDatasetAction",
+          "output_name": "output"
+        }
+      },
+      "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/fasta_filter_by_length/fasta_filter_by_length/1.1",
+      "tool_shed_repository": {
+        "changeset_revision": "2fd6033d0e9c",
+        "name": "fasta_filter_by_length",
+        "owner": "devteam",
+        "tool_shed": "toolshed.g2.bx.psu.edu"
+      },
+      "tool_state": "{\"__page__\": null, \"min_length\": \"\\\"8\\\"\", \"__rerun_remap_job_id__\": null, \"__workflow_invocation_uuid__\": \"\\\"5010416223b811e7a548fa163e14a73a\\\"\", \"max_length\": \"\\\"30\\\"\", \"input\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"chromInfo\": \"\\\"/panfs/roc/website/galaxyp.msi.umn.edu/GALAXYP/tool-data/shared/ucsc/chrom/?.len\\\"\"}",
+      "tool_version": "1.1",
+      "type": "tool",
+      "uuid": "9ff248aa-6597-48ba-b820-72ef79659e25",
+      "workflow_outputs": []
+    },
+    "14": {
+      "annotation": "",
+      "content_id": "toolshed.g2.bx.psu.edu/repos/devteam/fasta_filter_by_length/fasta_filter_by_length/1.1",
+      "errors": null,
+      "id": 14,
+      "input_connections": {
+        "input": {
+          "id": 10,
+          "output_name": "output"
+        }
+      },
+      "inputs": [
+        {
+          "description": "runtime parameter for tool Filter sequences by length",
+          "name": "input"
+        }
+      ],
+      "label": null,
+      "name": "Filter sequences by length",
+      "outputs": [
+        {
+          "name": "output",
+          "type": "fasta"
+        }
+      ],
+      "position": {
+        "left": 1166.515625,
+        "top": 709.984375
+      },
+      "post_job_actions": {
+        "HideDatasetActionoutput": {
+          "action_arguments": {},
+          "action_type": "HideDatasetAction",
+          "output_name": "output"
+        }
+      },
+      "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/fasta_filter_by_length/fasta_filter_by_length/1.1",
+      "tool_shed_repository": {
+        "changeset_revision": "2fd6033d0e9c",
+        "name": "fasta_filter_by_length",
+        "owner": "devteam",
+        "tool_shed": "toolshed.g2.bx.psu.edu"
+      },
+      "tool_state": "{\"__page__\": null, \"min_length\": \"\\\"31\\\"\", \"__rerun_remap_job_id__\": null, \"__workflow_invocation_uuid__\": \"\\\"5010416223b811e7a548fa163e14a73a\\\"\", \"max_length\": \"\\\"75\\\"\", \"input\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"chromInfo\": \"\\\"/panfs/roc/website/galaxyp.msi.umn.edu/GALAXYP/tool-data/shared/ucsc/chrom/?.len\\\"\"}",
+      "tool_version": "1.1",
+      "type": "tool",
+      "uuid": "c775142e-b307-49a1-abbb-c4e0ead0784d",
+      "workflow_outputs": []
+    },
+    "15": {
+      "annotation": "",
+      "content_id": "cat1",
+      "errors": null,
+      "id": 15,
+      "input_connections": {
+        "input1": {
+          "id": 13,
+          "output_name": "output"
+        },
+        "queries_0|input2": {
+          "id": 14,
+          "output_name": "output"
+        }
+      },
+      "inputs": [
+        {
+          "description": "runtime parameter for tool Concatenate datasets",
+          "name": "input1"
+        }
+      ],
+      "label": null,
+      "name": "Concatenate datasets",
+      "outputs": [
+        {
+          "name": "out_file1",
+          "type": "input"
+        }
+      ],
+      "position": {
+        "left": 1419.453125,
+        "top": 452.96875
+      },
+      "post_job_actions": {
+        "HideDatasetActionout_file1": {
+          "action_arguments": {},
+          "action_type": "HideDatasetAction",
+          "output_name": "out_file1"
+        }
+      },
+      "tool_id": "cat1",
+      "tool_state": "{\"__page__\": null, \"input1\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"__rerun_remap_job_id__\": null, \"__workflow_invocation_uuid__\": \"\\\"5010416223b811e7a548fa163e14a73a\\\"\", \"queries\": \"[{\\\"input2\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}, \\\"__index__\\\": 0}]\", \"chromInfo\": \"\\\"/panfs/roc/website/galaxyp.msi.umn.edu/GALAXYP/tool-data/shared/ucsc/chrom/?.len\\\"\"}",
+      "tool_version": "1.0.0",
+      "type": "tool",
+      "uuid": "92b61216-efd6-4975-952e-2d456e8a7ea5",
+      "workflow_outputs": []
+    },
+    "16": {
+      "annotation": "",
+      "content_id": "toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_find_and_replace/1.1.1",
+      "errors": null,
+      "id": 16,
+      "input_connections": {
+        "infile": {
+          "id": 15,
+          "output_name": "out_file1"
+        }
+      },
+      "inputs": [
+        {
+          "description": "runtime parameter for tool Replace",
+          "name": "infile"
+        }
+      ],
+      "label": null,
+      "name": "Replace",
+      "outputs": [
+        {
+          "name": "outfile",
+          "type": "input"
+        }
+      ],
+      "position": {
+        "left": 1630.859375,
+        "top": 234.09375
+      },
+      "post_job_actions": {
+        "HideDatasetActionoutfile": {
+          "action_arguments": {},
+          "action_type": "HideDatasetAction",
+          "output_name": "outfile"
+        }
+      },
+      "tool_id": "toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_find_and_replace/1.1.1",
+      "tool_shed_repository": {
+        "changeset_revision": "6378f8384f30",
+        "name": "text_processing",
+        "owner": "bgruening",
+        "tool_shed": "toolshed.g2.bx.psu.edu"
+      },
+      "tool_state": "{\"__page__\": null, \"caseinsensitive\": \"\\\"false\\\"\", \"searchwhere\": \"{\\\"searchwhere_select\\\": \\\"line\\\", \\\"__current_case__\\\": 0}\", \"find_pattern\": \"\\\"^(>.*)_([0-9]+)$\\\"\", \"__rerun_remap_job_id__\": null, \"is_regex\": \"\\\"true\\\"\", \"skip_first_line\": \"\\\"false\\\"\", \"replace_pattern\": \"\\\"$1 sequence length=$2 aa\\\"\", \"infile\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"wholewords\": \"\\\"false\\\"\"}",
+      "tool_version": "1.1.1",
+      "type": "tool",
+      "uuid": "9e54d800-a958-470b-a4e0-a4ea5489b809",
+      "workflow_outputs": []
+    },
+    "17": {
+      "annotation": "",
+      "content_id": "toolshed.g2.bx.psu.edu/repos/devteam/fasta_to_tabular/fasta2tab/1.1.0",
+      "errors": null,
+      "id": 17,
+      "input_connections": {
+        "input": {
+          "id": 16,
+          "output_name": "outfile"
+        }
+      },
+      "inputs": [
+        {
+          "description": "runtime parameter for tool FASTA-to-Tabular",
+          "name": "input"
+        }
+      ],
+      "label": null,
+      "name": "FASTA-to-Tabular",
+      "outputs": [
+        {
+          "name": "output",
+          "type": "tabular"
+        }
+      ],
+      "position": {
+        "left": 1672.484375,
+        "top": 337
+      },
+      "post_job_actions": {
+        "HideDatasetActionoutput": {
+          "action_arguments": {},
+          "action_type": "HideDatasetAction",
+          "output_name": "output"
+        }
+      },
+      "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/fasta_to_tabular/fasta2tab/1.1.0",
+      "tool_shed_repository": {
+        "changeset_revision": "7e801ab2b70e",
+        "name": "fasta_to_tabular",
+        "owner": "devteam",
+        "tool_shed": "toolshed.g2.bx.psu.edu"
+      },
+      "tool_state": "{\"__page__\": null, \"keep_first\": \"\\\"0\\\"\", \"descr_columns\": \"\\\"4\\\"\", \"__workflow_invocation_uuid__\": \"\\\"5010416223b811e7a548fa163e14a73a\\\"\", \"input\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"chromInfo\": \"\\\"/panfs/roc/website/galaxyp.msi.umn.edu/GALAXYP/tool-data/shared/ucsc/chrom/?.len\\\"\", \"__rerun_remap_job_id__\": null}",
+      "tool_version": "1.1.0",
+      "type": "tool",
+      "uuid": "9a0e9196-28aa-4583-97e3-f7b5accf9334",
+      "workflow_outputs": []
+    },
+    "18": {
+      "annotation": "",
+      "content_id": "addValue",
+      "errors": null,
+      "id": 18,
+      "input_connections": {
+        "input": {
+          "id": 17,
+          "output_name": "output"
+        }
+      },
+      "inputs": [
+        {
+          "description": "runtime parameter for tool Add column",
+          "name": "input"
+        }
+      ],
+      "label": null,
+      "name": "Add column",
+      "outputs": [
+        {
+          "name": "out_file1",
+          "type": "input"
+        }
+      ],
+      "position": {
+        "left": 1711.484375,
+        "top": 444.953125
+      },
+      "post_job_actions": {
+        "HideDatasetActionout_file1": {
+          "action_arguments": {},
+          "action_type": "HideDatasetAction",
+          "output_name": "out_file1"
+        }
+      },
+      "tool_id": "addValue",
+      "tool_state": "{\"__page__\": null, \"__rerun_remap_job_id__\": null, \"__workflow_invocation_uuid__\": \"\\\"5010416223b811e7a548fa163e14a73a\\\"\", \"exp\": \"\\\"1\\\"\", \"input\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"iterate\": \"\\\"yes\\\"\", \"chromInfo\": \"\\\"/panfs/roc/website/galaxyp.msi.umn.edu/GALAXYP/tool-data/shared/ucsc/chrom/?.len\\\"\"}",
+      "tool_version": "1.0.0",
+      "type": "tool",
+      "uuid": "56709b43-cb6f-4169-88b9-135931e48fb9",
+      "workflow_outputs": []
+    },
+    "19": {
+      "annotation": "",
+      "content_id": "mergeCols1",
+      "errors": null,
+      "id": 19,
+      "input_connections": {
+        "input1": {
+          "id": 18,
+          "output_name": "out_file1"
+        }
+      },
+      "inputs": [
+        {
+          "description": "runtime parameter for tool Merge Columns",
+          "name": "input1"
+        }
+      ],
+      "label": null,
+      "name": "Merge Columns",
+      "outputs": [
+        {
+          "name": "out_file1",
+          "type": "tabular"
+        }
+      ],
+      "position": {
+        "left": 1737.5,
+        "top": 560.953125
+      },
+      "post_job_actions": {
+        "HideDatasetActionout_file1": {
+          "action_arguments": {},
+          "action_type": "HideDatasetAction",
+          "output_name": "out_file1"
+        }
+      },
+      "tool_id": "mergeCols1",
+      "tool_state": "{\"__page__\": null, \"input1\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"__rerun_remap_job_id__\": null, \"col2\": \"\\\"6\\\"\", \"__workflow_invocation_uuid__\": \"\\\"5010416223b811e7a548fa163e14a73a\\\"\", \"col1\": \"\\\"1\\\"\", \"chromInfo\": \"\\\"/panfs/roc/website/galaxyp.msi.umn.edu/GALAXYP/tool-data/shared/ucsc/chrom/?.len\\\"\", \"columns\": \"[]\"}",
+      "tool_version": "1.0.1",
+      "type": "tool",
+      "uuid": "06eaacd8-d646-4600-8831-7e57852a73e6",
+      "workflow_outputs": []
+    },
+    "2": {
+      "annotation": "",
+      "content_id": "toolshed.g2.bx.psu.edu/repos/iuc/query_tabular/query_tabular/2.0.0",
+      "errors": null,
+      "id": 2,
+      "input_connections": {
+        "tables_0|table": {
+          "id": 0,
+          "output_name": "output"
+        }
+      },
+      "inputs": [
+        {
+          "description": "runtime parameter for tool Query Tabular",
+          "name": "add_to_database"
+        }
+      ],
+      "label": null,
+      "name": "Query Tabular",
+      "outputs": [
+        {
+          "name": "sqlitedb",
+          "type": "sqlite"
+        },
+        {
+          "name": "output",
+          "type": "tabular"
+        }
+      ],
+      "position": {
+        "left": 1085.953125,
+        "top": 1220.640625
+      },
+      "post_job_actions": {
+        "HideDatasetActionoutput": {
+          "action_arguments": {},
+          "action_type": "HideDatasetAction",
+          "output_name": "output"
+        },
+        "HideDatasetActionsqlitedb": {
+          "action_arguments": {},
+          "action_type": "HideDatasetAction",
+          "output_name": "sqlitedb"
+        },
+        "RenameDatasetActionoutput": {
+          "action_arguments": {
+            "newname": "short_peptides"
+          },
+          "action_type": "RenameDatasetAction",
+          "output_name": "output"
+        }
+      },
+      "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/query_tabular/query_tabular/2.0.0",
+      "tool_shed_repository": {
+        "changeset_revision": "1ea4e668bf73",
+        "name": "query_tabular",
+        "owner": "iuc",
+        "tool_shed": "toolshed.g2.bx.psu.edu"
+      },
+      "tool_state": "{\"tables\": \"[{\\\"tbl_opts\\\": {\\\"pkey_autoincr\\\": \\\"\\\", \\\"load_named_columns\\\": \\\"true\\\", \\\"indexes\\\": [], \\\"table_name\\\": \\\"psm\\\", \\\"col_names\\\": \\\"ID,Proteins,Sequence\\\", \\\"column_names_from_first_line\\\": \\\"false\\\"}, \\\"__index__\\\": 0, \\\"input_opts\\\": {\\\"linefilters\\\": [{\\\"filter\\\": {\\\"skip_lines\\\": \\\"1\\\", \\\"__current_case__\\\": 0, \\\"filter_type\\\": \\\"skip\\\"}, \\\"__index__\\\": 0}]}, \\\"table\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}}]\", \"save_db\": \"\\\"false\\\"\", \"__page__\": null, \"__rerun_remap_job_id__\": null, \"sqlquery\": \"\\\"SELECT psm.Sequence, LENGTH(psm.Sequence) as length\\\\nFROM psm WHERE length >=8 and length <=30\\\"\", \"add_to_database\": \"{\\\"withdb\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}}\", \"query_result\": \"{\\\"header\\\": \\\"no\\\", \\\"__current_case__\\\": 1}\", \"workdb\": \"\\\"workdb.sqlite\\\"\"}",
+      "tool_version": "2.0.0",
+      "type": "tool",
+      "uuid": "38adaf47-0e4d-4d69-ad67-4405df22a0cf",
+      "workflow_outputs": []
+    },
+    "20": {
+      "annotation": "",
+      "content_id": "Cut1",
+      "errors": null,
+      "id": 20,
+      "input_connections": {
+        "input": {
+          "id": 19,
+          "output_name": "out_file1"
+        }
+      },
+      "inputs": [
+        {
+          "description": "runtime parameter for tool Cut",
+          "name": "input"
+        }
+      ],
+      "label": null,
+      "name": "Cut",
+      "outputs": [
+        {
+          "name": "out_file1",
+          "type": "tabular"
+        }
+      ],
+      "position": {
+        "left": 1772.515625,
+        "top": 666
+      },
+      "post_job_actions": {
+        "HideDatasetActionout_file1": {
+          "action_arguments": {},
+          "action_type": "HideDatasetAction",
+          "output_name": "out_file1"
+        }
+      },
+      "tool_id": "Cut1",
+      "tool_state": "{\"__page__\": null, \"__rerun_remap_job_id__\": null, \"__workflow_invocation_uuid__\": \"\\\"5010416223b811e7a548fa163e14a73a\\\"\", \"delimiter\": \"\\\"T\\\"\", \"columnList\": \"\\\"c7,c3,c5\\\"\", \"input\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"chromInfo\": \"\\\"/panfs/roc/website/galaxyp.msi.umn.edu/GALAXYP/tool-data/shared/ucsc/chrom/?.len\\\"\"}",
+      "tool_version": "1.0.2",
+      "type": "tool",
+      "uuid": "6dc33bbb-9d42-4072-b6c6-95818c98ecfa",
+      "workflow_outputs": []
+    },
+    "21": {
+      "annotation": "",
+      "content_id": "toolshed.g2.bx.psu.edu/repos/devteam/tabular_to_fasta/tab2fasta/1.1.0",
+      "errors": null,
+      "id": 21,
+      "input_connections": {
+        "input": {
+          "id": 20,
+          "output_name": "out_file1"
+        }
+      },
+      "inputs": [
+        {
+          "description": "runtime parameter for tool Tabular-to-FASTA",
+          "name": "input"
+        }
+      ],
+      "label": null,
+      "name": "Tabular-to-FASTA",
+      "outputs": [
+        {
+          "name": "output",
+          "type": "fasta"
+        }
+      ],
+      "position": {
+        "left": 1821.546875,
+        "top": 775.9375
+      },
+      "post_job_actions": {
+        "HideDatasetActionoutput": {
+          "action_arguments": {},
+          "action_type": "HideDatasetAction",
+          "output_name": "output"
+        }
+      },
+      "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/tabular_to_fasta/tab2fasta/1.1.0",
+      "tool_shed_repository": {
+        "changeset_revision": "0b4e36026794",
+        "name": "tabular_to_fasta",
+        "owner": "devteam",
+        "tool_shed": "toolshed.g2.bx.psu.edu"
+      },
+      "tool_state": "{\"title_col\": \"[\\\"1\\\", \\\"2\\\"]\", \"__page__\": null, \"seq_col\": \"\\\"3\\\"\", \"__rerun_remap_job_id__\": null, \"__workflow_invocation_uuid__\": \"\\\"5010416223b811e7a548fa163e14a73a\\\"\", \"input\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"chromInfo\": \"\\\"/panfs/roc/website/galaxyp.msi.umn.edu/GALAXYP/tool-data/shared/ucsc/chrom/?.len\\\"\"}",
+      "tool_version": "1.1.0",
+      "type": "tool",
+      "uuid": "2ce06d39-7a34-46a4-aefe-12e9f4d14d34",
+      "workflow_outputs": []
+    },
+    "22": {
+      "annotation": "",
+      "content_id": "toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_find_and_replace/1.1.1",
+      "errors": null,
+      "id": 22,
+      "input_connections": {
+        "infile": {
+          "id": 21,
+          "output_name": "output"
+        }
+      },
+      "inputs": [
+        {
+          "description": "runtime parameter for tool Replace",
+          "name": "infile"
+        }
+      ],
+      "label": null,
+      "name": "Replace",
+      "outputs": [
+        {
+          "name": "outfile",
+          "type": "input"
+        }
+      ],
+      "position": {
+        "left": 2010.890625,
+        "top": 437.0625
+      },
+      "post_job_actions": {
+        "HideDatasetActionoutfile": {
+          "action_arguments": {},
+          "action_type": "HideDatasetAction",
+          "output_name": "outfile"
+        }
+      },
+      "tool_id": "toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_find_and_replace/1.1.1",
+      "tool_shed_repository": {
+        "changeset_revision": "6378f8384f30",
+        "name": "text_processing",
+        "owner": "bgruening",
+        "tool_shed": "toolshed.g2.bx.psu.edu"
+      },
+      "tool_state": "{\"__page__\": null, \"caseinsensitive\": \"\\\"false\\\"\", \"searchwhere\": \"{\\\"searchwhere_select\\\": \\\"line\\\", \\\"__current_case__\\\": 0}\", \"find_pattern\": \"\\\"_\\\"\", \"__rerun_remap_job_id__\": null, \"is_regex\": \"\\\"false\\\"\", \"skip_first_line\": \"\\\"false\\\"\", \"replace_pattern\": \"\\\" \\\"\", \"infile\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"wholewords\": \"\\\"false\\\"\"}",
+      "tool_version": "1.1.1",
+      "type": "tool",
+      "uuid": "7f81ef95-abad-4fb9-a1e4-2e115dc54526",
+      "workflow_outputs": []
+    },
+    "23": {
+      "annotation": "",
+      "content_id": "toolshed.g2.bx.psu.edu/repos/devteam/fasta_filter_by_length/fasta_filter_by_length/1.1",
+      "errors": null,
+      "id": 23,
+      "input_connections": {
+        "input": {
+          "id": 22,
+          "output_name": "outfile"
+        }
+      },
+      "inputs": [
+        {
+          "description": "runtime parameter for tool Filter sequences by length",
+          "name": "input"
+        }
+      ],
+      "label": null,
+      "name": "Filter sequences by length",
+      "outputs": [
+        {
+          "name": "output",
+          "type": "fasta"
+        }
+      ],
+      "position": {
+        "left": 2227.53125,
+        "top": 252.984375
+      },
+      "post_job_actions": {
+        "RenameDatasetActionoutput": {
+          "action_arguments": {
+            "newname": "short_peptide_fasta_traditional"
+          },
+          "action_type": "RenameDatasetAction",
+          "output_name": "output"
+        }
+      },
+      "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/fasta_filter_by_length/fasta_filter_by_length/1.1",
+      "tool_shed_repository": {
+        "changeset_revision": "2fd6033d0e9c",
+        "name": "fasta_filter_by_length",
+        "owner": "devteam",
+        "tool_shed": "toolshed.g2.bx.psu.edu"
+      },
+      "tool_state": "{\"__page__\": null, \"min_length\": \"\\\"8\\\"\", \"__rerun_remap_job_id__\": null, \"max_length\": \"\\\"30\\\"\", \"input\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\"}",
+      "tool_version": "1.1",
+      "type": "tool",
+      "uuid": "ffbb1b42-fc2a-4f3b-9e4a-6f7e18b60690",
+      "workflow_outputs": [
+        {
+          "label": "short_peptide_traditional",
+          "output_name": "output",
+          "uuid": "7e91c5b6-6198-4452-8276-734bcd8c2a82"
+        }
+      ]
+    },
+    "24": {
+      "annotation": "",
+      "content_id": "toolshed.g2.bx.psu.edu/repos/devteam/fasta_filter_by_length/fasta_filter_by_length/1.1",
+      "errors": null,
+      "id": 24,
+      "input_connections": {
+        "input": {
+          "id": 22,
+          "output_name": "outfile"
+        }
+      },
+      "inputs": [
+        {
+          "description": "runtime parameter for tool Filter sequences by length",
+          "name": "input"
+        }
+      ],
+      "label": null,
+      "name": "Filter sequences by length",
+      "outputs": [
+        {
+          "name": "output",
+          "type": "fasta"
+        }
+      ],
+      "position": {
+        "left": 2236.484375,
+        "top": 673.96875
+      },
+      "post_job_actions": {
+        "RenameDatasetActionoutput": {
+          "action_arguments": {
+            "newname": "long_peptide_fasta_traditional"
+          },
+          "action_type": "RenameDatasetAction",
+          "output_name": "output"
+        }
+      },
+      "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/fasta_filter_by_length/fasta_filter_by_length/1.1",
+      "tool_shed_repository": {
+        "changeset_revision": "2fd6033d0e9c",
+        "name": "fasta_filter_by_length",
+        "owner": "devteam",
+        "tool_shed": "toolshed.g2.bx.psu.edu"
+      },
+      "tool_state": "{\"__page__\": null, \"min_length\": \"\\\"31\\\"\", \"__rerun_remap_job_id__\": null, \"max_length\": \"\\\"75\\\"\", \"input\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\"}",
+      "tool_version": "1.1",
+      "type": "tool",
+      "uuid": "74f8f43a-af84-4586-be46-20d832955059",
+      "workflow_outputs": [
+        {
+          "label": "long_peptide_traditional",
+          "output_name": "output",
+          "uuid": "23561cc6-b7a4-4c80-a0c6-a354cced6169"
+        }
+      ]
+    },
+    "3": {
+      "annotation": "",
+      "content_id": "toolshed.g2.bx.psu.edu/repos/iuc/query_tabular/query_tabular/2.0.0",
+      "errors": null,
+      "id": 3,
+      "input_connections": {
+        "tables_0|table": {
+          "id": 0,
+          "output_name": "output"
+        }
+      },
+      "inputs": [
+        {
+          "description": "runtime parameter for tool Query Tabular",
+          "name": "add_to_database"
+        }
+      ],
+      "label": null,
+      "name": "Query Tabular",
+      "outputs": [
+        {
+          "name": "sqlitedb",
+          "type": "sqlite"
+        },
+        {
+          "name": "output",
+          "type": "tabular"
+        }
+      ],
+      "position": {
+        "left": 1092.96875,
+        "top": 1505.625
+      },
+      "post_job_actions": {
+        "HideDatasetActionoutput": {
+          "action_arguments": {},
+          "action_type": "HideDatasetAction",
+          "output_name": "output"
+        },
+        "HideDatasetActionsqlitedb": {
+          "action_arguments": {},
+          "action_type": "HideDatasetAction",
+          "output_name": "sqlitedb"
+        },
+        "RenameDatasetActionoutput": {
+          "action_arguments": {
+            "newname": "long_peptides"
+          },
+          "action_type": "RenameDatasetAction",
+          "output_name": "output"
+        }
+      },
+      "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/query_tabular/query_tabular/2.0.0",
+      "tool_shed_repository": {
+        "changeset_revision": "1ea4e668bf73",
+        "name": "query_tabular",
+        "owner": "iuc",
+        "tool_shed": "toolshed.g2.bx.psu.edu"
+      },
+      "tool_state": "{\"tables\": \"[{\\\"tbl_opts\\\": {\\\"pkey_autoincr\\\": \\\"\\\", \\\"load_named_columns\\\": \\\"false\\\", \\\"indexes\\\": [], \\\"table_name\\\": \\\"psm\\\", \\\"col_names\\\": \\\"ID,Proteins,Sequence\\\", \\\"column_names_from_first_line\\\": \\\"false\\\"}, \\\"__index__\\\": 0, \\\"input_opts\\\": {\\\"linefilters\\\": [{\\\"filter\\\": {\\\"skip_lines\\\": \\\"1\\\", \\\"__current_case__\\\": 0, \\\"filter_type\\\": \\\"skip\\\"}, \\\"__index__\\\": 0}]}, \\\"table\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}}]\", \"save_db\": \"\\\"false\\\"\", \"__page__\": null, \"__rerun_remap_job_id__\": null, \"sqlquery\": \"\\\"SELECT psm.Sequence, LENGTH(psm.Sequence) as length\\\\nFROM psm WHERE length > 30\\\"\", \"add_to_database\": \"{\\\"withdb\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}}\", \"query_result\": \"{\\\"header\\\": \\\"no\\\", \\\"__current_case__\\\": 1}\", \"workdb\": \"\\\"workdb.sqlite\\\"\"}",
+      "tool_version": "2.0.0",
+      "type": "tool",
+      "uuid": "d048ba82-9101-4d2e-ab88-ad81b3d716f9",
+      "workflow_outputs": []
+    },
+    "4": {
+      "annotation": "",
+      "content_id": "Remove beginning1",
+      "errors": null,
+      "id": 4,
+      "input_connections": {
+        "input": {
+          "id": 1,
+          "output_name": "out_file1"
+        }
+      },
+      "inputs": [
+        {
+          "description": "runtime parameter for tool Remove beginning",
+          "name": "input"
+        }
+      ],
+      "label": null,
+      "name": "Remove beginning",
+      "outputs": [
+        {
+          "name": "out_file1",
+          "type": "input"
+        }
+      ],
+      "position": {
+        "left": 600.5,
+        "top": 369
+      },
+      "post_job_actions": {
+        "HideDatasetActionout_file1": {
+          "action_arguments": {},
+          "action_type": "HideDatasetAction",
+          "output_name": "out_file1"
+        }
+      },
+      "tool_id": "Remove beginning1",
+      "tool_state": "{\"__page__\": null, \"num_lines\": \"\\\"1\\\"\", \"__rerun_remap_job_id__\": null, \"__workflow_invocation_uuid__\": \"\\\"5010416223b811e7a548fa163e14a73a\\\"\", \"input\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"chromInfo\": \"\\\"/panfs/roc/website/galaxyp.msi.umn.edu/GALAXYP/tool-data/shared/ucsc/chrom/?.len\\\"\"}",
+      "tool_version": "1.0.0",
+      "type": "tool",
+      "uuid": "523c49c8-ffe0-43fc-85c8-361b84030cfe",
+      "workflow_outputs": []
+    },
+    "5": {
+      "annotation": "",
+      "content_id": "cat1",
+      "errors": null,
+      "id": 5,
+      "input_connections": {
+        "input1": {
+          "id": 2,
+          "output_name": "output"
+        },
+        "queries_0|input2": {
+          "id": 3,
+          "output_name": "output"
+        }
+      },
+      "inputs": [
+        {
+          "description": "runtime parameter for tool Concatenate datasets",
+          "name": "input1"
+        }
+      ],
+      "label": null,
+      "name": "Concatenate datasets",
+      "outputs": [
+        {
+          "name": "out_file1",
+          "type": "input"
+        }
+      ],
+      "position": {
+        "left": 1483.484375,
+        "top": 1402.609375
+      },
+      "post_job_actions": {
+        "HideDatasetActionout_file1": {
+          "action_arguments": {},
+          "action_type": "HideDatasetAction",
+          "output_name": "out_file1"
+        },
+        "RenameDatasetActionout_file1": {
+          "action_arguments": {
+            "newname": "all_peptides"
+          },
+          "action_type": "RenameDatasetAction",
+          "output_name": "out_file1"
+        }
+      },
+      "tool_id": "cat1",
+      "tool_state": "{\"__page__\": null, \"__rerun_remap_job_id__\": null, \"input1\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"queries\": \"[{\\\"input2\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}, \\\"__index__\\\": 0}]\"}",
+      "tool_version": "1.0.0",
+      "type": "tool",
+      "uuid": "109497c5-0990-4799-b65e-ab7e359645f0",
+      "workflow_outputs": []
+    },
+    "6": {
+      "annotation": "",
+      "content_id": "toolshed.g2.bx.psu.edu/repos/devteam/tabular_to_fasta/tab2fasta/1.1.0",
+      "errors": null,
+      "id": 6,
+      "input_connections": {
+        "input": {
+          "id": 4,
+          "output_name": "out_file1"
+        }
+      },
+      "inputs": [
+        {
+          "description": "runtime parameter for tool Tabular-to-FASTA",
+          "name": "input"
+        }
+      ],
+      "label": null,
+      "name": "Tabular-to-FASTA",
+      "outputs": [
+        {
+          "name": "output",
+          "type": "fasta"
+        }
+      ],
+      "position": {
+        "left": 646.53125,
+        "top": 483
+      },
+      "post_job_actions": {
+        "HideDatasetActionoutput": {
+          "action_arguments": {},
+          "action_type": "HideDatasetAction",
+          "output_name": "output"
+        }
+      },
+      "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/tabular_to_fasta/tab2fasta/1.1.0",
+      "tool_shed_repository": {
+        "changeset_revision": "0b4e36026794",
+        "name": "tabular_to_fasta",
+        "owner": "devteam",
+        "tool_shed": "toolshed.g2.bx.psu.edu"
+      },
+      "tool_state": "{\"title_col\": \"[\\\"1\\\"]\", \"__page__\": null, \"seq_col\": \"\\\"1\\\"\", \"__rerun_remap_job_id__\": null, \"__workflow_invocation_uuid__\": \"\\\"5010416223b811e7a548fa163e14a73a\\\"\", \"input\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"chromInfo\": \"\\\"/panfs/roc/website/galaxyp.msi.umn.edu/GALAXYP/tool-data/shared/ucsc/chrom/?.len\\\"\"}",
+      "tool_version": "1.1.0",
+      "type": "tool",
+      "uuid": "8788c9f9-f963-42d8-b584-88ba45cb6cd9",
+      "workflow_outputs": []
+    },
+    "7": {
+      "annotation": "",
+      "content_id": "addValue",
+      "errors": null,
+      "id": 7,
+      "input_connections": {
+        "input": {
+          "id": 5,
+          "output_name": "out_file1"
+        }
+      },
+      "inputs": [
+        {
+          "description": "runtime parameter for tool Add column",
+          "name": "input"
+        }
+      ],
+      "label": null,
+      "name": "Add column",
+      "outputs": [
+        {
+          "name": "out_file1",
+          "type": "input"
+        }
+      ],
+      "position": {
+        "left": 1749.59375,
+        "top": 1392.71875
+      },
+      "post_job_actions": {
+        "HideDatasetActionout_file1": {
+          "action_arguments": {},
+          "action_type": "HideDatasetAction",
+          "output_name": "out_file1"
+        }
+      },
+      "tool_id": "addValue",
+      "tool_state": "{\"__page__\": null, \"iterate\": \"\\\"yes\\\"\", \"__rerun_remap_job_id__\": null, \"exp\": \"\\\"1\\\"\", \"input\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\"}",
+      "tool_version": "1.0.0",
+      "type": "tool",
+      "uuid": "3c706f84-2541-426e-a660-3f28343ed37c",
+      "workflow_outputs": []
+    },
+    "8": {
+      "annotation": "",
+      "content_id": "toolshed.g2.bx.psu.edu/repos/devteam/fasta_compute_length/fasta_compute_length/1.0.1",
+      "errors": null,
+      "id": 8,
+      "input_connections": {
+        "input": {
+          "id": 6,
+          "output_name": "output"
+        }
+      },
+      "inputs": [
+        {
+          "description": "runtime parameter for tool Compute sequence length",
+          "name": "input"
+        }
+      ],
+      "label": null,
+      "name": "Compute sequence length",
+      "outputs": [
+        {
+          "name": "output",
+          "type": "tabular"
+        }
+      ],
+      "position": {
+        "left": 654.5,
+        "top": 607.96875
+      },
+      "post_job_actions": {
+        "HideDatasetActionoutput": {
+          "action_arguments": {},
+          "action_type": "HideDatasetAction",
+          "output_name": "output"
+        }
+      },
+      "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/fasta_compute_length/fasta_compute_length/1.0.1",
+      "tool_shed_repository": {
+        "changeset_revision": "de2db1bdfbf8",
+        "name": "fasta_compute_length",
+        "owner": "devteam",
+        "tool_shed": "toolshed.g2.bx.psu.edu"
+      },
+      "tool_state": "{\"__page__\": null, \"keep_first_word\": \"\\\"false\\\"\", \"keep_first\": \"\\\"0\\\"\", \"__workflow_invocation_uuid__\": \"\\\"5010416223b811e7a548fa163e14a73a\\\"\", \"input\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"chromInfo\": \"\\\"/panfs/roc/website/galaxyp.msi.umn.edu/GALAXYP/tool-data/shared/ucsc/chrom/?.len\\\"\", \"__rerun_remap_job_id__\": null}",
+      "tool_version": "1.0.1",
+      "type": "tool",
+      "uuid": "fb5980b3-aa3e-4565-a55e-ad9f8ebf2c45",
+      "workflow_outputs": []
+    },
+    "9": {
+      "annotation": "",
+      "content_id": "toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_find_and_replace/1.1.1",
+      "errors": null,
+      "id": 9,
+      "input_connections": {
+        "infile": {
+          "id": 7,
+          "output_name": "out_file1"
+        }
+      },
+      "inputs": [
+        {
+          "description": "runtime parameter for tool Replace",
+          "name": "infile"
+        }
+      ],
+      "label": null,
+      "name": "Replace",
+      "outputs": [
+        {
+          "name": "outfile",
+          "type": "input"
+        }
+      ],
+      "position": {
+        "left": 1982.859375,
+        "top": 1364.078125
+      },
+      "post_job_actions": {
+        "HideDatasetActionoutfile": {
+          "action_arguments": {},
+          "action_type": "HideDatasetAction",
+          "output_name": "outfile"
+        }
+      },
+      "tool_id": "toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_find_and_replace/1.1.1",
+      "tool_shed_repository": {
+        "changeset_revision": "6378f8384f30",
+        "name": "text_processing",
+        "owner": "bgruening",
+        "tool_shed": "toolshed.g2.bx.psu.edu"
+      },
+      "tool_state": "{\"__page__\": null, \"caseinsensitive\": \"\\\"false\\\"\", \"searchwhere\": \"{\\\"searchwhere_select\\\": \\\"line\\\", \\\"__current_case__\\\": 0}\", \"find_pattern\": \"\\\"(\\\\\\\\w+)\\\\\\\\t(\\\\\\\\d+)\\\\\\\\t(\\\\\\\\d+)\\\"\", \"__rerun_remap_job_id__\": null, \"is_regex\": \"\\\"true\\\"\", \"skip_first_line\": \"\\\"false\\\"\", \"replace_pattern\": \"\\\">$1$3 length=$2\\\\\\\\n$1\\\"\", \"infile\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"wholewords\": \"\\\"false\\\"\"}",
+      "tool_version": "1.1.1",
+      "type": "tool",
+      "uuid": "cdd38d8a-400e-4daf-be49-c659b80ba33c",
+      "workflow_outputs": []
+    }
+  },
+  "tags": [],
+  "uuid": "26a88a7a-8f76-4c1a-b087-be4351793fcb"
+}
