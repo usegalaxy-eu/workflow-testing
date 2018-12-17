@@ -1,0 +1,20 @@
+---
+- doc: "Query Tabular F1000 Proteogenomics: PSM Report to Novel Peptides"
+  job:
+    PSM_Report:
+      class: File
+      location: https://zenodo.org/record/2283682/files/Sample_PSM_Report_proteogenomics.tabular
+      filetype: tabular
+    Database_Mouse_nr:
+      class: File
+      location: https://zenodo.org/record/2283682/files/mouse_nr_db_050318.fasta
+      filetype: fasta
+  outputs:
+    Novel_Peptides_traditional:
+      asserts:
+        has_text:
+          text: "ESSREALVEPTSESPRPALAR"
+    Novel_Peptides_qt:
+      asserts:
+        has_text:
+          text: "ESSREALVEPTSESPRPALAR"
