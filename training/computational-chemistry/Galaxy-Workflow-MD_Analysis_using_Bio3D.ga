@@ -1,0 +1,244 @@
+{
+    "a_galaxy_workflow": "true", 
+    "annotation": "", 
+    "format-version": "0.1", 
+    "name": "MD Analysis using Bio3D", 
+    "steps": {
+        "0": {
+            "annotation": "", 
+            "content_id": null, 
+            "errors": null, 
+            "id": 0, 
+            "input_connections": {}, 
+            "inputs": [
+                {
+                    "description": "", 
+                    "name": "Galaxy1-[minimizer_pdb_8.pdb].pdb"
+                }
+            ], 
+            "label": "Galaxy1-[minimizer_pdb_8.pdb].pdb", 
+            "name": "Input dataset", 
+            "outputs": [], 
+            "position": {
+                "left": 200, 
+                "top": 200
+            }, 
+            "tool_id": null, 
+            "tool_state": "{\"name\": \"Galaxy1-[minimizer_pdb_8.pdb].pdb\"}", 
+            "tool_version": null, 
+            "type": "data_input", 
+            "uuid": "6c07a4b5-0ade-4c3b-977b-46327d6f28e7", 
+            "workflow_outputs": []
+        }, 
+        "1": {
+            "annotation": "", 
+            "content_id": null, 
+            "errors": null, 
+            "id": 1, 
+            "input_connections": {}, 
+            "inputs": [
+                {
+                    "description": "", 
+                    "name": "Galaxy2-[5ns-1000-frames.dcd].dcd"
+                }
+            ], 
+            "label": "Galaxy2-[5ns-1000-frames.dcd].dcd", 
+            "name": "Input dataset", 
+            "outputs": [], 
+            "position": {
+                "left": 200, 
+                "top": 320
+            }, 
+            "tool_id": null, 
+            "tool_state": "{\"name\": \"Galaxy2-[5ns-1000-frames.dcd].dcd\"}", 
+            "tool_version": null, 
+            "type": "data_input", 
+            "uuid": "2ba809bd-2922-40c7-bb5a-bfb6050b79df", 
+            "workflow_outputs": []
+        }, 
+        "2": {
+            "annotation": "", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/chemteam/bio3d_rmsf/bio3d_rmsf/2.3", 
+            "errors": null, 
+            "id": 2, 
+            "input_connections": {
+                "dcdin": {
+                    "id": 1, 
+                    "output_name": "output"
+                }, 
+                "pdbin": {
+                    "id": 0, 
+                    "output_name": "output"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool RMSF Analysis", 
+                    "name": "pdbin"
+                }, 
+                {
+                    "description": "runtime parameter for tool RMSF Analysis", 
+                    "name": "dcdin"
+                }
+            ], 
+            "label": null, 
+            "name": "RMSF Analysis", 
+            "outputs": [
+                {
+                    "name": "output", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "rmsf_plot", 
+                    "type": "png"
+                }
+            ], 
+            "position": {
+                "left": 435, 
+                "top": 495
+            }, 
+            "post_job_actions": {}, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/chemteam/bio3d_rmsf/bio3d_rmsf/2.3", 
+            "tool_shed_repository": {
+                "changeset_revision": "e838317708a6", 
+                "name": "bio3d_rmsf", 
+                "owner": "chemteam", 
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            }, 
+            "tool_state": "{\"__page__\": null, \"rmsf\": \"{\\\"__current_case__\\\": 0, \\\"sele\\\": \\\"calpha\\\"}\", \"__rerun_remap_job_id__\": null, \"pdbin\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"chromInfo\": \"\\\"/opt/galaxy/tool-data/shared/ucsc/chrom/?.len\\\"\", \"dcdin\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\"}", 
+            "tool_version": "2.3", 
+            "type": "tool", 
+            "uuid": "0010e547-66ba-4c57-87a9-64f45b6d1b8b", 
+            "workflow_outputs": []
+        }, 
+        "3": {
+            "annotation": "", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/chemteam/bio3d_pca/bio3d_pca/2.3", 
+            "errors": null, 
+            "id": 3, 
+            "input_connections": {
+                "dcdin": {
+                    "id": 1, 
+                    "output_name": "output"
+                }, 
+                "pdbin": {
+                    "id": 0, 
+                    "output_name": "output"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool PCA", 
+                    "name": "pdbin"
+                }, 
+                {
+                    "description": "runtime parameter for tool PCA", 
+                    "name": "dcdin"
+                }
+            ], 
+            "label": null, 
+            "name": "PCA", 
+            "outputs": [
+                {
+                    "name": "output", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "pca_plot", 
+                    "type": "png"
+                }, 
+                {
+                    "name": "pca_cluster", 
+                    "type": "png"
+                }, 
+                {
+                    "name": "pc1_rmsf", 
+                    "type": "png"
+                }
+            ], 
+            "position": {
+                "left": 668, 
+                "top": 104
+            }, 
+            "post_job_actions": {}, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/chemteam/bio3d_pca/bio3d_pca/2.3", 
+            "tool_shed_repository": {
+                "changeset_revision": "f56fb2762abb", 
+                "name": "bio3d_pca", 
+                "owner": "chemteam", 
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            }, 
+            "tool_state": "{\"__page__\": null, \"__rerun_remap_job_id__\": null, \"method\": \"\\\"false\\\"\", \"pdbin\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"pca\": \"{\\\"__current_case__\\\": 0, \\\"sele\\\": \\\"calpha\\\"}\", \"chromInfo\": \"\\\"/opt/galaxy/tool-data/shared/ucsc/chrom/?.len\\\"\", \"dcdin\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\"}", 
+            "tool_version": "2.3", 
+            "type": "tool", 
+            "uuid": "be585280-9e47-47bb-b4ea-d9b8375c8204", 
+            "workflow_outputs": []
+        }, 
+        "4": {
+            "annotation": "", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/chemteam/bio3d_rmsd/bio3d_rmsd/2.3", 
+            "errors": null, 
+            "id": 4, 
+            "input_connections": {
+                "dcdin": {
+                    "id": 1, 
+                    "output_name": "output"
+                }, 
+                "pdbin": {
+                    "id": 0, 
+                    "output_name": "output"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool RMSD Analysis", 
+                    "name": "pdbin"
+                }, 
+                {
+                    "description": "runtime parameter for tool RMSD Analysis", 
+                    "name": "dcdin"
+                }
+            ], 
+            "label": null, 
+            "name": "RMSD Analysis", 
+            "outputs": [
+                {
+                    "name": "output", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "rmsd_plot", 
+                    "type": "png"
+                }, 
+                {
+                    "name": "rmsd_hist_plot", 
+                    "type": "png"
+                }
+            ], 
+            "position": {
+                "left": 734, 
+                "top": 403
+            }, 
+            "post_job_actions": {}, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/chemteam/bio3d_rmsd/bio3d_rmsd/2.3", 
+            "tool_shed_repository": {
+                "changeset_revision": "75fd897bd85d", 
+                "name": "bio3d_rmsd", 
+                "owner": "chemteam", 
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            }, 
+            "tool_state": "{\"__page__\": null, \"rmsd\": \"{\\\"__current_case__\\\": 0, \\\"sele\\\": \\\"calpha\\\"}\", \"__rerun_remap_job_id__\": null, \"pdbin\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"chromInfo\": \"\\\"/opt/galaxy/tool-data/shared/ucsc/chrom/?.len\\\"\", \"dcdin\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\"}", 
+            "tool_version": "2.3", 
+            "type": "tool", 
+            "uuid": "8088ee87-34b5-4499-9419-4fcceb2f2a4a", 
+            "workflow_outputs": []
+        }
+    }, 
+    "tags": [
+        "analysis", 
+        "moleculardynamics", 
+        "bio3d"
+    ], 
+    "uuid": "c1773a7e-1836-4828-8c05-53ca22a3e043", 
+    "version": 1
+}
