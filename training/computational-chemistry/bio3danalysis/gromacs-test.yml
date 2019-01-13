@@ -1,0 +1,12 @@
+---
+- doc: Test sample data for the GROMACS workflow
+  job:
+    input_str:
+      class: File
+      location: https://raw.githubusercontent.com/galaxycomputationalchemistry/galaxy-tools-compchem/master/tools/gromacs/test-data/1AKI.pdb
+      filetype: pdb
+  outputs:
+    gro_output:
+      asserts:
+        has_text:
+          text: "LYSOZYME in water"
