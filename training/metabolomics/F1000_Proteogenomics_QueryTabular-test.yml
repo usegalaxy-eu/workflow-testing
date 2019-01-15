@@ -1,0 +1,20 @@
+---
+- doc: "Query Tabular F1000 Metabolomics: Mass Adjustment"
+  job:
+    data_matrix:
+      class: File
+      location: https://zenodo.org/record/2508401/files/dataMatrix.tabular
+      filetype: tabular
+    sample_metadata:
+      class: File
+      location: https://zenodo.org/record/2508401/files/sampleMetadata.tabular
+      filetype: tabular
+    variable_metadata:
+      class: File
+      location: https://zenodo.org/record/2508401/files/variableMetadata.tabular
+      filetype: tabular
+  outputs:
+    vkmz_qt_output_tabular:
+      asserts:
+        has_text:
+          text: "murra668_20180508_qc_17"
