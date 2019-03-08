@@ -2,7 +2,7 @@
   job:
     cliques_lite:
       class: File
-      location: https://github.com/BackofenLab/docker-galaxy-graphclust/raw/master/sample_data/cliques-low-representatives.fa
+      location: https://raw.githubusercontent.com/BackofenLab/GraphClust-2/master/data/Rfam-cliques-dataset/cliques-low-representatives.fa
       filetype: fasta
   outputs:
     evaluation_text:
