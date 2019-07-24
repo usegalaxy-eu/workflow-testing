@@ -1,0 +1,23 @@
+- doc: Data for MIRACUM-main
+  job:
+    normal_forward_reads:
+      class: File
+      location: https://zenodo.org/record/2582555/files/SLGFSK-N_231335_r1_chr5_12_17.fastq.gz?download=1
+      filetype: fastqsanger.gz
+    normal_reverse_reads:
+      class: File
+      location: https://zenodo.org/record/2582555/files/SLGFSK-N_231335_r2_chr5_12_17.fastq.gz?download=1
+      filetype: fastqsanger.gz
+    tumor_forward_reads:
+      class: File
+      location: https://zenodo.org/record/2582555/files/SLGFSK-T_231336_r1_chr5_12_17.fastq.gz?download=1
+      filetype: fastqsanger.gz
+    tumor_reverse_reads:
+      class: File
+      location: https://zenodo.org/record/2582555/files/SLGFSK-T_231336_r2_chr5_12_17.fastq.gz?download=1
+      filetype: fastqsanger.gz
+    # Not really needed, as no connection in workflow
+    capture_regions:
+      class: File
+      location: https://www.dropbox.com/s/axvdwe2lzf2ome9/VCRome_2_1_hg19_capture_targets.bed?dl=1
+      filetype: bed
