@@ -1,0 +1,6 @@
+- doc: Just transfer a big (1GB) file there and back
+  job:
+    big-file:
+      class: File
+      location: http://speedtest.belwue.net/random-1G
+      filetype: txt

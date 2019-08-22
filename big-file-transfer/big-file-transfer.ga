@@ -1,0 +1,73 @@
+{
+  "uuid": "cec65567-724c-40f6-9079-b79a241be7a4",
+  "tags": [],
+  "format-version": "0.1",
+  "name": "Big-File",
+  "version": 1,
+  "steps": {
+    "0": {
+      "tool_id": null,
+      "tool_version": null,
+      "outputs": [],
+      "workflow_outputs": [{
+        "output_name": "output",
+        "uuid": "c1221d53-4d6b-4735-a39d-c8e9a4cd3492",
+        "label": null
+      }],
+      "input_connections": {},
+      "tool_state": "{}",
+      "id": 0,
+      "uuid": "2d85b49e-97c0-4200-be9f-7b20d7546b7e",
+      "errors": null,
+      "name": "Input dataset",
+      "label": "big-file",
+      "inputs": [
+          {
+              "description": "",
+              "name": "big-file"
+          }
+      ],
+      "position": {
+        "top": 133,
+        "left": 155.5
+      },
+      "annotation": "",
+      "content_id": null,
+      "type": "data_input"
+    },
+    "1": {
+        "annotation": "",
+        "content_id": "Show beginning1",
+        "errors": null,
+        "id": 1,
+        "input_connections": {
+            "input": {
+                "id": 0,
+                "output_name": "output"
+            }
+        },
+        "inputs": [],
+        "label": null,
+        "name": "Select first",
+        "outputs": [
+            {
+                "name": "out_file1",
+                "type": "input"
+            }
+        ],
+        "position": {
+            "left": 230,
+            "top": 10
+        },
+        "post_job_actions": {},
+        "tool_id": "Show beginning1",
+        "tool_state": "{\"__page__\": null, \"input\": \"null\", \"__rerun_remap_job_id__\": null, \"chromInfo\": \"\\\"/srv/galaxy/var/tool-data/shared/ucsc/chrom/?.len\\\"\", \"lineNum\": \"\\\"9999999999999\\\"\"}",
+        "tool_version": "1.0.0",
+        "type": "tool",
+        "uuid": "ce0f997a-6952-4f9c-ae70-32247268f7fa",
+        "workflow_outputs": []
+    }
+  }, 
+  "annotation": "",
+  "a_galaxy_workflow": "true"
+}
