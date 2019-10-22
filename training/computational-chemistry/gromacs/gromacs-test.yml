@@ -3,7 +3,7 @@
   job:
     input_str:
       class: File
-      location: https://raw.githubusercontent.com/galaxycomputationalchemistry/galaxy-tools-compchem/master/tools/gromacs/test-data/1AKI.pdb
+      location: https://raw.githubusercontent.com/simonbray/test-files/master/gromacs_workflow/inp.pdb
       filetype: pdb
   outputs:
     gro_output:
@@ -11,5 +11,5 @@
         has_text:
           text: "LYSOZYME in water"
     xtc_output:
-      file: traj.xtc
+      file: https://raw.githubusercontent.com/simonbray/test-files/master/gromacs_workflow/outp.xtc
       compare: simsize
