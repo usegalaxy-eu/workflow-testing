@@ -1,0 +1,15 @@
+---
+- doc: Test sample data for the GROMACS workflow
+  job:
+    input_str:
+      class: File
+      location: https://raw.githubusercontent.com/simonbray/test-files/master/gromacs_workflow/inp.pdb
+      filetype: pdb
+  outputs:
+    gro_output:
+      asserts:
+        has_text:
+          text: "LYSOZYME in water"
+    xtc_output:
+      file: https://raw.githubusercontent.com/simonbray/test-files/master/gromacs_workflow/outp.xtc
+      compare: simsize
