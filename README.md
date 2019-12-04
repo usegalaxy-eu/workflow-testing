@@ -1,10 +1,10 @@
-# UseGalaxy.eu Workflow Testing
+# Galaxy Workflow Testing
 
-Based off of [jmchilton's template](https://github.com/jmchilton/planemo-workflow-test-template), except running tests against UseGalaxy.eu
+This repository runs automated tests of several workflows against various Galaxy servers.
 
 ## Testing
 
-We are [automatically running](https://build.galaxyproject.eu/job/usegalaxy-eu/job/workflow-testing/) these workflows against UseGalaxy.eu
+We are [automatically running](https://build.galaxyproject.eu/job/usegalaxy-eu/job/workflow-testing/) these workflows against UseGalaxy.eu, [and we can test against your server too!](https://github.com/usegalaxy-eu/workflow-testing/issues/new)
 
 Workflow                                                                                     | Status
 ---                                                                                          | ---
@@ -44,6 +44,10 @@ training/metabolomics/F1000_Metabolomics_Query_Tabular_Mass_Adjustment.ga       
 ## Contributing
 
 An introduction to workflow testing and a tutorial can be found at the [Galaxy Training Network](https://galaxyproject.github.io/training-material/topics/contributing/tutorials/create-new-tutorial-technical/tutorial.html#testing-the-workflow-recommended).
+
+## About
+
+Based off of [jmchilton's template](https://github.com/jmchilton/planemo-workflow-test-template), except running tests against UseGalaxy.eu
 
 ## Pretty-printing Worfklow JSON
 
