@@ -6,7 +6,7 @@ This repository runs automated tests of several workflows against various Galaxy
 
 We are [automatically running](https://build.galaxyproject.eu/job/usegalaxy-eu/job/workflow-testing/) these workflows against UseGalaxy.eu, [and we can test against your server too!](https://github.com/usegalaxy-eu/workflow-testing/issues/new)
 
-Workflow                                                                                     | Status
+Workflow                                                                                     | UseGalaxy.EU
 ---                                                                                          | ---
 GraphClust2/GC-lite.ga                                                                       | [![Build Status](https://build.galaxyproject.eu/job/usegalaxy-eu/job/workflow-testing/PYTHON=System-CPython-2.7,WORKFLOW=GraphClust2%2FGC-lite.ga/badge/icon                                                                           ) ](https://build.galaxyproject.eu/job/usegalaxy-eu/job/workflow-testing/PYTHON=System-CPython-2.7,WORKFLOW=GraphClust2%2FGC-lite.ga/                                                                           )
 example1/wf3-shed-tools.ga                                                                   | [![Build Status](https://build.galaxyproject.eu/job/usegalaxy-eu/job/workflow-testing/PYTHON=System-CPython-2.7,WORKFLOW=example1%2Fwf3-shed-tools.ga/badge/icon                                                                       ) ](https://build.galaxyproject.eu/job/usegalaxy-eu/job/workflow-testing/PYTHON=System-CPython-2.7,WORKFLOW=example1%2Fwf3-shed-tools.ga/                                                                       )
