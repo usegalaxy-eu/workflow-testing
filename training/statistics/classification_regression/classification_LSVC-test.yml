@@ -1,17 +1,17 @@
 ---
-- doc: Test sample data for Linear SVC classifier workflow
+- doc: Test Linear SVC classifier workflow
   job:
-    breast_w_train:
+    breast-w_train:
       class: File
-      location: https://zenodo.org/record/1401230/files/breast-w_train.tsv
+      location: https://zenodo.org/record/3248907/files/breast-w_train.tsv
       filetype: tabular
-    breast_w_test:
+    breast-w_test:
       class: File
-      location: https://zenodo.org/record/1401230/files/breast-w_test.tsv
+      location: https://zenodo.org/record/3248907/files/breast-w_test.tsv
       filetype: tabular
-    breast_w_targets:
+    breast-w_targets:
       class: File
-      location: https://zenodo.org/record/1401230/files/breast-w_targets.tsv
+      location: https://zenodo.org/record/3248907/files/breast-w_targets.tsv
       filetype: tabular
   outputs:
     output_roc:
