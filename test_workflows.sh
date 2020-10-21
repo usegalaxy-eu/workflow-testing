@@ -1,16 +1,5 @@
 #!/bin/bash
 
-# if GALAXY_URL and GALAXY_USER_KEY are not set, try to set them from local untracked file
-[ ! $GALAXY_URL ] || [ ! $GALAXY_USER_KEY ] && source .secret.env
-export GALAXY_URL GALAXY_USER_KEY
-
-virtualenv -p python3 .venv; . .venv/bin/activate
-pip install -r requirements.txt
-
-# initalise parsec with url and api key.  Remove any existing parsec configuration stored in the home directory
-rm -f ~/.parsec.yml ||:
-parsec init --url $GALAXY_URL --api_key $GALAXY_USER_KEY # caution: if ~/.parsec.yml already exists at this point it will not be updated
-
 workflow_list=workflows_to_test.txt
 # # get list of local workflows with tests (ignoring training folder)
 find . \( -name '*-test.yml' ! -path './training*' \) | sed 's/^\.\///g' | sed 's/-test.yml/.ga/g' > $workflow_list
