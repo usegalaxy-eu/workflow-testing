@@ -1,2 +1,3 @@
 .venv/
 tool_test_output.*
+.secret.env

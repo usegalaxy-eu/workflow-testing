@@ -1,0 +1,2 @@
+planemo==0.72.0
+galaxy-parsec==1.13.0
