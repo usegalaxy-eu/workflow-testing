@@ -205,7 +205,15 @@
                 "x": 904.5,
                 "y": 320
             },
-            "post_job_actions": {},
+            "post_job_actions": {
+                "RenameDatasetActionout_file1": {
+                    "action_arguments": {
+                        "newname": "tutorial_output.txt"
+                    },
+                    "action_type": "RenameDatasetAction",
+                    "output_name": "out_file1"
+                }
+            },
             "tool_id": "random_lines1",
             "tool_state": "{\"input\": {\"__class__\": \"RuntimeValue\"}, \"num_lines\": {\"__class__\": \"ConnectedValue\"}, \"seed_source\": {\"seed_source_selector\": \"set_seed\", \"__current_case__\": 1, \"seed\": \"0\"}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
             "tool_version": "2.0.2",
