@@ -36,7 +36,7 @@
             "uuid": "004a6ce7-a8f3-4a54-b513-e1456a3695e8",
             "workflow_outputs": [
                 {
-                    "label": null,
+                    "label": "Dataset 2",
                     "output_name": "output",
                     "uuid": "05042d8c-8f06-4646-81ba-1f4ffb858ad3"
                 }
@@ -74,7 +74,7 @@
             "uuid": "b42b2137-033e-4e7e-849e-21def05f4a70",
             "workflow_outputs": [
                 {
-                    "label": null,
+                    "label": "Dataset 1",
                     "output_name": "output",
                     "uuid": "8c0a8c18-74d3-43c5-b3fa-8d1a3a4721b6"
                 }
@@ -112,7 +112,7 @@
             "uuid": "442ca31b-cdcf-46eb-815c-c23baf2c4dc5",
             "workflow_outputs": [
                 {
-                    "label": null,
+                    "label": "Number of lines",
                     "output_name": "output",
                     "uuid": "f47aa63e-c347-4e2b-9b9e-c95c2e7df101"
                 }
@@ -160,7 +160,7 @@
             "uuid": "860edbb3-b1dd-42a0-8edd-d4d3838ca916",
             "workflow_outputs": [
                 {
-                    "label": null,
+                    "label": "Concatenate datasets",
                     "output_name": "out_file1",
                     "uuid": "ca8c4181-931d-4ff2-98ae-19d9316f9fa4"
                 }
