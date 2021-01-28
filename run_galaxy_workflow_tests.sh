@@ -14,6 +14,7 @@ planemo $PLANEMO_OPTIONS test \
 	--galaxy_user_key "$GALAXY_USER_KEY" \
 	--no_shed_install \
 	--engine external_galaxy \
+	--test_output_json test_output.json \
 	"$1";
 planemo_exit_code=$?
 set -e
@@ -26,6 +27,6 @@ else
 	# Otherwise immediately delete
 	history_id=$(parsec histories get_histories --name "$history_name" | jq -r .[0].id)
 	parsec histories delete_history --purge $history_id
-	echo "<html><head></head><body>Test was completely successful</body></html>"> history.html
+	echo "<html><head></head><body>Test was completely successful</body></html>" > history.html
 fi
 exit $planemo_exit_code
