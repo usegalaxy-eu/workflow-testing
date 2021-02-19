@@ -1,0 +1,18 @@
+---
+- doc: Test an imaging workflow with 4000 jobs
+  job:
+    images.zip:
+      class: File
+      location: https://zenodo.org/record/3360236/files/data.zip
+      filetype: zip
+    rules:
+      class: File
+      location: rules.tabular
+      filetype: tabular
+  outputs:
+    outputs_collapsed:
+      asserts:
+        has_line:
+          line: '33421.40648011782	679	29.994753456131555'
+        ## not yet implemented
+        ##has_n_columns: 4963
